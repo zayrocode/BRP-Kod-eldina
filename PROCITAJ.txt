@@ -1,0 +1,78 @@
+BALKAN REVOLUTION RP - NOVI SERVER
+
+1. Zatvori stari SA-MP server ako je pokrenut (koristi isti port 7777).
+2. Dvaput klikni na "Pokreni server.bat".
+3. U SA-MP klijentu se povezi na 127.0.0.1:7777.
+
+Novi i postojeci nalozi se cuvaju u: scriptfiles\Korisnici
+Aktivni gamemode je: gamemodes\BE.amx
+Za izmjene izvornog koda koristi: gamemodes\BE.pwn
+Komande /ah i /name, zajedno sa svim njihovim pomocnim funkcijama,
+nalaze se direktno u gamemodes\BE.pwn (pri kraju fajla).
+
+Ovaj folder je zasebna kopija. Stari server folder ostaje netaknut.
+
+BANKA I MARKER
+Banka iz BANKA-FINITO-HAHAH-1.txt je dodana kao 167 objekata u pawno\include\BankaMapa.inc
+i ucitava se pri pokretanju gamemodea na originalnim koordinatama.
+Stunt bonusi i njihove standardne poruke su iskljuceni za sve igrace.
+/gotomarker - desnim klikom postavi oznaku na mapi, zatvori mapu i ukucaj komandu.
+Posljednja oznaka se pamti do izlaska sa servera.
+Za veoma udaljene oznake visina terena moze biti neprecizna.
+
+NOVE KOMANDE
+/ah - prikazuje sve komande u jednom prozoru.
+/setadmincode - vlasnik otvara skriveni prozor i sam unosi novi admin kod.
+Kod se odmah snima u Korisnici/<trenutno_ime>.ini pod kljucem AdminKod.
+Moze biti i jedna cifra, npr. 1. Ne mijenjaj fajl dok server radi.
+RENT VOZILA
+Samo 10 Faggio, 10 Glendale i 10 Premier iz pocetka Vozila.inc su rent vozila.
+Sjedi za volan slobodnog vozila i otvara se izbor: 10 min/200 RSD,
+15 min/300 RSD ili 30 min/600 RSD. Cijena se odmah skida s naloga.
+Novac za rent skida se iz novcanika. Banka prikazuje odvojeno stanje
+iz polja Banka u nalogu; novih 5000 dinara ide u novcanik.
+Preostalo vrijeme stoji na dnu ekrana. Po isteku vozilo se respawna.
+/unrent - odmah vraca vozilo i zaustavlja odbrojavanje bez povrata novca.
+/rentvehiclehelp - prikazuje upute i cijene.
+Aktivno rent vozilo moze voziti samo igrac koji ga je iznajmio.
+Rent se prekida i vozilo se vraca pri izlasku igraca sa servera ili unistenju vozila.
+/jetpack - admin ukljucuje jetpack; ponovni /jetpack ili Enter ga uklanja.
+/buyhouse - kupovina je dozvoljena samo ako igrac nema nijednu kucu.
+/sellhouse - prodaja osvjezava upis kuce i novca u nalogu.
+/setlevel - dozvoljava level 1-5000 i odmah osvjezava TAB listu.
+Oznake drugih igraca na radaru/mapi su iskljucene.
+LOKACIJE
+Tekst ispod grada se osvjezava svake 2 sekunde prema trenutnoj GTA zoni.
+Nazivi zona su originalni GTA nazivi u pawno\include\map-zones.inc.
+Naziv lokacije je centriran ispod BEOGRAD; za unutrasnjost pise Interior.
+
+/rtc - admin vraca vozilo u kojem sjedi na pocetnu poziciju; vozilo
+stvoreno komandom /veh uklanja sa servera.
+/artc [ID/Ime] - admin isto radi vozilu u kojem sjedi izabrani igrac.
+/artcveh [ID vozila] - admin respawna i prazno vozilo po ID-u iz /dl.
+/fix - admin popravlja vozilo u kojem sjedi, kao vozac ili putnik.
+/afix [ID/Ime] - admin popravlja vozilo izabranog igraca s bilo koje lokacije.
+/afixveh [ID vozila] - admin popravlja i prazno vozilo po ID-u iz /dl.
+/name [ID/Ime] [NovoIme] [Broj dana] - Vlasnik (admin 9) ili RCON
+admin daje izabrano privremeno ime. Npr. /name 3 Marko 7.
+Ime moze imati 3-20 znakova: slova, brojeve i []()$@._=.
+Primjeri: zan, Z562N, Z$N. Znak # i razmak SA-MP ne prihvata.
+Komandu mozes ponoviti istom igracu koliko god puta zelis. Svaki put
+novi broj dana pocinje od trenutka promjene. Npr. Arijan_Zaha -> Arijan
+-> Marko, a po isteku se vraca Arijan_Zaha.
+U scriptfiles\Korisnici postoji samo fajl trenutnog imena. Taj isti
+nalog, sa novcem, levelom i ostalim podacima, prelazi na svako novo ime
+i nazad na prvobitno. Pod starim imenom nema pristupa dok traje promjena.
+U scriptfiles\BackupImena se cuvaju samo imena i datum isteka.
+
+NOVI HUD / TEXTDRAW
+Gore: Balkan Revolution, BANKA (RSD), EURO, ZLATO, BEOGRAD i trenutna GTA lokacija.
+Dole: detaljna tamna traka, HAPPY HOUR: USKORO, datum, vrijeme i nasumicne poruke svakih 150 sekundi.
+EURO cita vrijednost Euro iz Korisnici/<ime>.ini; ako je nema, prikazuje 0.
+
+BANKA EKSTERIJER I ULAZ
+Osam objekata iz Banka Exterijer.txt je u gamemodes\BE.pwn.
+Pritisnite F kod 1462.9076, -1022.8073 za ulaz, a kod 153.7911, 1702.7163 za izlaz.
+Obje tacke su u Interior 0 i VirtualWorld 0.
+
+

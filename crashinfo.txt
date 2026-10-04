@@ -1,0 +1,1946 @@
+
+--------------------------
+SA-MP Server: 0.3.7-R2
+
+Exception At Address: 0x0049939B Module: (samp-server.exe)
+
+Registers:
+EAX: 0x0019F358	EBX: 0x036D8B80	ECX: 0x00000000	EDX: 0x004056C0
+ESI: 0x00000000	EDI: 0x0288A5E0	EBP: 0x0019F368	ESP: 0x0019F340
+EFLAGS: 0x00010286
+
+Stack:
++0000: 0x0288A5E0   0x0288A5E0   0x036D8B80   0xFFFFFFFF
++0010: 0x0019F340   0x0019ED84   0x0019FB2C   0x0049D208
++0020: 0x004BA1B8   0xFFFFFFFF   0x036DC378   0x004056CD
++0030: 0x00000000   0x004010B6   0x0288A5E0   0x037E2A0C
++0040: 0x036F1494   0x00402B63   0x0288A5E0   0x0000000A
++0050: 0x0019F3A8   0x037E2A0C   0x0019F844   0x00000001
++0060: 0x037E2EDC   0x0288A5E0   0x00000000   0x000F1574
++0070: 0x000F1578   0x000F1A3C   0x000B1B70   0x000F1584
++0080: 0x000B1B74   0x036D8B80   0x036F1494   0x00000000
++0090: 0x036D8020   0x00018914   0x004746BE   0x0288A5E0
++00A0: 0x0019F834   0x0000001F   0x30312031   0x20303030
++00B0: 0x00470035   0x00007369   0x5F646D63   0x7270616E
++00C0: 0x6B697661   0x00756375   0x0288A5E0   0x0288A5E0
++00D0: 0x036D8B80   0x000B1B48   0x00000000   0x00000000
++00E0: 0x00000000   0x00000000   0x00000000   0x00000000
++00F0: 0x00000000   0x00000000   0x00000000   0x00000000
++0100: 0x00000000   0x00000000   0x00000000   0x00000000
++0110: 0x00000000   0x00000000   0x00000000   0x00000000
++0120: 0x00000000   0x00000000   0x00000000   0x00000000
++0130: 0x00000000   0x00001000   0x022D0000   0xFFFFFD69
+
+--------------------------
+
+Loaded Modules:
+samp-server.exe	A: 0x00400000 - 0x00519000	(C:\Users\Eldin\Desktop\Kopija extreme\samp-server.exe)
+ntdll.dll	A: 0x76FA0000 - 0x77144000	(C:\Windows\SYSTEM32\ntdll.dll)
+KERNEL32.DLL	A: 0x75BB0000 - 0x75CA0000	(C:\Windows\System32\KERNEL32.DLL)
+KERNELBASE.dll	A: 0x751D0000 - 0x75409000	(C:\Windows\System32\KERNELBASE.dll)
+SHELL32.dll	A: 0x754D0000 - 0x75AAB000	(C:\Windows\System32\SHELL32.dll)
+msvcp_win.dll	A: 0x76AD0000 - 0x76B4B000	(C:\Windows\System32\msvcp_win.dll)
+ucrtbase.dll	A: 0x761E0000 - 0x76300000	(C:\Windows\System32\ucrtbase.dll)
+USER32.dll	A: 0x76D60000 - 0x76EFD000	(C:\Windows\System32\USER32.dll)
+win32u.dll	A: 0x74FF0000 - 0x75008000	(C:\Windows\System32\win32u.dll)
+GDI32.dll	A: 0x76870000 - 0x76893000	(C:\Windows\System32\GDI32.dll)
+gdi32full.dll	A: 0x74E70000 - 0x74F57000	(C:\Windows\System32\gdi32full.dll)
+WINMM.dll	A: 0x6BDE0000 - 0x6BE08000	(C:\Windows\SYSTEM32\WINMM.dll)
+WSOCK32.dll	A: 0x64570000 - 0x64578000	(C:\Windows\SYSTEM32\WSOCK32.dll)
+msvcrt.dll	A: 0x76C40000 - 0x76CFF000	(C:\Windows\System32\msvcrt.dll)
+ws2_32.DLL	A: 0x76F00000 - 0x76F63000	(C:\Windows\System32\ws2_32.DLL)
+RPCRT4.dll	A: 0x76980000 - 0x76A39000	(C:\Windows\System32\RPCRT4.dll)
+IMM32.DLL	A: 0x75B80000 - 0x75BA5000	(C:\Windows\System32\IMM32.DLL)
+sscanf.DLL	A: 0x5D100000 - 0x5D12A000	(C:\Users\Eldin\Desktop\Kopija extreme\plugins\sscanf.DLL)
+VCRUNTIME140.dll	A: 0x5CD70000 - 0x5CD85000	(C:\Windows\SYSTEM32\VCRUNTIME140.dll)
+MSVCP140.dll	A: 0x5CD90000 - 0x5CDFD000	(C:\Windows\SYSTEM32\MSVCP140.dll)
+mswsock.dll	A: 0x742A0000 - 0x742F2000	(C:\Windows\system32\mswsock.dll)
+napinsp.dll	A: 0x74360000 - 0x74371000	(C:\Windows\system32\napinsp.dll)
+sechost.dll	A: 0x76300000 - 0x76377000	(C:\Windows\System32\sechost.dll)
+bcrypt.dll	A: 0x76F70000 - 0x76F89000	(C:\Windows\System32\bcrypt.dll)
+pnrpnsp.dll	A: 0x74340000 - 0x74356000	(C:\Windows\system32\pnrpnsp.dll)
+wshbth.dll	A: 0x74320000 - 0x74336000	(C:\Windows\system32\wshbth.dll)
+NLAapi.dll	A: 0x74300000 - 0x74316000	(C:\Windows\system32\NLAapi.dll)
+IPHLPAPI.DLL	A: 0x74410000 - 0x74442000	(C:\Windows\SYSTEM32\IPHLPAPI.DLL)
+DNSAPI.dll	A: 0x74210000 - 0x742A0000	(C:\Windows\SYSTEM32\DNSAPI.dll)
+NSI.dll	A: 0x75AB0000 - 0x75AB7000	(C:\Windows\System32\NSI.dll)
+winrnr.dll	A: 0x74200000 - 0x7420E000	(C:\Windows\System32\winrnr.dll)
+rasadhlp.dll	A: 0x741F0000 - 0x741F8000	(C:\Windows\System32\rasadhlp.dll)
+
+--------------------------
+SA-MP Server: 0.3.7-R2
+
+Exception At Address: 0x0049939B Module: (samp-server.exe)
+
+Registers:
+EAX: 0x0019F358	EBX: 0x0373ABD0	ECX: 0x00000000	EDX: 0x004056C0
+ESI: 0x00000000	EDI: 0x0290A5E0	EBP: 0x0019F368	ESP: 0x0019F340
+EFLAGS: 0x00010286
+
+Stack:
++0000: 0x0290A5E0   0x0290A5E0   0x0373ABD0   0xFFFFFFFF
++0010: 0x0019F340   0x0019ED84   0x0019FB2C   0x0049D208
++0020: 0x004BA1B8   0xFFFFFFFF   0x0373E3C8   0x004056CD
++0030: 0x00000000   0x004010B6   0x0290A5E0   0x03844FA4
++0040: 0x037537BC   0x00402B63   0x0290A5E0   0x0000000A
++0050: 0x0019F3A8   0x03844FA4   0x0019F844   0x00000001
++0060: 0x03845474   0x0290A5E0   0x00000000   0x000F17E4
++0070: 0x000F17E8   0x000F1CAC   0x000B1DD8   0x000F17F4
++0080: 0x000B1DDC   0x0373ABD0   0x037537BC   0x00000000
++0090: 0x0373A020   0x00018BEC   0x004746BE   0x0290A5E0
++00A0: 0x0019F834   0x00000020   0x30352031   0x37203030
++00B0: 0x00474600   0x00007369   0x5F646D63   0x7270616E
++00C0: 0x6B697661   0x00756375   0x0290A5E0   0x0290A5E0
++00D0: 0x0373ABD0   0x000B1DB4   0x00000000   0x00000000
++00E0: 0x00000000   0x00000000   0x00000000   0x00000000
++00F0: 0x00000000   0x00000000   0x00000000   0x00000000
++0100: 0x00000000   0x00000000   0x00000000   0x00000000
++0110: 0x00000000   0x00000000   0x00000000   0x00000000
++0120: 0x00000000   0x00000000   0x00000000   0x00000000
++0130: 0x00000000   0x00001000   0x02430000   0xFFFFFD69
+
+--------------------------
+
+Loaded Modules:
+samp-server.exe	A: 0x00400000 - 0x00519000	(C:\Users\Eldin\Desktop\Kopija extreme\samp-server.exe)
+ntdll.dll	A: 0x76FA0000 - 0x77144000	(C:\Windows\SYSTEM32\ntdll.dll)
+KERNEL32.DLL	A: 0x75BB0000 - 0x75CA0000	(C:\Windows\System32\KERNEL32.DLL)
+KERNELBASE.dll	A: 0x751D0000 - 0x75409000	(C:\Windows\System32\KERNELBASE.dll)
+SHELL32.dll	A: 0x754D0000 - 0x75AAB000	(C:\Windows\System32\SHELL32.dll)
+msvcp_win.dll	A: 0x76AD0000 - 0x76B4B000	(C:\Windows\System32\msvcp_win.dll)
+ucrtbase.dll	A: 0x761E0000 - 0x76300000	(C:\Windows\System32\ucrtbase.dll)
+USER32.dll	A: 0x76D60000 - 0x76EFD000	(C:\Windows\System32\USER32.dll)
+win32u.dll	A: 0x74FF0000 - 0x75008000	(C:\Windows\System32\win32u.dll)
+GDI32.dll	A: 0x76870000 - 0x76893000	(C:\Windows\System32\GDI32.dll)
+gdi32full.dll	A: 0x74E70000 - 0x74F57000	(C:\Windows\System32\gdi32full.dll)
+WINMM.dll	A: 0x6BDE0000 - 0x6BE08000	(C:\Windows\SYSTEM32\WINMM.dll)
+msvcrt.dll	A: 0x76C40000 - 0x76CFF000	(C:\Windows\System32\msvcrt.dll)
+WSOCK32.dll	A: 0x64570000 - 0x64578000	(C:\Windows\SYSTEM32\WSOCK32.dll)
+ws2_32.DLL	A: 0x76F00000 - 0x76F63000	(C:\Windows\System32\ws2_32.DLL)
+RPCRT4.dll	A: 0x76980000 - 0x76A39000	(C:\Windows\System32\RPCRT4.dll)
+IMM32.DLL	A: 0x75B80000 - 0x75BA5000	(C:\Windows\System32\IMM32.DLL)
+sscanf.DLL	A: 0x5D100000 - 0x5D12A000	(C:\Users\Eldin\Desktop\Kopija extreme\plugins\sscanf.DLL)
+MSVCP140.dll	A: 0x5CD90000 - 0x5CDFD000	(C:\Windows\SYSTEM32\MSVCP140.dll)
+VCRUNTIME140.dll	A: 0x5CD70000 - 0x5CD85000	(C:\Windows\SYSTEM32\VCRUNTIME140.dll)
+mswsock.dll	A: 0x742A0000 - 0x742F2000	(C:\Windows\system32\mswsock.dll)
+napinsp.dll	A: 0x74360000 - 0x74371000	(C:\Windows\system32\napinsp.dll)
+sechost.dll	A: 0x76300000 - 0x76377000	(C:\Windows\System32\sechost.dll)
+bcrypt.dll	A: 0x76F70000 - 0x76F89000	(C:\Windows\System32\bcrypt.dll)
+pnrpnsp.dll	A: 0x74340000 - 0x74356000	(C:\Windows\system32\pnrpnsp.dll)
+wshbth.dll	A: 0x74320000 - 0x74336000	(C:\Windows\system32\wshbth.dll)
+NLAapi.dll	A: 0x74300000 - 0x74316000	(C:\Windows\system32\NLAapi.dll)
+IPHLPAPI.DLL	A: 0x74410000 - 0x74442000	(C:\Windows\SYSTEM32\IPHLPAPI.DLL)
+DNSAPI.dll	A: 0x74210000 - 0x742A0000	(C:\Windows\SYSTEM32\DNSAPI.dll)
+NSI.dll	A: 0x75AB0000 - 0x75AB7000	(C:\Windows\System32\NSI.dll)
+winrnr.dll	A: 0x74200000 - 0x7420E000	(C:\Windows\System32\winrnr.dll)
+rasadhlp.dll	A: 0x741F0000 - 0x741F8000	(C:\Windows\System32\rasadhlp.dll)
+
+--------------------------
+SA-MP Server: 0.3.7-R2
+
+Exception At Address: 0x0049939B Module: (samp-server.exe)
+
+Registers:
+EAX: 0x0019F358	EBX: 0x036CFBD0	ECX: 0x00000000	EDX: 0x004056C0
+ESI: 0x00000000	EDI: 0x0283A5E0	EBP: 0x0019F368	ESP: 0x0019F340
+EFLAGS: 0x00010286
+
+Stack:
++0000: 0x0283A5E0   0x0283A5E0   0x036CFBD0   0xFFFFFFFF
++0010: 0x0019F340   0x0019ED84   0x0019FB2C   0x0049D208
++0020: 0x004BA1B8   0xFFFFFFFF   0x036D33C8   0x004056CD
++0030: 0x00000000   0x004010B6   0x0283A5E0   0x037D9FA4
++0040: 0x036E87BC   0x00402B63   0x0283A5E0   0x0000000A
++0050: 0x0019F3A8   0x037D9FA4   0x0019F844   0x00000001
++0060: 0x037DA474   0x0283A5E0   0x00000000   0x000F17E4
++0070: 0x000F17E8   0x000F1CAC   0x000B1DD8   0x000F17F4
++0080: 0x000B1DDC   0x036CFBD0   0x036E87BC   0x00000000
++0090: 0x036CF020   0x00018BEC   0x004746BE   0x0283A5E0
++00A0: 0x0019F834   0x00000020   0x30352031   0x35203030
++00B0: 0x00474600   0x00007369   0x5F646D63   0x7270616E
++00C0: 0x6B697661   0x00756375   0x0283A5E0   0x0283A5E0
++00D0: 0x036CFBD0   0x000B1DB4   0x00000000   0x00000000
++00E0: 0x00000000   0x00000000   0x00000000   0x00000000
++00F0: 0x00000000   0x00000000   0x00000000   0x00000000
++0100: 0x00000000   0x00000000   0x00000000   0x00000000
++0110: 0x00000000   0x00000000   0x00000000   0x00000000
++0120: 0x00000000   0x00000000   0x00000000   0x00000000
++0130: 0x00000000   0x00000000   0x00000000   0xFFFFFCE8
+
+--------------------------
+
+Loaded Modules:
+samp-server.exe	A: 0x00400000 - 0x00519000	(C:\Users\Eldin\Desktop\Kopija extreme\samp-server.exe)
+ntdll.dll	A: 0x76FA0000 - 0x77144000	(C:\Windows\SYSTEM32\ntdll.dll)
+KERNEL32.DLL	A: 0x75BB0000 - 0x75CA0000	(C:\Windows\System32\KERNEL32.DLL)
+KERNELBASE.dll	A: 0x751D0000 - 0x75409000	(C:\Windows\System32\KERNELBASE.dll)
+SHELL32.dll	A: 0x754D0000 - 0x75AAB000	(C:\Windows\System32\SHELL32.dll)
+msvcp_win.dll	A: 0x76AD0000 - 0x76B4B000	(C:\Windows\System32\msvcp_win.dll)
+ucrtbase.dll	A: 0x761E0000 - 0x76300000	(C:\Windows\System32\ucrtbase.dll)
+USER32.dll	A: 0x76D60000 - 0x76EFD000	(C:\Windows\System32\USER32.dll)
+win32u.dll	A: 0x74FF0000 - 0x75008000	(C:\Windows\System32\win32u.dll)
+GDI32.dll	A: 0x76870000 - 0x76893000	(C:\Windows\System32\GDI32.dll)
+gdi32full.dll	A: 0x74E70000 - 0x74F57000	(C:\Windows\System32\gdi32full.dll)
+WINMM.dll	A: 0x6BDE0000 - 0x6BE08000	(C:\Windows\SYSTEM32\WINMM.dll)
+WSOCK32.dll	A: 0x64570000 - 0x64578000	(C:\Windows\SYSTEM32\WSOCK32.dll)
+msvcrt.dll	A: 0x76C40000 - 0x76CFF000	(C:\Windows\System32\msvcrt.dll)
+ws2_32.DLL	A: 0x76F00000 - 0x76F63000	(C:\Windows\System32\ws2_32.DLL)
+RPCRT4.dll	A: 0x76980000 - 0x76A39000	(C:\Windows\System32\RPCRT4.dll)
+IMM32.DLL	A: 0x75B80000 - 0x75BA5000	(C:\Windows\System32\IMM32.DLL)
+sscanf.DLL	A: 0x5D100000 - 0x5D12A000	(C:\Users\Eldin\Desktop\Kopija extreme\plugins\sscanf.DLL)
+MSVCP140.dll	A: 0x5CD90000 - 0x5CDFD000	(C:\Windows\SYSTEM32\MSVCP140.dll)
+VCRUNTIME140.dll	A: 0x5CD70000 - 0x5CD85000	(C:\Windows\SYSTEM32\VCRUNTIME140.dll)
+mswsock.dll	A: 0x742A0000 - 0x742F2000	(C:\Windows\system32\mswsock.dll)
+napinsp.dll	A: 0x74360000 - 0x74371000	(C:\Windows\system32\napinsp.dll)
+sechost.dll	A: 0x76300000 - 0x76377000	(C:\Windows\System32\sechost.dll)
+bcrypt.dll	A: 0x76F70000 - 0x76F89000	(C:\Windows\System32\bcrypt.dll)
+pnrpnsp.dll	A: 0x74340000 - 0x74356000	(C:\Windows\system32\pnrpnsp.dll)
+wshbth.dll	A: 0x74320000 - 0x74336000	(C:\Windows\system32\wshbth.dll)
+NLAapi.dll	A: 0x74300000 - 0x74316000	(C:\Windows\system32\NLAapi.dll)
+IPHLPAPI.DLL	A: 0x74410000 - 0x74442000	(C:\Windows\SYSTEM32\IPHLPAPI.DLL)
+DNSAPI.dll	A: 0x74210000 - 0x742A0000	(C:\Windows\SYSTEM32\DNSAPI.dll)
+NSI.dll	A: 0x75AB0000 - 0x75AB7000	(C:\Windows\System32\NSI.dll)
+winrnr.dll	A: 0x74200000 - 0x7420E000	(C:\Windows\System32\winrnr.dll)
+rasadhlp.dll	A: 0x741F0000 - 0x741F8000	(C:\Windows\System32\rasadhlp.dll)
+
+--------------------------
+SA-MP Server: 0.3.7-R2
+
+Exception At Address: 0x0049939B Module: (samp-server.exe)
+
+Registers:
+EAX: 0x0019F358	EBX: 0x03742BD0	ECX: 0x00000000	EDX: 0x004056C0
+ESI: 0x00000000	EDI: 0x0290A5E0	EBP: 0x0019F368	ESP: 0x0019F340
+EFLAGS: 0x00010286
+
+Stack:
++0000: 0x0290A5E0   0x0290A5E0   0x03742BD0   0xFFFFFFFF
++0010: 0x0019F340   0x0019ED84   0x0019FB2C   0x0049D208
++0020: 0x004BA1B8   0xFFFFFFFF   0x037463C8   0x004056CD
++0030: 0x00000000   0x004010B6   0x0290A5E0   0x0384CFA4
++0040: 0x0375B7BC   0x00402B63   0x0290A5E0   0x0000000A
++0050: 0x0019F3A8   0x0384CFA4   0x0019F844   0x00000001
++0060: 0x0384D474   0x0290A5E0   0x00000000   0x000F17E4
++0070: 0x000F17E8   0x000F1CAC   0x000B1DD8   0x000F17F4
++0080: 0x000B1DDC   0x03742BD0   0x0375B7BC   0x00000000
++0090: 0x03742020   0x00018BEC   0x004746BE   0x0290A5E0
++00A0: 0x0019F834   0x00000020   0x30352031   0x38203030
++00B0: 0x00474600   0x00007369   0x5F646D63   0x7270616E
++00C0: 0x6B697661   0x00756375   0x0290A5E0   0x0290A5E0
++00D0: 0x03742BD0   0x000B1DB4   0x00000000   0x00000000
++00E0: 0x00000000   0x00000000   0x00000000   0x00000000
++00F0: 0x00000000   0x00000000   0x00000000   0x00000000
++0100: 0x00000000   0x00000000   0x00000000   0x00000000
++0110: 0x00000000   0x00000000   0x00000000   0x00000000
++0120: 0x00000000   0x00000000   0x00000000   0x00000000
++0130: 0x00000000   0x00000800   0x02300000   0xFFFFFCE8
+
+--------------------------
+
+Loaded Modules:
+samp-server.exe	A: 0x00400000 - 0x00519000	(C:\Users\Eldin\Desktop\Kopija extreme\samp-server.exe)
+ntdll.dll	A: 0x76FA0000 - 0x77144000	(C:\Windows\SYSTEM32\ntdll.dll)
+KERNEL32.DLL	A: 0x75BB0000 - 0x75CA0000	(C:\Windows\System32\KERNEL32.DLL)
+KERNELBASE.dll	A: 0x751D0000 - 0x75409000	(C:\Windows\System32\KERNELBASE.dll)
+SHELL32.dll	A: 0x754D0000 - 0x75AAB000	(C:\Windows\System32\SHELL32.dll)
+msvcp_win.dll	A: 0x76AD0000 - 0x76B4B000	(C:\Windows\System32\msvcp_win.dll)
+ucrtbase.dll	A: 0x761E0000 - 0x76300000	(C:\Windows\System32\ucrtbase.dll)
+USER32.dll	A: 0x76D60000 - 0x76EFD000	(C:\Windows\System32\USER32.dll)
+win32u.dll	A: 0x74FF0000 - 0x75008000	(C:\Windows\System32\win32u.dll)
+GDI32.dll	A: 0x76870000 - 0x76893000	(C:\Windows\System32\GDI32.dll)
+gdi32full.dll	A: 0x74E70000 - 0x74F57000	(C:\Windows\System32\gdi32full.dll)
+WINMM.dll	A: 0x6BDE0000 - 0x6BE08000	(C:\Windows\SYSTEM32\WINMM.dll)
+WSOCK32.dll	A: 0x64570000 - 0x64578000	(C:\Windows\SYSTEM32\WSOCK32.dll)
+msvcrt.dll	A: 0x76C40000 - 0x76CFF000	(C:\Windows\System32\msvcrt.dll)
+ws2_32.DLL	A: 0x76F00000 - 0x76F63000	(C:\Windows\System32\ws2_32.DLL)
+RPCRT4.dll	A: 0x76980000 - 0x76A39000	(C:\Windows\System32\RPCRT4.dll)
+IMM32.DLL	A: 0x75B80000 - 0x75BA5000	(C:\Windows\System32\IMM32.DLL)
+sscanf.DLL	A: 0x5D100000 - 0x5D12A000	(C:\Users\Eldin\Desktop\Kopija extreme\plugins\sscanf.DLL)
+VCRUNTIME140.dll	A: 0x5CDA0000 - 0x5CDB5000	(C:\Windows\SYSTEM32\VCRUNTIME140.dll)
+MSVCP140.dll	A: 0x57990000 - 0x579FD000	(C:\Windows\SYSTEM32\MSVCP140.dll)
+mswsock.dll	A: 0x742A0000 - 0x742F2000	(C:\Windows\system32\mswsock.dll)
+napinsp.dll	A: 0x74360000 - 0x74371000	(C:\Windows\system32\napinsp.dll)
+sechost.dll	A: 0x76300000 - 0x76377000	(C:\Windows\System32\sechost.dll)
+bcrypt.dll	A: 0x76F70000 - 0x76F89000	(C:\Windows\System32\bcrypt.dll)
+pnrpnsp.dll	A: 0x74340000 - 0x74356000	(C:\Windows\system32\pnrpnsp.dll)
+wshbth.dll	A: 0x74320000 - 0x74336000	(C:\Windows\system32\wshbth.dll)
+NLAapi.dll	A: 0x74300000 - 0x74316000	(C:\Windows\system32\NLAapi.dll)
+IPHLPAPI.DLL	A: 0x74410000 - 0x74442000	(C:\Windows\SYSTEM32\IPHLPAPI.DLL)
+DNSAPI.dll	A: 0x74210000 - 0x742A0000	(C:\Windows\SYSTEM32\DNSAPI.dll)
+NSI.dll	A: 0x75AB0000 - 0x75AB7000	(C:\Windows\System32\NSI.dll)
+winrnr.dll	A: 0x74200000 - 0x7420E000	(C:\Windows\System32\winrnr.dll)
+rasadhlp.dll	A: 0x741F0000 - 0x741F8000	(C:\Windows\System32\rasadhlp.dll)
+
+--------------------------
+SA-MP Server: 0.3.7-R2
+
+Exception At Address: 0x0049939B Module: (samp-server.exe)
+
+Registers:
+EAX: 0x0019F334	EBX: 0x0371B05C	ECX: 0x00000000	EDX: 0x004056C0
+ESI: 0x00000000	EDI: 0x028EA6B0	EBP: 0x0019F344	ESP: 0x0019F31C
+EFLAGS: 0x00010286
+
+Stack:
++0000: 0x028EA6B0   0x028EA6B0   0x0371B05C   0xFFFFFFFF
++0010: 0x0019F31C   0x0019ED5C   0x0019FB2C   0x0049D208
++0020: 0x004BA1B8   0xFFFFFFFF   0x03724124   0x004056CD
++0030: 0x00000000   0x004010B6   0x028EA6B0   0x0386C8B4
++0040: 0x037455A4   0x00402B63   0x028EA6B0   0x0000000C
++0050: 0x0019F384   0x0386C8B4   0x0019F3D0   0x028EA6B0
++0060: 0x00000034   0x00000002   0x00000000   0x0012730C
++0070: 0x00127310   0x00127350   0x000E744C   0x0012731C
++0080: 0x000E7450   0x0371B05C   0x037455A4   0x00000000
++0090: 0x0371A020   0x0002A548   0x5CDAF428   0x028EA6B0
++00A0: 0x0019F82C   0x00000034   0x0386C900   0x00000001
++00B0: 0x028EA6B0   0x0019F83C   0x004746BE   0x00000002
++00C0: 0x0019F82C   0x00000034   0x00470001   0x00007369
++00D0: 0x5F646D63   0x7270616E   0x67697661   0x74616769
++00E0: 0x006E6F72   0x028EA6B0   0x037455A4   0x00000001
++00F0: 0x000E7444   0x00000000   0x00000000   0x00000000
++0100: 0x00000000   0x00000000   0x00000000   0x00000000
++0110: 0x00000000   0x00000000   0x00000000   0x00000000
++0120: 0x00000000   0x00000000   0x00000000   0x00000000
++0130: 0x00000000   0x0000001E   0x02010002   0x02360270
+
+--------------------------
+
+Loaded Modules:
+samp-server.exe	A: 0x00400000 - 0x00519000	(C:\Users\Eldin\Desktop\Kopija extreme\samp-server.exe)
+ntdll.dll	A: 0x76FA0000 - 0x77144000	(C:\Windows\SYSTEM32\ntdll.dll)
+KERNEL32.DLL	A: 0x75BB0000 - 0x75CA0000	(C:\Windows\System32\KERNEL32.DLL)
+KERNELBASE.dll	A: 0x751D0000 - 0x75409000	(C:\Windows\System32\KERNELBASE.dll)
+SHELL32.dll	A: 0x754D0000 - 0x75AAB000	(C:\Windows\System32\SHELL32.dll)
+msvcp_win.dll	A: 0x76AD0000 - 0x76B4B000	(C:\Windows\System32\msvcp_win.dll)
+ucrtbase.dll	A: 0x761E0000 - 0x76300000	(C:\Windows\System32\ucrtbase.dll)
+USER32.dll	A: 0x76D60000 - 0x76EFD000	(C:\Windows\System32\USER32.dll)
+win32u.dll	A: 0x74FF0000 - 0x75008000	(C:\Windows\System32\win32u.dll)
+GDI32.dll	A: 0x76870000 - 0x76893000	(C:\Windows\System32\GDI32.dll)
+gdi32full.dll	A: 0x74E70000 - 0x74F57000	(C:\Windows\System32\gdi32full.dll)
+WSOCK32.dll	A: 0x64570000 - 0x64578000	(C:\Windows\SYSTEM32\WSOCK32.dll)
+WINMM.dll	A: 0x6BDE0000 - 0x6BE08000	(C:\Windows\SYSTEM32\WINMM.dll)
+msvcrt.dll	A: 0x76C40000 - 0x76CFF000	(C:\Windows\System32\msvcrt.dll)
+ws2_32.DLL	A: 0x76F00000 - 0x76F63000	(C:\Windows\System32\ws2_32.DLL)
+RPCRT4.dll	A: 0x76980000 - 0x76A39000	(C:\Windows\System32\RPCRT4.dll)
+IMM32.DLL	A: 0x75B80000 - 0x75BA5000	(C:\Windows\System32\IMM32.DLL)
+sscanf.DLL	A: 0x5D100000 - 0x5D12A000	(C:\Users\Eldin\Desktop\Kopija extreme\plugins\sscanf.DLL)
+MSVCP140.dll	A: 0x5C670000 - 0x5C706000	(C:\Windows\SYSTEM32\MSVCP140.dll)
+VCRUNTIME140.dll	A: 0x5CDE0000 - 0x5CDFD000	(C:\Windows\SYSTEM32\VCRUNTIME140.dll)
+streamer.dll	A: 0x5CD70000 - 0x5CDD6000	(C:\Users\Eldin\Desktop\Kopija extreme\plugins\streamer.dll)
+mswsock.dll	A: 0x742A0000 - 0x742F2000	(C:\Windows\system32\mswsock.dll)
+napinsp.dll	A: 0x74360000 - 0x74371000	(C:\Windows\system32\napinsp.dll)
+sechost.dll	A: 0x76300000 - 0x76377000	(C:\Windows\System32\sechost.dll)
+bcrypt.dll	A: 0x76F70000 - 0x76F89000	(C:\Windows\System32\bcrypt.dll)
+pnrpnsp.dll	A: 0x74340000 - 0x74356000	(C:\Windows\system32\pnrpnsp.dll)
+wshbth.dll	A: 0x74320000 - 0x74336000	(C:\Windows\system32\wshbth.dll)
+NLAapi.dll	A: 0x74300000 - 0x74316000	(C:\Windows\system32\NLAapi.dll)
+IPHLPAPI.DLL	A: 0x74410000 - 0x74442000	(C:\Windows\SYSTEM32\IPHLPAPI.DLL)
+DNSAPI.dll	A: 0x74210000 - 0x742A0000	(C:\Windows\SYSTEM32\DNSAPI.dll)
+NSI.dll	A: 0x75AB0000 - 0x75AB7000	(C:\Windows\System32\NSI.dll)
+winrnr.dll	A: 0x74200000 - 0x7420E000	(C:\Windows\System32\winrnr.dll)
+rasadhlp.dll	A: 0x741F0000 - 0x741F8000	(C:\Windows\System32\rasadhlp.dll)
+
+--------------------------
+SA-MP Server: 0.3.7-R2
+
+Exception At Address: 0x0049939B Module: (samp-server.exe)
+
+Registers:
+EAX: 0x0019F334	EBX: 0x0368905C	ECX: 0x00000000	EDX: 0x004056C0
+ESI: 0x00000000	EDI: 0x0281A6B0	EBP: 0x0019F344	ESP: 0x0019F31C
+EFLAGS: 0x00010286
+
+Stack:
++0000: 0x0281A6B0   0x0281A6B0   0x0368905C   0xFFFFFFFF
++0010: 0x0019F31C   0x0019ED5C   0x0019FB2C   0x0049D208
++0020: 0x004BA1B8   0xFFFFFFFF   0x03692124   0x004056CD
++0030: 0x00000000   0x004010B6   0x0281A6B0   0x037DA814
++0040: 0x036B35A4   0x00402B63   0x0281A6B0   0x0000000C
++0050: 0x0019F384   0x037DA814   0x0019F3D0   0x0281A6B0
++0060: 0x00000034   0x00000002   0x00000000   0x0012726C
++0070: 0x00127270   0x001272B0   0x000E73AC   0x0012727C
++0080: 0x000E73B0   0x0368905C   0x036B35A4   0x00000000
++0090: 0x03688020   0x0002A548   0x5CDAF428   0x0281A6B0
++00A0: 0x0019F82C   0x00000034   0x037DA860   0x00000001
++00B0: 0x0281A6B0   0x0019F83C   0x004746BE   0x00000002
++00C0: 0x0019F82C   0x00000034   0x00470001   0x00007369
++00D0: 0x5F646D63   0x7270616E   0x67697661   0x74616769
++00E0: 0x006E6F72   0x0281A6B0   0x036B35A4   0x00000001
++00F0: 0x000E73A4   0x00000000   0x00000000   0x00000000
++0100: 0x00000000   0x00000000   0x00000000   0x00000000
++0110: 0x00000000   0x00000000   0x00000000   0x00000000
++0120: 0x00000000   0x00000000   0x00000000   0x00000000
++0130: 0x00000000   0x00000000   0x02010002   0x022B0270
+
+--------------------------
+
+Loaded Modules:
+samp-server.exe	A: 0x00400000 - 0x00519000	(C:\Users\Eldin\Desktop\Kopija extreme\samp-server.exe)
+ntdll.dll	A: 0x76FA0000 - 0x77144000	(C:\Windows\SYSTEM32\ntdll.dll)
+KERNEL32.DLL	A: 0x75BB0000 - 0x75CA0000	(C:\Windows\System32\KERNEL32.DLL)
+KERNELBASE.dll	A: 0x751D0000 - 0x75409000	(C:\Windows\System32\KERNELBASE.dll)
+SHELL32.dll	A: 0x754D0000 - 0x75AAB000	(C:\Windows\System32\SHELL32.dll)
+msvcp_win.dll	A: 0x76AD0000 - 0x76B4B000	(C:\Windows\System32\msvcp_win.dll)
+ucrtbase.dll	A: 0x761E0000 - 0x76300000	(C:\Windows\System32\ucrtbase.dll)
+USER32.dll	A: 0x76D60000 - 0x76EFD000	(C:\Windows\System32\USER32.dll)
+win32u.dll	A: 0x74FF0000 - 0x75008000	(C:\Windows\System32\win32u.dll)
+GDI32.dll	A: 0x76870000 - 0x76893000	(C:\Windows\System32\GDI32.dll)
+gdi32full.dll	A: 0x74E70000 - 0x74F57000	(C:\Windows\System32\gdi32full.dll)
+WINMM.dll	A: 0x6BDE0000 - 0x6BE08000	(C:\Windows\SYSTEM32\WINMM.dll)
+WSOCK32.dll	A: 0x64570000 - 0x64578000	(C:\Windows\SYSTEM32\WSOCK32.dll)
+msvcrt.dll	A: 0x76C40000 - 0x76CFF000	(C:\Windows\System32\msvcrt.dll)
+WS2_32.dll	A: 0x76F00000 - 0x76F63000	(C:\Windows\System32\WS2_32.dll)
+RPCRT4.dll	A: 0x76980000 - 0x76A39000	(C:\Windows\System32\RPCRT4.dll)
+IMM32.DLL	A: 0x75B80000 - 0x75BA5000	(C:\Windows\System32\IMM32.DLL)
+sscanf.DLL	A: 0x5D100000 - 0x5D12A000	(C:\Users\Eldin\Desktop\Kopija extreme\plugins\sscanf.DLL)
+MSVCP140.dll	A: 0x5C670000 - 0x5C706000	(C:\Windows\SYSTEM32\MSVCP140.dll)
+VCRUNTIME140.dll	A: 0x5CDE0000 - 0x5CDFD000	(C:\Windows\SYSTEM32\VCRUNTIME140.dll)
+streamer.dll	A: 0x5CD70000 - 0x5CDD6000	(C:\Users\Eldin\Desktop\Kopija extreme\plugins\streamer.dll)
+mswsock.dll	A: 0x742A0000 - 0x742F2000	(C:\Windows\system32\mswsock.dll)
+napinsp.dll	A: 0x74360000 - 0x74371000	(C:\Windows\system32\napinsp.dll)
+sechost.dll	A: 0x76300000 - 0x76377000	(C:\Windows\System32\sechost.dll)
+bcrypt.dll	A: 0x76F70000 - 0x76F89000	(C:\Windows\System32\bcrypt.dll)
+pnrpnsp.dll	A: 0x74340000 - 0x74356000	(C:\Windows\system32\pnrpnsp.dll)
+wshbth.dll	A: 0x74320000 - 0x74336000	(C:\Windows\system32\wshbth.dll)
+NLAapi.dll	A: 0x74300000 - 0x74316000	(C:\Windows\system32\NLAapi.dll)
+IPHLPAPI.DLL	A: 0x74410000 - 0x74442000	(C:\Windows\SYSTEM32\IPHLPAPI.DLL)
+DNSAPI.dll	A: 0x74210000 - 0x742A0000	(C:\Windows\SYSTEM32\DNSAPI.dll)
+NSI.dll	A: 0x75AB0000 - 0x75AB7000	(C:\Windows\System32\NSI.dll)
+winrnr.dll	A: 0x74200000 - 0x7420E000	(C:\Windows\System32\winrnr.dll)
+rasadhlp.dll	A: 0x741F0000 - 0x741F8000	(C:\Windows\System32\rasadhlp.dll)
+
+--------------------------
+SA-MP Server: 0.3.7-R2
+
+Exception At Address: 0x0049939B Module: (samp-server.exe)
+
+Registers:
+EAX: 0x0019F304	EBX: 0x03700578	ECX: 0x00000000	EDX: 0x004056C0
+ESI: 0x00000000	EDI: 0x024DA628	EBP: 0x0019F314	ESP: 0x0019F2EC
+EFLAGS: 0x00010286
+
+Stack:
++0000: 0x024DA628   0x024DA628   0x03700578   0xFFFFFFFF
++0010: 0x0019F2EC   0x0019ED2C   0x0019FB24   0x0049D208
++0020: 0x004BA1B8   0xFFFFFFFF   0x037133D0   0x004056CD
++0030: 0x00000000   0x004010B6   0x024DA628   0x0389E148
++0040: 0x0374F7A0   0x00402B63   0x024DA628   0x00000011
++0050: 0x0019F354   0x0389E148   0x0019F3A0   0x024DA628
++0060: 0x0000003A   0x00000002   0x00000000   0x0014E9A4
++0070: 0x0014E9A8   0x0014EFD0   0x0010F148   0x0014E9B4
++0080: 0x0010F14C   0x03700578   0x0374F7A0   0x00000000
++0090: 0x036FF020   0x0004F228   0x5CDAF428   0x024DA628
++00A0: 0x0019F80C   0x0000003A   0x0389E77C   0x00000001
++00B0: 0x024DA628   0x0019F81C   0x004746BE   0x00000002
++00C0: 0x0019F80C   0x0000003A   0x66617254   0x20616B69
++00D0: 0x6F726541   0x6D6F7264   0x00470020   0x00007369
++00E0: 0x5F646D63   0x6965726B   0x6C6A6172   0x6C656261
++00F0: 0x00474400   0x024DA628   0x024DA628   0x03700578
++0100: 0x0010F100   0x00000000   0x00000000   0x00000000
++0110: 0x00000000   0x00000000   0x00000000   0x00000000
++0120: 0x00000000   0x00000000   0x00000000   0x00000000
++0130: 0x00000000   0x00000000   0x00000000   0x00000000
+
+--------------------------
+
+Loaded Modules:
+samp-server.exe	A: 0x00400000 - 0x00519000	(C:\Users\Eldin\Desktop\Kopija extreme\samp-server.exe)
+ntdll.dll	A: 0x76FA0000 - 0x77144000	(C:\Windows\SYSTEM32\ntdll.dll)
+KERNEL32.DLL	A: 0x75BB0000 - 0x75CA0000	(C:\Windows\System32\KERNEL32.DLL)
+KERNELBASE.dll	A: 0x751D0000 - 0x75409000	(C:\Windows\System32\KERNELBASE.dll)
+SHELL32.dll	A: 0x754D0000 - 0x75AAB000	(C:\Windows\System32\SHELL32.dll)
+msvcp_win.dll	A: 0x76AD0000 - 0x76B4B000	(C:\Windows\System32\msvcp_win.dll)
+ucrtbase.dll	A: 0x761E0000 - 0x76300000	(C:\Windows\System32\ucrtbase.dll)
+USER32.dll	A: 0x76D60000 - 0x76EFD000	(C:\Windows\System32\USER32.dll)
+win32u.dll	A: 0x74FF0000 - 0x75008000	(C:\Windows\System32\win32u.dll)
+GDI32.dll	A: 0x76870000 - 0x76893000	(C:\Windows\System32\GDI32.dll)
+gdi32full.dll	A: 0x74E70000 - 0x74F57000	(C:\Windows\System32\gdi32full.dll)
+WSOCK32.dll	A: 0x64570000 - 0x64578000	(C:\Windows\SYSTEM32\WSOCK32.dll)
+WINMM.dll	A: 0x6BDE0000 - 0x6BE08000	(C:\Windows\SYSTEM32\WINMM.dll)
+msvcrt.dll	A: 0x76C40000 - 0x76CFF000	(C:\Windows\System32\msvcrt.dll)
+WS2_32.dll	A: 0x76F00000 - 0x76F63000	(C:\Windows\System32\WS2_32.dll)
+RPCRT4.dll	A: 0x76980000 - 0x76A39000	(C:\Windows\System32\RPCRT4.dll)
+IMM32.DLL	A: 0x75B80000 - 0x75BA5000	(C:\Windows\System32\IMM32.DLL)
+sscanf.DLL	A: 0x5D100000 - 0x5D12A000	(C:\Users\Eldin\Desktop\Kopija extreme\plugins\sscanf.DLL)
+VCRUNTIME140.dll	A: 0x5CDE0000 - 0x5CDFD000	(C:\Windows\SYSTEM32\VCRUNTIME140.dll)
+MSVCP140.dll	A: 0x5C670000 - 0x5C706000	(C:\Windows\SYSTEM32\MSVCP140.dll)
+streamer.dll	A: 0x5CD70000 - 0x5CDD6000	(C:\Users\Eldin\Desktop\Kopija extreme\plugins\streamer.dll)
+mswsock.dll	A: 0x742A0000 - 0x742F2000	(C:\Windows\system32\mswsock.dll)
+napinsp.dll	A: 0x74360000 - 0x74371000	(C:\Windows\system32\napinsp.dll)
+sechost.dll	A: 0x76300000 - 0x76377000	(C:\Windows\System32\sechost.dll)
+bcrypt.dll	A: 0x76F70000 - 0x76F89000	(C:\Windows\System32\bcrypt.dll)
+pnrpnsp.dll	A: 0x74340000 - 0x74356000	(C:\Windows\system32\pnrpnsp.dll)
+wshbth.dll	A: 0x74320000 - 0x74336000	(C:\Windows\system32\wshbth.dll)
+NLAapi.dll	A: 0x74300000 - 0x74316000	(C:\Windows\system32\NLAapi.dll)
+IPHLPAPI.DLL	A: 0x74410000 - 0x74442000	(C:\Windows\SYSTEM32\IPHLPAPI.DLL)
+DNSAPI.dll	A: 0x74210000 - 0x742A0000	(C:\Windows\SYSTEM32\DNSAPI.dll)
+NSI.dll	A: 0x75AB0000 - 0x75AB7000	(C:\Windows\System32\NSI.dll)
+winrnr.dll	A: 0x74200000 - 0x7420E000	(C:\Windows\System32\winrnr.dll)
+rasadhlp.dll	A: 0x741F0000 - 0x741F8000	(C:\Windows\System32\rasadhlp.dll)
+
+--------------------------
+SA-MP Server: 0.3.7-R2
+
+Exception At Address: 0x0049939B Module: (samp-server.exe)
+
+Registers:
+EAX: 0x0019F2F0	EBX: 0x036CE5D4	ECX: 0x00000000	EDX: 0x004056C0
+ESI: 0x00000000	EDI: 0x0289A628	EBP: 0x0019F300	ESP: 0x0019F2D8
+EFLAGS: 0x00010286
+
+Stack:
++0000: 0x0289A628   0x0289A628   0x036CE5D4   0xFFFFFFFF
++0010: 0x0019F2D8   0x0019ED1C   0x0019FB0C   0x0049D208
++0020: 0x004BA1B8   0xFFFFFFFF   0x036E142C   0x004056CD
++0030: 0x00000000   0x004010B6   0x0289A628   0x0387D824
++0040: 0x03720560   0x00402B63   0x0289A628   0x00000011
++0050: 0x0019F340   0x0387D824   0x0019F38C   0x0289A628
++0060: 0x0000003A   0x00000002   0x00000000   0x0015D2C0
++0070: 0x0015D2C4   0x0015D410   0x0011D628   0x0015D2D0
++0080: 0x0011D62C   0x036CE5D4   0x03720560   0x00000000
++0090: 0x036CD020   0x00051F8C   0x5CDAF428   0x0289A628
++00A0: 0x0019F80C   0x0000003A   0x0387D97C   0x00000001
++00B0: 0x0289A628   0x0019F81C   0x004746BE   0x00000002
++00C0: 0x0019F80C   0x0000003A   0x6163754B   0x2065746A
++00D0: 0x6C61732F   0x20726574   0x76206164   0x74696469
++00E0: 0x6F702065   0x766F6C73   0x76732065   0x00470065
++00F0: 0x00007369   0x5F646D63   0x6965726B   0x6C6A6172
++0100: 0x6C656261   0x00474400   0x0289A628   0x03720560
++0110: 0x0011D4F8   0x0011D590   0x00000000   0x00000000
++0120: 0x00000000   0x00000000   0x00000000   0x00000000
++0130: 0x00000000   0x00000000   0x00000000   0x00000000
+
+--------------------------
+
+Loaded Modules:
+samp-server.exe	A: 0x00400000 - 0x00519000	(C:\Users\Eldin\Desktop\Kopija extreme\samp-server.exe)
+ntdll.dll	A: 0x76FA0000 - 0x77144000	(C:\Windows\SYSTEM32\ntdll.dll)
+KERNEL32.DLL	A: 0x75BB0000 - 0x75CA0000	(C:\Windows\System32\KERNEL32.DLL)
+KERNELBASE.dll	A: 0x751D0000 - 0x75409000	(C:\Windows\System32\KERNELBASE.dll)
+SHELL32.dll	A: 0x754D0000 - 0x75AAB000	(C:\Windows\System32\SHELL32.dll)
+msvcp_win.dll	A: 0x76AD0000 - 0x76B4B000	(C:\Windows\System32\msvcp_win.dll)
+ucrtbase.dll	A: 0x761E0000 - 0x76300000	(C:\Windows\System32\ucrtbase.dll)
+USER32.dll	A: 0x76D60000 - 0x76EFD000	(C:\Windows\System32\USER32.dll)
+win32u.dll	A: 0x74FF0000 - 0x75008000	(C:\Windows\System32\win32u.dll)
+GDI32.dll	A: 0x76870000 - 0x76893000	(C:\Windows\System32\GDI32.dll)
+gdi32full.dll	A: 0x74E70000 - 0x74F57000	(C:\Windows\System32\gdi32full.dll)
+WSOCK32.dll	A: 0x64570000 - 0x64578000	(C:\Windows\SYSTEM32\WSOCK32.dll)
+WINMM.dll	A: 0x6BDE0000 - 0x6BE08000	(C:\Windows\SYSTEM32\WINMM.dll)
+msvcrt.dll	A: 0x76C40000 - 0x76CFF000	(C:\Windows\System32\msvcrt.dll)
+ws2_32.DLL	A: 0x76F00000 - 0x76F63000	(C:\Windows\System32\ws2_32.DLL)
+RPCRT4.dll	A: 0x76980000 - 0x76A39000	(C:\Windows\System32\RPCRT4.dll)
+IMM32.DLL	A: 0x75B80000 - 0x75BA5000	(C:\Windows\System32\IMM32.DLL)
+sscanf.DLL	A: 0x5D100000 - 0x5D12A000	(C:\Users\Eldin\Desktop\Kopija extreme\plugins\sscanf.DLL)
+VCRUNTIME140.dll	A: 0x5CDE0000 - 0x5CDFD000	(C:\Windows\SYSTEM32\VCRUNTIME140.dll)
+MSVCP140.dll	A: 0x5C670000 - 0x5C706000	(C:\Windows\SYSTEM32\MSVCP140.dll)
+streamer.dll	A: 0x5CD70000 - 0x5CDD6000	(C:\Users\Eldin\Desktop\Kopija extreme\plugins\streamer.dll)
+mswsock.dll	A: 0x742A0000 - 0x742F2000	(C:\Windows\system32\mswsock.dll)
+napinsp.dll	A: 0x74360000 - 0x74371000	(C:\Windows\system32\napinsp.dll)
+sechost.dll	A: 0x76300000 - 0x76377000	(C:\Windows\System32\sechost.dll)
+bcrypt.dll	A: 0x76F70000 - 0x76F89000	(C:\Windows\System32\bcrypt.dll)
+pnrpnsp.dll	A: 0x74340000 - 0x74356000	(C:\Windows\system32\pnrpnsp.dll)
+wshbth.dll	A: 0x74320000 - 0x74336000	(C:\Windows\system32\wshbth.dll)
+NLAapi.dll	A: 0x74300000 - 0x74316000	(C:\Windows\system32\NLAapi.dll)
+IPHLPAPI.DLL	A: 0x74410000 - 0x74442000	(C:\Windows\SYSTEM32\IPHLPAPI.DLL)
+DNSAPI.dll	A: 0x74210000 - 0x742A0000	(C:\Windows\SYSTEM32\DNSAPI.dll)
+NSI.dll	A: 0x75AB0000 - 0x75AB7000	(C:\Windows\System32\NSI.dll)
+winrnr.dll	A: 0x74200000 - 0x7420E000	(C:\Windows\System32\winrnr.dll)
+rasadhlp.dll	A: 0x741F0000 - 0x741F8000	(C:\Windows\System32\rasadhlp.dll)
+
+--------------------------
+SA-MP Server: 0.3.7-R2
+
+Exception At Address: 0x0049939B Module: (samp-server.exe)
+
+Registers:
+EAX: 0x0019F2F0	EBX: 0x0379D5D4	ECX: 0x00000000	EDX: 0x004056C0
+ESI: 0x00000000	EDI: 0x0295A628	EBP: 0x0019F300	ESP: 0x0019F2D8
+EFLAGS: 0x00010286
+
+Stack:
++0000: 0x0295A628   0x0295A628   0x0379D5D4   0xFFFFFFFF
++0010: 0x0019F2D8   0x0019ED1C   0x0019FB0C   0x0049D208
++0020: 0x004BA1B8   0xFFFFFFFF   0x037B042C   0x004056CD
++0030: 0x00000000   0x004010B6   0x0295A628   0x0394C824
++0040: 0x037EF560   0x00402B63   0x0295A628   0x00000011
++0050: 0x0019F340   0x0394C824   0x0019F38C   0x0295A628
++0060: 0x0000003A   0x00000002   0x00000000   0x0015D2C0
++0070: 0x0015D2C4   0x0015D410   0x0011D628   0x0015D2D0
++0080: 0x0011D62C   0x0379D5D4   0x037EF560   0x00000000
++0090: 0x0379C020   0x00051F8C   0x5CDAF428   0x0295A628
++00A0: 0x0019F80C   0x0000003A   0x0394C97C   0x00000001
++00B0: 0x0295A628   0x0019F81C   0x004746BE   0x00000002
++00C0: 0x0019F80C   0x0000003A   0x6163754B   0x2065746A
++00D0: 0x6C61732F   0x20726574   0x76206164   0x74696469
++00E0: 0x6F702065   0x766F6C73   0x76732065   0x00470065
++00F0: 0x00007369   0x5F646D63   0x6965726B   0x6C6A6172
++0100: 0x6C656261   0x00474400   0x0295A628   0x037EF560
++0110: 0x0011D4F8   0x0011D590   0x00000000   0x00000000
++0120: 0x00000000   0x00000000   0x00000000   0x00000000
++0130: 0x00000000   0x00000000   0x00000000   0x00000000
+
+--------------------------
+
+Loaded Modules:
+samp-server.exe	A: 0x00400000 - 0x00519000	(C:\Users\Eldin\Desktop\Kopija extreme\samp-server.exe)
+ntdll.dll	A: 0x76FA0000 - 0x77144000	(C:\Windows\SYSTEM32\ntdll.dll)
+KERNEL32.DLL	A: 0x75BB0000 - 0x75CA0000	(C:\Windows\System32\KERNEL32.DLL)
+KERNELBASE.dll	A: 0x751D0000 - 0x75409000	(C:\Windows\System32\KERNELBASE.dll)
+SHELL32.dll	A: 0x754D0000 - 0x75AAB000	(C:\Windows\System32\SHELL32.dll)
+msvcp_win.dll	A: 0x76AD0000 - 0x76B4B000	(C:\Windows\System32\msvcp_win.dll)
+ucrtbase.dll	A: 0x761E0000 - 0x76300000	(C:\Windows\System32\ucrtbase.dll)
+USER32.dll	A: 0x76D60000 - 0x76EFD000	(C:\Windows\System32\USER32.dll)
+win32u.dll	A: 0x74FF0000 - 0x75008000	(C:\Windows\System32\win32u.dll)
+GDI32.dll	A: 0x76870000 - 0x76893000	(C:\Windows\System32\GDI32.dll)
+gdi32full.dll	A: 0x74E70000 - 0x74F57000	(C:\Windows\System32\gdi32full.dll)
+WINMM.dll	A: 0x6BDE0000 - 0x6BE08000	(C:\Windows\SYSTEM32\WINMM.dll)
+WSOCK32.dll	A: 0x64570000 - 0x64578000	(C:\Windows\SYSTEM32\WSOCK32.dll)
+msvcrt.dll	A: 0x76C40000 - 0x76CFF000	(C:\Windows\System32\msvcrt.dll)
+ws2_32.DLL	A: 0x76F00000 - 0x76F63000	(C:\Windows\System32\ws2_32.DLL)
+RPCRT4.dll	A: 0x76980000 - 0x76A39000	(C:\Windows\System32\RPCRT4.dll)
+IMM32.DLL	A: 0x75B80000 - 0x75BA5000	(C:\Windows\System32\IMM32.DLL)
+sscanf.DLL	A: 0x5D100000 - 0x5D12A000	(C:\Users\Eldin\Desktop\Kopija extreme\plugins\sscanf.DLL)
+VCRUNTIME140.dll	A: 0x5CDE0000 - 0x5CDFD000	(C:\Windows\SYSTEM32\VCRUNTIME140.dll)
+MSVCP140.dll	A: 0x5C670000 - 0x5C706000	(C:\Windows\SYSTEM32\MSVCP140.dll)
+streamer.dll	A: 0x5CD70000 - 0x5CDD6000	(C:\Users\Eldin\Desktop\Kopija extreme\plugins\streamer.dll)
+mswsock.dll	A: 0x742A0000 - 0x742F2000	(C:\Windows\system32\mswsock.dll)
+napinsp.dll	A: 0x74360000 - 0x74371000	(C:\Windows\system32\napinsp.dll)
+sechost.dll	A: 0x76300000 - 0x76377000	(C:\Windows\System32\sechost.dll)
+bcrypt.dll	A: 0x76F70000 - 0x76F89000	(C:\Windows\System32\bcrypt.dll)
+pnrpnsp.dll	A: 0x74340000 - 0x74356000	(C:\Windows\system32\pnrpnsp.dll)
+wshbth.dll	A: 0x74320000 - 0x74336000	(C:\Windows\system32\wshbth.dll)
+NLAapi.dll	A: 0x74300000 - 0x74316000	(C:\Windows\system32\NLAapi.dll)
+IPHLPAPI.DLL	A: 0x74410000 - 0x74442000	(C:\Windows\SYSTEM32\IPHLPAPI.DLL)
+DNSAPI.dll	A: 0x74210000 - 0x742A0000	(C:\Windows\SYSTEM32\DNSAPI.dll)
+NSI.dll	A: 0x75AB0000 - 0x75AB7000	(C:\Windows\System32\NSI.dll)
+winrnr.dll	A: 0x74200000 - 0x7420E000	(C:\Windows\System32\winrnr.dll)
+rasadhlp.dll	A: 0x741F0000 - 0x741F8000	(C:\Windows\System32\rasadhlp.dll)
+
+--------------------------
+SA-MP Server: 0.3.7-R2
+
+Exception At Address: 0x0049939B Module: (samp-server.exe)
+
+Registers:
+EAX: 0x0019F2D8	EBX: 0x036915D4	ECX: 0x00000000	EDX: 0x004056C0
+ESI: 0x00000000	EDI: 0x0281A628	EBP: 0x0019F2E8	ESP: 0x0019F2C0
+EFLAGS: 0x00010286
+
+Stack:
++0000: 0x0281A628   0x0281A628   0x036915D4   0xFFFFFFFF
++0010: 0x0019F2C0   0x0019ED04   0x0019FB0C   0x0049D208
++0020: 0x004BA1B8   0xFFFFFFFF   0x036A442C   0x004056CD
++0030: 0x00000000   0x004010B6   0x0281A628   0x03840824
++0040: 0x036E3560   0x00402B63   0x0281A628   0x00000011
++0050: 0x0019F328   0x03840824   0x0019F374   0x0281A628
++0060: 0x0000003A   0x00000002   0x00000000   0x0015D2C0
++0070: 0x0015D2C4   0x0015D410   0x0011D628   0x0015D2D0
++0080: 0x0011D62C   0x036915D4   0x036E3560   0x00000000
++0090: 0x03690020   0x00051F8C   0x5CDAF428   0x0281A628
++00A0: 0x0019F7F4   0x0000003A   0x0384097C   0x00000001
++00B0: 0x0281A628   0x0019F804   0x004746BE   0x00000002
++00C0: 0x0019F7F4   0x0000003A   0x6163754B   0x2065746A
++00D0: 0x6C61732F   0x20726574   0x76206164   0x74696469
++00E0: 0x6F702065   0x766F6C73   0x76732065   0x00470065
++00F0: 0x00007369   0x5F646D63   0x6965726B   0x6C6A6172
++0100: 0x6C656261   0x00474400   0x0281A628   0x0281A628
++0110: 0x036915D4   0x0011D590   0x00000000   0x00000000
++0120: 0x00000000   0x00000000   0x00000000   0x00000000
++0130: 0x00000000   0x00000000   0x00000000   0x00000000
+
+--------------------------
+
+Loaded Modules:
+samp-server.exe	A: 0x00400000 - 0x00519000	(C:\Users\Eldin\Desktop\Kopija extreme\samp-server.exe)
+ntdll.dll	A: 0x76FA0000 - 0x77144000	(C:\Windows\SYSTEM32\ntdll.dll)
+KERNEL32.DLL	A: 0x75BB0000 - 0x75CA0000	(C:\Windows\System32\KERNEL32.DLL)
+KERNELBASE.dll	A: 0x751D0000 - 0x75409000	(C:\Windows\System32\KERNELBASE.dll)
+SHELL32.dll	A: 0x754D0000 - 0x75AAB000	(C:\Windows\System32\SHELL32.dll)
+msvcp_win.dll	A: 0x76AD0000 - 0x76B4B000	(C:\Windows\System32\msvcp_win.dll)
+ucrtbase.dll	A: 0x761E0000 - 0x76300000	(C:\Windows\System32\ucrtbase.dll)
+USER32.dll	A: 0x76D60000 - 0x76EFD000	(C:\Windows\System32\USER32.dll)
+win32u.dll	A: 0x74FF0000 - 0x75008000	(C:\Windows\System32\win32u.dll)
+GDI32.dll	A: 0x76870000 - 0x76893000	(C:\Windows\System32\GDI32.dll)
+gdi32full.dll	A: 0x74E70000 - 0x74F57000	(C:\Windows\System32\gdi32full.dll)
+WINMM.dll	A: 0x6BDE0000 - 0x6BE08000	(C:\Windows\SYSTEM32\WINMM.dll)
+WSOCK32.dll	A: 0x64570000 - 0x64578000	(C:\Windows\SYSTEM32\WSOCK32.dll)
+msvcrt.dll	A: 0x76C40000 - 0x76CFF000	(C:\Windows\System32\msvcrt.dll)
+ws2_32.DLL	A: 0x76F00000 - 0x76F63000	(C:\Windows\System32\ws2_32.DLL)
+RPCRT4.dll	A: 0x76980000 - 0x76A39000	(C:\Windows\System32\RPCRT4.dll)
+IMM32.DLL	A: 0x75B80000 - 0x75BA5000	(C:\Windows\System32\IMM32.DLL)
+sscanf.DLL	A: 0x5D100000 - 0x5D12A000	(C:\Users\Eldin\Desktop\Kopija extreme\plugins\sscanf.DLL)
+VCRUNTIME140.dll	A: 0x5CDE0000 - 0x5CDFD000	(C:\Windows\SYSTEM32\VCRUNTIME140.dll)
+MSVCP140.dll	A: 0x5C670000 - 0x5C706000	(C:\Windows\SYSTEM32\MSVCP140.dll)
+streamer.dll	A: 0x5CD70000 - 0x5CDD6000	(C:\Users\Eldin\Desktop\Kopija extreme\plugins\streamer.dll)
+mswsock.dll	A: 0x742A0000 - 0x742F2000	(C:\Windows\system32\mswsock.dll)
+napinsp.dll	A: 0x74360000 - 0x74371000	(C:\Windows\system32\napinsp.dll)
+sechost.dll	A: 0x76300000 - 0x76377000	(C:\Windows\System32\sechost.dll)
+bcrypt.dll	A: 0x76F70000 - 0x76F89000	(C:\Windows\System32\bcrypt.dll)
+pnrpnsp.dll	A: 0x74340000 - 0x74356000	(C:\Windows\system32\pnrpnsp.dll)
+wshbth.dll	A: 0x74320000 - 0x74336000	(C:\Windows\system32\wshbth.dll)
+NLAapi.dll	A: 0x74300000 - 0x74316000	(C:\Windows\system32\NLAapi.dll)
+IPHLPAPI.DLL	A: 0x74410000 - 0x74442000	(C:\Windows\SYSTEM32\IPHLPAPI.DLL)
+DNSAPI.dll	A: 0x74210000 - 0x742A0000	(C:\Windows\SYSTEM32\DNSAPI.dll)
+NSI.dll	A: 0x75AB0000 - 0x75AB7000	(C:\Windows\System32\NSI.dll)
+winrnr.dll	A: 0x74200000 - 0x7420E000	(C:\Windows\System32\winrnr.dll)
+rasadhlp.dll	A: 0x741F0000 - 0x741F8000	(C:\Windows\System32\rasadhlp.dll)
+
+--------------------------
+SA-MP Server: 0.3.7-R2
+
+Exception At Address: 0x0049939B Module: (samp-server.exe)
+
+Registers:
+EAX: 0x0019F318	EBX: 0x036CA5D4	ECX: 0x00000000	EDX: 0x004056C0
+ESI: 0x00000000	EDI: 0x0288A628	EBP: 0x0019F328	ESP: 0x0019F300
+EFLAGS: 0x00010286
+
+Stack:
++0000: 0x0288A628   0x0288A628   0x036CA5D4   0xFFFFFFFF
++0010: 0x0019F300   0x0019ED44   0x0019FB2C   0x0049D208
++0020: 0x004BA1B8   0xFFFFFFFF   0x036DD42C   0x004056CD
++0030: 0x00000000   0x004010B6   0x0288A628   0x038796E4
++0040: 0x0371C4A0   0x00402B63   0x0288A628   0x00000011
++0050: 0x0019F368   0x038796E4   0x0019F3B4   0x0288A628
++0060: 0x0000003A   0x00000002   0x00000000   0x0015D240
++0070: 0x0015D244   0x0015D390   0x0011D4A8   0x0015D250
++0080: 0x0011D4AC   0x036CA5D4   0x0371C4A0   0x00000000
++0090: 0x036C9020   0x00051ECC   0x5CDAF428   0x0288A628
++00A0: 0x0019F814   0x0000003A   0x0387983C   0x00000001
++00B0: 0x0288A628   0x0019F824   0x004746BE   0x00000002
++00C0: 0x0019F814   0x0000003A   0x696C6F56   0x0047006D
++00D0: 0x00007369   0x5F646D63   0x6965726B   0x6C6A6172
++00E0: 0x6C656261   0x00474400   0x0288A628   0x0288A628
++00F0: 0x036CA5D4   0x0011D490   0x00000000   0x00000000
++0100: 0x00000000   0x00000000   0x00000000   0x00000000
++0110: 0x00000000   0x00000000   0x00000000   0x00000000
++0120: 0x00000000   0x00000000   0x00000000   0x00000000
++0130: 0x00000000   0x00000000   0x00000000   0x00000000
+
+--------------------------
+
+Loaded Modules:
+samp-server.exe	A: 0x00400000 - 0x00519000	(C:\Users\Eldin\Desktop\Kopija extreme\samp-server.exe)
+ntdll.dll	A: 0x76FA0000 - 0x77144000	(C:\Windows\SYSTEM32\ntdll.dll)
+KERNEL32.DLL	A: 0x75BB0000 - 0x75CA0000	(C:\Windows\System32\KERNEL32.DLL)
+KERNELBASE.dll	A: 0x751D0000 - 0x75409000	(C:\Windows\System32\KERNELBASE.dll)
+SHELL32.dll	A: 0x754D0000 - 0x75AAB000	(C:\Windows\System32\SHELL32.dll)
+msvcp_win.dll	A: 0x76AD0000 - 0x76B4B000	(C:\Windows\System32\msvcp_win.dll)
+ucrtbase.dll	A: 0x761E0000 - 0x76300000	(C:\Windows\System32\ucrtbase.dll)
+USER32.dll	A: 0x76D60000 - 0x76EFD000	(C:\Windows\System32\USER32.dll)
+win32u.dll	A: 0x74FF0000 - 0x75008000	(C:\Windows\System32\win32u.dll)
+GDI32.dll	A: 0x76870000 - 0x76893000	(C:\Windows\System32\GDI32.dll)
+gdi32full.dll	A: 0x74E70000 - 0x74F57000	(C:\Windows\System32\gdi32full.dll)
+WSOCK32.dll	A: 0x64570000 - 0x64578000	(C:\Windows\SYSTEM32\WSOCK32.dll)
+WINMM.dll	A: 0x6BDE0000 - 0x6BE08000	(C:\Windows\SYSTEM32\WINMM.dll)
+msvcrt.dll	A: 0x76C40000 - 0x76CFF000	(C:\Windows\System32\msvcrt.dll)
+WS2_32.dll	A: 0x76F00000 - 0x76F63000	(C:\Windows\System32\WS2_32.dll)
+RPCRT4.dll	A: 0x76980000 - 0x76A39000	(C:\Windows\System32\RPCRT4.dll)
+IMM32.DLL	A: 0x75B80000 - 0x75BA5000	(C:\Windows\System32\IMM32.DLL)
+sscanf.DLL	A: 0x5D100000 - 0x5D12A000	(C:\Users\Eldin\Desktop\Kopija extreme\plugins\sscanf.DLL)
+VCRUNTIME140.dll	A: 0x5CDE0000 - 0x5CDFD000	(C:\Windows\SYSTEM32\VCRUNTIME140.dll)
+MSVCP140.dll	A: 0x5C670000 - 0x5C706000	(C:\Windows\SYSTEM32\MSVCP140.dll)
+streamer.dll	A: 0x5CD70000 - 0x5CDD6000	(C:\Users\Eldin\Desktop\Kopija extreme\plugins\streamer.dll)
+mswsock.dll	A: 0x742A0000 - 0x742F2000	(C:\Windows\system32\mswsock.dll)
+napinsp.dll	A: 0x74360000 - 0x74371000	(C:\Windows\system32\napinsp.dll)
+sechost.dll	A: 0x76300000 - 0x76377000	(C:\Windows\System32\sechost.dll)
+bcrypt.dll	A: 0x76F70000 - 0x76F89000	(C:\Windows\System32\bcrypt.dll)
+pnrpnsp.dll	A: 0x74340000 - 0x74356000	(C:\Windows\system32\pnrpnsp.dll)
+wshbth.dll	A: 0x74320000 - 0x74336000	(C:\Windows\system32\wshbth.dll)
+NLAapi.dll	A: 0x74300000 - 0x74316000	(C:\Windows\system32\NLAapi.dll)
+IPHLPAPI.DLL	A: 0x74410000 - 0x74442000	(C:\Windows\SYSTEM32\IPHLPAPI.DLL)
+DNSAPI.dll	A: 0x74210000 - 0x742A0000	(C:\Windows\SYSTEM32\DNSAPI.dll)
+NSI.dll	A: 0x75AB0000 - 0x75AB7000	(C:\Windows\System32\NSI.dll)
+winrnr.dll	A: 0x74200000 - 0x7420E000	(C:\Windows\System32\winrnr.dll)
+rasadhlp.dll	A: 0x741F0000 - 0x741F8000	(C:\Windows\System32\rasadhlp.dll)
+
+--------------------------
+SA-MP Server: 0.3.7-R2
+
+Exception At Address: 0x0049DC8D Module: (samp-server.exe)
+
+Registers:
+EAX: 0x52445A5B	EBX: 0x03C2706E	ECX: 0x00000036	EDX: 0x001AF8FD
+ESI: 0x001AF530	EDI: 0x001AFD29	EBP: 0x001AF57C	ESP: 0x001AF4F0
+EFLAGS: 0x00010246
+
+Stack:
++0000: 0x001AFCC8   0x001AF8C8   0x03C27098   0x00000000
++0010: 0x001AFA44   0x001AF5C8   0x000000FF   0x00000007
++0020: 0x00000000   0x001AF5C8   0x00000000   0x00000000
++0030: 0x00000000   0x00000000   0x00000000   0x001AF548
++0040: 0x00000036   0x00000000   0x000000FF   0xFFFFFFFF
++0050: 0x00000002   0x001AFA44   0x001AF700   0x00000052
++0060: 0x80000005   0x000000FF   0x0001001C   0x00000100
++0070: 0x7719F733   0x001AF584   0x771783B1   0x772468C0
++0080: 0x001AF708   0x00000200   0x001AF5B8   0x001AF5C8
++0090: 0x00000052   0x001AF6CC   0x771C381F   0x001AF708
++00A0: 0x00000200   0x001AF5B8   0x001AF5C8   0x00000052
++00B0: 0x7711B27C   0x00000001   0x771C382C   0x001AFA44
++00C0: 0x001AF700   0x001AFAB4   0x000000A4   0x00000001
++00D0: 0x000000AE   0x00000066   0x61636F4C   0x676E6974
++00E0: 0x70786520   0x2074726F   0x506E4F22   0x696C6275
++00F0: 0x6C614363   0x2022326C   0x20726F66   0x204C4C44
++0100: 0x6B6E5522   0x6E776F6E   0x61662022   0x64656C69
++0110: 0x74697720   0x74732068   0x73757461   0x7830203A
++0120: 0x30303063   0x39333130   0x00000A2E   0x00000000
++0130: 0x00000000   0x00000000   0x00000000   0x00000000
+
+--------------------------
+
+Loaded Modules:
+samp-server.exe	A: 0x00400000 - 0x00519000	(C:\Users\forre\Documents\ChatGPT\Samp server\Balkan Revolution RP - Novi Server\samp-server.exe)
+ntdll.dll	A: 0x77110000 - 0x772CF000	(C:\WINDOWS\SYSTEM32\ntdll.dll)
+KERNEL32.DLL	A: 0x74EE0000 - 0x74FD0000	(C:\WINDOWS\System32\KERNEL32.DLL)
+KERNELBASE.dll	A: 0x75290000 - 0x7556A000	(C:\WINDOWS\System32\KERNELBASE.dll)
+SHELL32.dll	A: 0x76A90000 - 0x770F5000	(C:\WINDOWS\System32\SHELL32.dll)
+msvcp_win.dll	A: 0x74FE0000 - 0x75065000	(C:\WINDOWS\System32\msvcp_win.dll)
+ucrtbase.dll	A: 0x75870000 - 0x75980000	(C:\WINDOWS\System32\ucrtbase.dll)
+USER32.dll	A: 0x75070000 - 0x75257000	(C:\WINDOWS\System32\USER32.dll)
+win32u.dll	A: 0x75260000 - 0x7527C000	(C:\WINDOWS\System32\win32u.dll)
+GDI32.dll	A: 0x74BD0000 - 0x74BF2000	(C:\WINDOWS\System32\GDI32.dll)
+gdi32full.dll	A: 0x74C00000 - 0x74CEA000	(C:\WINDOWS\System32\gdi32full.dll)
+WSOCK32.dll	A: 0x6DF30000 - 0x6DF38000	(C:\WINDOWS\SYSTEM32\WSOCK32.dll)
+WINMM.dll	A: 0x6DEF0000 - 0x6DF23000	(C:\WINDOWS\SYSTEM32\WINMM.dll)
+msvcrt.dll	A: 0x75BD0000 - 0x75C97000	(C:\WINDOWS\System32\msvcrt.dll)
+ws2_32.DLL	A: 0x76330000 - 0x7639A000	(C:\WINDOWS\System32\ws2_32.DLL)
+RPCRT4.dll	A: 0x75580000 - 0x7563C000	(C:\WINDOWS\System32\RPCRT4.dll)
+IMM32.DLL	A: 0x76300000 - 0x76325000	(C:\WINDOWS\System32\IMM32.DLL)
+sscanf.DLL	A: 0x60190000 - 0x601BA000	(C:\Users\forre\Documents\ChatGPT\Samp server\Balkan Revolution RP - Novi Server\plugins\sscanf.DLL)
+VCRUNTIME140.dll	A: 0x6DF40000 - 0x6DF5D000	(C:\WINDOWS\SYSTEM32\VCRUNTIME140.dll)
+MSVCP140.dll	A: 0x5E180000 - 0x5E216000	(C:\WINDOWS\SYSTEM32\MSVCP140.dll)
+streamer.dll	A: 0x60120000 - 0x60186000	(C:\Users\forre\Documents\ChatGPT\Samp server\Balkan Revolution RP - Novi Server\plugins\streamer.dll)
+mswsock.dll	A: 0x70270000 - 0x702C4000	(C:\WINDOWS\system32\mswsock.dll)
+napinsp.dll	A: 0x6EE60000 - 0x6EE72000	(C:\WINDOWS\system32\napinsp.dll)
+sechost.dll	A: 0x76530000 - 0x765B5000	(C:\WINDOWS\System32\sechost.dll)
+DNSAPI.dll	A: 0x6FF00000 - 0x7000D000	(C:\WINDOWS\SYSTEM32\DNSAPI.dll)
+DSPARSE.dll	A: 0x6FEF0000 - 0x6FEFA000	(C:\WINDOWS\SYSTEM32\DSPARSE.dll)
+IPHLPAPI.DLL	A: 0x6FEA0000 - 0x6FEC6000	(C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL)
+NSI.dll	A: 0x75B10000 - 0x75B17000	(C:\WINDOWS\System32\NSI.dll)
+winrnr.dll	A: 0x6EE40000 - 0x6EE4E000	(C:\WINDOWS\System32\winrnr.dll)
+wshbth.dll	A: 0x6EE20000 - 0x6EE32000	(C:\WINDOWS\system32\wshbth.dll)
+rasadhlp.dll	A: 0x6FE90000 - 0x6FE98000	(C:\Windows\System32\rasadhlp.dll)
+
+--------------------------
+SA-MP Server: 0.3.7-R2
+
+Exception At Address: 0x70025903 Module: (MSVCP140.dll)
+
+Registers:
+EAX: 0x00000000	EBX: 0x007AB430	ECX: 0x03DEF984	EDX: 0x00000000
+ESI: 0x00000000	EDI: 0x00000000	EBP: 0x03DEF8E8	ESP: 0x03DEF8C4
+EFLAGS: 0x00010286
+
+Stack:
++0000: 0x00000000   0x007AB430   0x03DEF984   0x00000000
++0010: 0x5F22A5B4   0x00000002   0x03DEF920   0x5F04A453
++0020: 0x21AF2DA2   0x03DEF8F8   0x70025BDD   0x007AB430
++0030: 0x00000000   0x03DEF92C   0x5F04AC9D   0x007AB430
++0040: 0xAC0035BA   0x03DEFD0C   0x00000000   0x00000001
++0050: 0x00000000   0x007AB430   0x03DEF984   0x03DEF970
++0060: 0x5F22ACB5   0xFFFFFFFF   0x03DEF97C   0x5F045376
++0070: 0x03DEFD0C   0xAC0035EA   0x0078FF58   0x0078FF4C
++0080: 0xFFFFFFFF   0x5F04FC92   0x00000000   0x00000000
++0090: 0x00000000   0x00000000   0x5EF8A02D   0x00000000
++00A0: 0x00000000   0x03DEFD0C   0x00000001   0x03DEF9B4
++00B0: 0x5F21960F   0x00000001   0x03DEF9C0   0x5F045FEF
++00C0: 0x007AB424   0x007AB418   0x00000004   0xAC003556
++00D0: 0x0078FF58   0x0078FF4C   0x5F04FC92   0x00000000
++00E0: 0x00000000   0x00000000   0x5EF87C35   0xAC00355A
++00F0: 0x03DEFA28   0x5F21A10D   0x00000001   0x03DEFA34
++0100: 0x5F04FC92   0x03DEFD0C   0x007AB424   0x007AB418
++0110: 0x00000000   0x00000000   0x00000000   0x00000000
++0120: 0x00000000   0x5F22B000   0x00000001   0x5F04FC92
++0130: 0x00000000   0x00000000   0x00000000   0x03DE0000
+
+--------------------------
+
+Loaded Modules:
+samp-server.exe	A: 0x00400000 - 0x00519000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\samp-server.exe)
+ntdll.dll	A: 0x77CA0000 - 0x77E5F000	(C:\WINDOWS\SYSTEM32\ntdll.dll)
+KERNEL32.DLL	A: 0x766D0000 - 0x767C0000	(C:\WINDOWS\System32\KERNEL32.DLL)
+KERNELBASE.dll	A: 0x76010000 - 0x762EA000	(C:\WINDOWS\System32\KERNELBASE.dll)
+apphelp.dll	A: 0x756C0000 - 0x7576F000	(C:\WINDOWS\SYSTEM32\apphelp.dll)
+SHELL32.dll	A: 0x77620000 - 0x77C85000	(C:\WINDOWS\System32\SHELL32.dll)
+msvcp_win.dll	A: 0x76F50000 - 0x76FD5000	(C:\WINDOWS\System32\msvcp_win.dll)
+ucrtbase.dll	A: 0x76FE0000 - 0x770F0000	(C:\WINDOWS\System32\ucrtbase.dll)
+USER32.dll	A: 0x75A20000 - 0x75C07000	(C:\WINDOWS\System32\USER32.dll)
+win32u.dll	A: 0x76F30000 - 0x76F4C000	(C:\WINDOWS\System32\win32u.dll)
+GDI32.dll	A: 0x76F00000 - 0x76F22000	(C:\WINDOWS\System32\GDI32.dll)
+gdi32full.dll	A: 0x768F0000 - 0x769DA000	(C:\WINDOWS\System32\gdi32full.dll)
+WINMM.dll	A: 0x71D70000 - 0x71DA3000	(C:\WINDOWS\SYSTEM32\WINMM.dll)
+WSOCK32.dll	A: 0x6F270000 - 0x6F278000	(C:\WINDOWS\SYSTEM32\WSOCK32.dll)
+msvcrt.dll	A: 0x765E0000 - 0x766A7000	(C:\WINDOWS\System32\msvcrt.dll)
+ws2_32.DLL	A: 0x76570000 - 0x765DA000	(C:\WINDOWS\System32\ws2_32.DLL)
+RPCRT4.dll	A: 0x769E0000 - 0x76A9C000	(C:\WINDOWS\System32\RPCRT4.dll)
+IMM32.DLL	A: 0x77590000 - 0x775B5000	(C:\WINDOWS\System32\IMM32.DLL)
+sscanf.DLL	A: 0x5F3A0000 - 0x5F3CA000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\sscanf.DLL)
+VCRUNTIME140.dll	A: 0x70080000 - 0x70095000	(C:\WINDOWS\SYSTEM32\VCRUNTIME140.dll)
+MSVCP140.dll	A: 0x70010000 - 0x7007D000	(C:\WINDOWS\SYSTEM32\MSVCP140.dll)
+streamer.dll	A: 0x5F330000 - 0x5F396000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\streamer.dll)
+requests.dll	A: 0x5EF30000 - 0x5F32F000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\requests.dll)
+ADVAPI32.dll	A: 0x77260000 - 0x772E5000	(C:\WINDOWS\System32\ADVAPI32.dll)
+sechost.dll	A: 0x77500000 - 0x77585000	(C:\WINDOWS\System32\sechost.dll)
+CRYPT32.dll	A: 0x75C10000 - 0x75D1E000	(C:\WINDOWS\System32\CRYPT32.dll)
+WINHTTP.dll	A: 0x72D00000 - 0x72DE6000	(C:\WINDOWS\SYSTEM32\WINHTTP.dll)
+bcrypt.dll	A: 0x738D0000 - 0x738EC000	(C:\WINDOWS\SYSTEM32\bcrypt.dll)
+CONCRT140.dll	A: 0x5EEF0000 - 0x5EF2E000	(C:\WINDOWS\SYSTEM32\CONCRT140.dll)
+DPAPI.DLL	A: 0x711E0000 - 0x711E9000	(C:\WINDOWS\SYSTEM32\DPAPI.DLL)
+mswsock.dll	A: 0x71E60000 - 0x71EB4000	(C:\WINDOWS\system32\mswsock.dll)
+napinsp.dll	A: 0x6C550000 - 0x6C562000	(C:\WINDOWS\system32\napinsp.dll)
+DNSAPI.dll	A: 0x70BF0000 - 0x70CFD000	(C:\WINDOWS\SYSTEM32\DNSAPI.dll)
+DSPARSE.dll	A: 0x70BE0000 - 0x70BEA000	(C:\WINDOWS\SYSTEM32\DSPARSE.dll)
+IPHLPAPI.DLL	A: 0x72F30000 - 0x72F56000	(C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL)
+NSI.dll	A: 0x764F0000 - 0x764F7000	(C:\WINDOWS\System32\NSI.dll)
+winrnr.dll	A: 0x6C570000 - 0x6C57E000	(C:\WINDOWS\System32\winrnr.dll)
+wshbth.dll	A: 0x6C5C0000 - 0x6C5D2000	(C:\WINDOWS\system32\wshbth.dll)
+rasadhlp.dll	A: 0x70BD0000 - 0x70BD8000	(C:\Windows\System32\rasadhlp.dll)
+kernel.appcore.dll	A: 0x74480000 - 0x74495000	(C:\WINDOWS\SYSTEM32\kernel.appcore.dll)
+
+--------------------------
+SA-MP Server: 0.3.7-R2
+
+Exception At Address: 0x70025903 Module: (MSVCP140.dll)
+
+Registers:
+EAX: 0x00000000	EBX: 0x0074DE98	ECX: 0x03E0F984	EDX: 0x00000000
+ESI: 0x00000000	EDI: 0x00000000	EBP: 0x03E0F8E8	ESP: 0x03E0F8C4
+EFLAGS: 0x00010286
+
+Stack:
++0000: 0x00000000   0x0074DE98   0x03E0F984   0x00000000
++0010: 0x5F22A5B4   0x00000002   0x03E0F920   0x5F04A453
++0020: 0x9557052A   0x03E0F8F8   0x70025BDD   0x0074DE98
++0030: 0x00000000   0x03E0F92C   0x5F04AC9D   0x0074DE98
++0040: 0x26EFEB18   0x03E0FD0C   0x00000000   0x00000001
++0050: 0x00000000   0x0074DE98   0x03E0F984   0x03E0F970
++0060: 0x5F22ACB5   0xFFFFFFFF   0x03E0F97C   0x5F045376
++0070: 0x03E0FD0C   0x26EFEB48   0x007152E0   0x007152D4
++0080: 0xFFFFFFFF   0x5F04FC92   0x00000000   0x00000000
++0090: 0x00000000   0x00000000   0x5EF8A02D   0x00000000
++00A0: 0x00000000   0x03E0FD0C   0x00000001   0x03E0F9B4
++00B0: 0x5F21960F   0x00000001   0x03E0F9C0   0x5F045FEF
++00C0: 0x0074DE8C   0x0074DE80   0x00000004   0x26EFEBF4
++00D0: 0x007152E0   0x007152D4   0x5F04FC92   0x00000000
++00E0: 0x00000000   0x00000000   0x5EF87C35   0x26EFEBF8
++00F0: 0x03E0FA28   0x5F21A10D   0x00000001   0x03E0FA34
++0100: 0x5F04FC92   0x03E0FD0C   0x0074DE8C   0x0074DE80
++0110: 0x00000000   0x00000000   0x00000000   0x00000000
++0120: 0x00000000   0x5F22B000   0x00000001   0x5F04FC92
++0130: 0x00000000   0x00000000   0x00000000   0x03E00000
+
+--------------------------
+
+Loaded Modules:
+samp-server.exe	A: 0x00400000 - 0x00519000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\samp-server.exe)
+ntdll.dll	A: 0x77CA0000 - 0x77E5F000	(C:\WINDOWS\SYSTEM32\ntdll.dll)
+KERNEL32.DLL	A: 0x766D0000 - 0x767C0000	(C:\WINDOWS\System32\KERNEL32.DLL)
+KERNELBASE.dll	A: 0x76010000 - 0x762EA000	(C:\WINDOWS\System32\KERNELBASE.dll)
+SHELL32.dll	A: 0x77620000 - 0x77C85000	(C:\WINDOWS\System32\SHELL32.dll)
+msvcp_win.dll	A: 0x76F50000 - 0x76FD5000	(C:\WINDOWS\System32\msvcp_win.dll)
+ucrtbase.dll	A: 0x76FE0000 - 0x770F0000	(C:\WINDOWS\System32\ucrtbase.dll)
+USER32.dll	A: 0x75A20000 - 0x75C07000	(C:\WINDOWS\System32\USER32.dll)
+win32u.dll	A: 0x76F30000 - 0x76F4C000	(C:\WINDOWS\System32\win32u.dll)
+GDI32.dll	A: 0x76F00000 - 0x76F22000	(C:\WINDOWS\System32\GDI32.dll)
+gdi32full.dll	A: 0x768F0000 - 0x769DA000	(C:\WINDOWS\System32\gdi32full.dll)
+WSOCK32.dll	A: 0x6F270000 - 0x6F278000	(C:\WINDOWS\SYSTEM32\WSOCK32.dll)
+WINMM.dll	A: 0x71D70000 - 0x71DA3000	(C:\WINDOWS\SYSTEM32\WINMM.dll)
+msvcrt.dll	A: 0x765E0000 - 0x766A7000	(C:\WINDOWS\System32\msvcrt.dll)
+ws2_32.DLL	A: 0x76570000 - 0x765DA000	(C:\WINDOWS\System32\ws2_32.DLL)
+RPCRT4.dll	A: 0x769E0000 - 0x76A9C000	(C:\WINDOWS\System32\RPCRT4.dll)
+IMM32.DLL	A: 0x77590000 - 0x775B5000	(C:\WINDOWS\System32\IMM32.DLL)
+sscanf.DLL	A: 0x5F3A0000 - 0x5F3CA000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\sscanf.DLL)
+VCRUNTIME140.dll	A: 0x70080000 - 0x70095000	(C:\WINDOWS\SYSTEM32\VCRUNTIME140.dll)
+MSVCP140.dll	A: 0x70010000 - 0x7007D000	(C:\WINDOWS\SYSTEM32\MSVCP140.dll)
+streamer.dll	A: 0x5F330000 - 0x5F396000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\streamer.dll)
+requests.dll	A: 0x5EF30000 - 0x5F32F000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\requests.dll)
+ADVAPI32.dll	A: 0x77260000 - 0x772E5000	(C:\WINDOWS\System32\ADVAPI32.dll)
+sechost.dll	A: 0x77500000 - 0x77585000	(C:\WINDOWS\System32\sechost.dll)
+WINHTTP.dll	A: 0x72D00000 - 0x72DE6000	(C:\WINDOWS\SYSTEM32\WINHTTP.dll)
+CRYPT32.dll	A: 0x75C10000 - 0x75D1E000	(C:\WINDOWS\System32\CRYPT32.dll)
+CONCRT140.dll	A: 0x5EEF0000 - 0x5EF2E000	(C:\WINDOWS\SYSTEM32\CONCRT140.dll)
+bcrypt.dll	A: 0x738D0000 - 0x738EC000	(C:\WINDOWS\SYSTEM32\bcrypt.dll)
+DPAPI.DLL	A: 0x711E0000 - 0x711E9000	(C:\WINDOWS\SYSTEM32\DPAPI.DLL)
+mswsock.dll	A: 0x71E60000 - 0x71EB4000	(C:\WINDOWS\system32\mswsock.dll)
+napinsp.dll	A: 0x6C550000 - 0x6C562000	(C:\WINDOWS\system32\napinsp.dll)
+DNSAPI.dll	A: 0x70BF0000 - 0x70CFD000	(C:\WINDOWS\SYSTEM32\DNSAPI.dll)
+DSPARSE.dll	A: 0x70BE0000 - 0x70BEA000	(C:\WINDOWS\SYSTEM32\DSPARSE.dll)
+IPHLPAPI.DLL	A: 0x72F30000 - 0x72F56000	(C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL)
+NSI.dll	A: 0x764F0000 - 0x764F7000	(C:\WINDOWS\System32\NSI.dll)
+winrnr.dll	A: 0x6C570000 - 0x6C57E000	(C:\WINDOWS\System32\winrnr.dll)
+wshbth.dll	A: 0x6C5C0000 - 0x6C5D2000	(C:\WINDOWS\system32\wshbth.dll)
+rasadhlp.dll	A: 0x70BD0000 - 0x70BD8000	(C:\Windows\System32\rasadhlp.dll)
+kernel.appcore.dll	A: 0x74480000 - 0x74495000	(C:\WINDOWS\SYSTEM32\kernel.appcore.dll)
+
+--------------------------
+SA-MP Server: 0.3.7-R2
+
+Exception At Address: 0x70025903 Module: (MSVCP140.dll)
+
+Registers:
+EAX: 0x00000000	EBX: 0x007C2CC0	ECX: 0x03E4F984	EDX: 0x00000000
+ESI: 0x00000000	EDI: 0x00000000	EBP: 0x03E4F8E8	ESP: 0x03E4F8C4
+EFLAGS: 0x00010282
+
+Stack:
++0000: 0x00000000   0x007C2CC0   0x03E4F984   0x00000000
++0010: 0x5F22A5B4   0x00000002   0x03E4F920   0x5F04A453
++0020: 0xD3490EBD   0x03E4F8F8   0x70025BDD   0x007C2CC0
++0030: 0x00000000   0x03E4F92C   0x5F04AC9D   0x007C2CC0
++0040: 0x391436C9   0x03E4FD0C   0x00000000   0x00000001
++0050: 0x00000000   0x007C2CC0   0x03E4F984   0x03E4F970
++0060: 0x5F22ACB5   0xFFFFFFFF   0x03E4F97C   0x5F045376
++0070: 0x03E4FD0C   0x39143699   0x00785028   0x0078501C
++0080: 0xFFFFFFFF   0x5F04FC92   0x00000000   0x00000000
++0090: 0x00000000   0x00000000   0x5EF8A02D   0x00000000
++00A0: 0x00000000   0x03E4FD0C   0x00000001   0x03E4F9B4
++00B0: 0x5F21960F   0x00000001   0x03E4F9C0   0x5F045FEF
++00C0: 0x007C2CB4   0x007C2CA8   0x00000004   0x39143625
++00D0: 0x00785028   0x0078501C   0x5F04FC92   0x00000000
++00E0: 0x00000000   0x00000000   0x5EF87C35   0x39143629
++00F0: 0x03E4FA28   0x5F21A10D   0x00000001   0x03E4FA34
++0100: 0x5F04FC92   0x03E4FD0C   0x007C2CB4   0x007C2CA8
++0110: 0x00000000   0x00000000   0x00000000   0x00000000
++0120: 0x00000000   0x5F22B000   0x00000001   0x5F04FC92
++0130: 0x00000000   0x00000000   0x00000000   0x03E40000
+
+--------------------------
+
+Loaded Modules:
+samp-server.exe	A: 0x00400000 - 0x00519000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\samp-server.exe)
+ntdll.dll	A: 0x77CA0000 - 0x77E5F000	(C:\WINDOWS\SYSTEM32\ntdll.dll)
+KERNEL32.DLL	A: 0x766D0000 - 0x767C0000	(C:\WINDOWS\System32\KERNEL32.DLL)
+KERNELBASE.dll	A: 0x76010000 - 0x762EA000	(C:\WINDOWS\System32\KERNELBASE.dll)
+SHELL32.dll	A: 0x77620000 - 0x77C85000	(C:\WINDOWS\System32\SHELL32.dll)
+msvcp_win.dll	A: 0x76F50000 - 0x76FD5000	(C:\WINDOWS\System32\msvcp_win.dll)
+ucrtbase.dll	A: 0x76FE0000 - 0x770F0000	(C:\WINDOWS\System32\ucrtbase.dll)
+USER32.dll	A: 0x75A20000 - 0x75C07000	(C:\WINDOWS\System32\USER32.dll)
+win32u.dll	A: 0x76F30000 - 0x76F4C000	(C:\WINDOWS\System32\win32u.dll)
+GDI32.dll	A: 0x76F00000 - 0x76F22000	(C:\WINDOWS\System32\GDI32.dll)
+gdi32full.dll	A: 0x768F0000 - 0x769DA000	(C:\WINDOWS\System32\gdi32full.dll)
+WINMM.dll	A: 0x71D70000 - 0x71DA3000	(C:\WINDOWS\SYSTEM32\WINMM.dll)
+WSOCK32.dll	A: 0x6F270000 - 0x6F278000	(C:\WINDOWS\SYSTEM32\WSOCK32.dll)
+msvcrt.dll	A: 0x765E0000 - 0x766A7000	(C:\WINDOWS\System32\msvcrt.dll)
+ws2_32.DLL	A: 0x76570000 - 0x765DA000	(C:\WINDOWS\System32\ws2_32.DLL)
+RPCRT4.dll	A: 0x769E0000 - 0x76A9C000	(C:\WINDOWS\System32\RPCRT4.dll)
+IMM32.DLL	A: 0x77590000 - 0x775B5000	(C:\WINDOWS\System32\IMM32.DLL)
+sscanf.DLL	A: 0x5F3A0000 - 0x5F3CA000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\sscanf.DLL)
+MSVCP140.dll	A: 0x70010000 - 0x7007D000	(C:\WINDOWS\SYSTEM32\MSVCP140.dll)
+VCRUNTIME140.dll	A: 0x70080000 - 0x70095000	(C:\WINDOWS\SYSTEM32\VCRUNTIME140.dll)
+streamer.dll	A: 0x5F330000 - 0x5F396000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\streamer.dll)
+requests.dll	A: 0x5EF30000 - 0x5F32F000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\requests.dll)
+ADVAPI32.dll	A: 0x77260000 - 0x772E5000	(C:\WINDOWS\System32\ADVAPI32.dll)
+sechost.dll	A: 0x77500000 - 0x77585000	(C:\WINDOWS\System32\sechost.dll)
+CRYPT32.dll	A: 0x75C10000 - 0x75D1E000	(C:\WINDOWS\System32\CRYPT32.dll)
+WINHTTP.dll	A: 0x72D00000 - 0x72DE6000	(C:\WINDOWS\SYSTEM32\WINHTTP.dll)
+bcrypt.dll	A: 0x738D0000 - 0x738EC000	(C:\WINDOWS\SYSTEM32\bcrypt.dll)
+CONCRT140.dll	A: 0x5EEF0000 - 0x5EF2E000	(C:\WINDOWS\SYSTEM32\CONCRT140.dll)
+DPAPI.DLL	A: 0x711E0000 - 0x711E9000	(C:\WINDOWS\SYSTEM32\DPAPI.DLL)
+mswsock.dll	A: 0x71E60000 - 0x71EB4000	(C:\WINDOWS\system32\mswsock.dll)
+napinsp.dll	A: 0x6C550000 - 0x6C562000	(C:\WINDOWS\system32\napinsp.dll)
+DNSAPI.dll	A: 0x70BF0000 - 0x70CFD000	(C:\WINDOWS\SYSTEM32\DNSAPI.dll)
+DSPARSE.dll	A: 0x70BE0000 - 0x70BEA000	(C:\WINDOWS\SYSTEM32\DSPARSE.dll)
+IPHLPAPI.DLL	A: 0x72F30000 - 0x72F56000	(C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL)
+NSI.dll	A: 0x764F0000 - 0x764F7000	(C:\WINDOWS\System32\NSI.dll)
+winrnr.dll	A: 0x6C570000 - 0x6C57E000	(C:\WINDOWS\System32\winrnr.dll)
+wshbth.dll	A: 0x6C5C0000 - 0x6C5D2000	(C:\WINDOWS\system32\wshbth.dll)
+rasadhlp.dll	A: 0x70BD0000 - 0x70BD8000	(C:\Windows\System32\rasadhlp.dll)
+kernel.appcore.dll	A: 0x74480000 - 0x74495000	(C:\WINDOWS\SYSTEM32\kernel.appcore.dll)
+
+--------------------------
+SA-MP Server: 0.3.7-R2
+
+Exception At Address: 0x70025903 Module: (MSVCP140.dll)
+
+Registers:
+EAX: 0x00000000	EBX: 0x007349B0	ECX: 0x03DEF984	EDX: 0x00000000
+ESI: 0x00000000	EDI: 0x00000000	EBP: 0x03DEF8E8	ESP: 0x03DEF8C4
+EFLAGS: 0x00010286
+
+Stack:
++0000: 0x00000000   0x007349B0   0x03DEF984   0x00000000
++0010: 0x5F22A5B4   0x00000002   0x03DEF920   0x5F04A453
++0020: 0xF326965A   0x03DEF8F8   0x70025BDD   0x007349B0
++0030: 0x00000000   0x03DEF92C   0x5F04AC9D   0x007349B0
++0040: 0x35EA32BD   0x03DEFD0C   0x00000000   0x00000001
++0050: 0x00000000   0x007349B0   0x03DEF984   0x03DEF970
++0060: 0x5F22ACB5   0xFFFFFFFF   0x03DEF97C   0x5F045376
++0070: 0x03DEFD0C   0x35EA32ED   0x00745E98   0x00745E8C
++0080: 0xFFFFFFFF   0x5F04FC92   0x00000000   0x00000000
++0090: 0x00000000   0x00000000   0x5EF8A02D   0x00000000
++00A0: 0x00000000   0x03DEFD0C   0x00000001   0x03DEF9B4
++00B0: 0x5F21960F   0x00000001   0x03DEF9C0   0x5F045FEF
++00C0: 0x007349A4   0x00734998   0x00000004   0x35EA3251
++00D0: 0x00745E98   0x00745E8C   0x5F04FC92   0x00000000
++00E0: 0x00000000   0x00000000   0x5EF87C35   0x35EA325D
++00F0: 0x03DEFA28   0x5F21A10D   0x00000001   0x03DEFA34
++0100: 0x5F04FC92   0x03DEFD0C   0x007349A4   0x00734998
++0110: 0x00000000   0x00000000   0x00000000   0x00000000
++0120: 0x00000000   0x5F22B000   0x00000001   0x5F04FC92
++0130: 0x00000000   0x00000000   0x00000000   0x03DE0000
+
+--------------------------
+
+Loaded Modules:
+samp-server.exe	A: 0x00400000 - 0x00519000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\samp-server.exe)
+ntdll.dll	A: 0x77CA0000 - 0x77E5F000	(C:\WINDOWS\SYSTEM32\ntdll.dll)
+KERNEL32.DLL	A: 0x766D0000 - 0x767C0000	(C:\WINDOWS\System32\KERNEL32.DLL)
+KERNELBASE.dll	A: 0x76010000 - 0x762EA000	(C:\WINDOWS\System32\KERNELBASE.dll)
+SHELL32.dll	A: 0x77620000 - 0x77C85000	(C:\WINDOWS\System32\SHELL32.dll)
+msvcp_win.dll	A: 0x76F50000 - 0x76FD5000	(C:\WINDOWS\System32\msvcp_win.dll)
+ucrtbase.dll	A: 0x76FE0000 - 0x770F0000	(C:\WINDOWS\System32\ucrtbase.dll)
+USER32.dll	A: 0x75A20000 - 0x75C07000	(C:\WINDOWS\System32\USER32.dll)
+win32u.dll	A: 0x76F30000 - 0x76F4C000	(C:\WINDOWS\System32\win32u.dll)
+GDI32.dll	A: 0x76F00000 - 0x76F22000	(C:\WINDOWS\System32\GDI32.dll)
+gdi32full.dll	A: 0x768F0000 - 0x769DA000	(C:\WINDOWS\System32\gdi32full.dll)
+WINMM.dll	A: 0x71D70000 - 0x71DA3000	(C:\WINDOWS\SYSTEM32\WINMM.dll)
+WSOCK32.dll	A: 0x6F270000 - 0x6F278000	(C:\WINDOWS\SYSTEM32\WSOCK32.dll)
+ws2_32.DLL	A: 0x76570000 - 0x765DA000	(C:\WINDOWS\System32\ws2_32.DLL)
+msvcrt.dll	A: 0x765E0000 - 0x766A7000	(C:\WINDOWS\System32\msvcrt.dll)
+RPCRT4.dll	A: 0x769E0000 - 0x76A9C000	(C:\WINDOWS\System32\RPCRT4.dll)
+IMM32.DLL	A: 0x77590000 - 0x775B5000	(C:\WINDOWS\System32\IMM32.DLL)
+sscanf.DLL	A: 0x5F3A0000 - 0x5F3CA000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\sscanf.DLL)
+VCRUNTIME140.dll	A: 0x70080000 - 0x70095000	(C:\WINDOWS\SYSTEM32\VCRUNTIME140.dll)
+MSVCP140.dll	A: 0x70010000 - 0x7007D000	(C:\WINDOWS\SYSTEM32\MSVCP140.dll)
+streamer.dll	A: 0x5F330000 - 0x5F396000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\streamer.dll)
+requests.dll	A: 0x5EF30000 - 0x5F32F000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\requests.dll)
+ADVAPI32.dll	A: 0x77260000 - 0x772E5000	(C:\WINDOWS\System32\ADVAPI32.dll)
+sechost.dll	A: 0x77500000 - 0x77585000	(C:\WINDOWS\System32\sechost.dll)
+WINHTTP.dll	A: 0x72D00000 - 0x72DE6000	(C:\WINDOWS\SYSTEM32\WINHTTP.dll)
+CRYPT32.dll	A: 0x75C10000 - 0x75D1E000	(C:\WINDOWS\System32\CRYPT32.dll)
+CONCRT140.dll	A: 0x5EEF0000 - 0x5EF2E000	(C:\WINDOWS\SYSTEM32\CONCRT140.dll)
+bcrypt.dll	A: 0x738D0000 - 0x738EC000	(C:\WINDOWS\SYSTEM32\bcrypt.dll)
+DPAPI.DLL	A: 0x711E0000 - 0x711E9000	(C:\WINDOWS\SYSTEM32\DPAPI.DLL)
+mswsock.dll	A: 0x71E60000 - 0x71EB4000	(C:\WINDOWS\system32\mswsock.dll)
+napinsp.dll	A: 0x6C550000 - 0x6C562000	(C:\WINDOWS\system32\napinsp.dll)
+DNSAPI.dll	A: 0x70BF0000 - 0x70CFD000	(C:\WINDOWS\SYSTEM32\DNSAPI.dll)
+DSPARSE.dll	A: 0x70BE0000 - 0x70BEA000	(C:\WINDOWS\SYSTEM32\DSPARSE.dll)
+IPHLPAPI.DLL	A: 0x72F30000 - 0x72F56000	(C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL)
+NSI.dll	A: 0x764F0000 - 0x764F7000	(C:\WINDOWS\System32\NSI.dll)
+winrnr.dll	A: 0x6C570000 - 0x6C57E000	(C:\WINDOWS\System32\winrnr.dll)
+wshbth.dll	A: 0x6C5C0000 - 0x6C5D2000	(C:\WINDOWS\system32\wshbth.dll)
+rasadhlp.dll	A: 0x70BD0000 - 0x70BD8000	(C:\Windows\System32\rasadhlp.dll)
+kernel.appcore.dll	A: 0x74480000 - 0x74495000	(C:\WINDOWS\SYSTEM32\kernel.appcore.dll)
+
+--------------------------
+SA-MP Server: 0.3.7-R2
+
+Exception At Address: 0x70025903 Module: (MSVCP140.dll)
+
+Registers:
+EAX: 0x00000000	EBX: 0x0089A0F0	ECX: 0x03E1F984	EDX: 0x00000000
+ESI: 0x00000000	EDI: 0x00000000	EBP: 0x03E1F8E8	ESP: 0x03E1F8C4
+EFLAGS: 0x00010286
+
+Stack:
++0000: 0x00000000   0x0089A0F0   0x03E1F984   0x00000000
++0010: 0x5F22A5B4   0x00000002   0x03E1F920   0x5F04A453
++0020: 0x54A54E81   0x03E1F8F8   0x70025BDD   0x0089A0F0
++0030: 0x00000000   0x03E1F92C   0x5F04AC9D   0x0089A0F0
++0040: 0x90232210   0x03E1FD0C   0x00000000   0x00000001
++0050: 0x00000000   0x0089A0F0   0x03E1F984   0x03E1F970
++0060: 0x5F22ACB5   0xFFFFFFFF   0x03E1F97C   0x5F045376
++0070: 0x03E1FD0C   0x90232240   0x008653A0   0x00865394
++0080: 0xFFFFFFFF   0x5F04FC92   0x00000000   0x00000000
++0090: 0x00000000   0x00000000   0x5EF8A02D   0x00000000
++00A0: 0x00000000   0x03E1FD0C   0x00000001   0x03E1F9B4
++00B0: 0x5F21960F   0x00000001   0x03E1F9C0   0x5F045FEF
++00C0: 0x0089A0E4   0x0089A0D8   0x00000004   0x902322FC
++00D0: 0x008653A0   0x00865394   0x5F04FC92   0x00000000
++00E0: 0x00000000   0x00000000   0x5EF87C35   0x902322F0
++00F0: 0x03E1FA28   0x5F21A10D   0x00000001   0x03E1FA34
++0100: 0x5F04FC92   0x03E1FD0C   0x0089A0E4   0x0089A0D8
++0110: 0x00000000   0x00000000   0x00000000   0x00000000
++0120: 0x00000000   0x5F22B000   0x00000001   0x5F04FC92
++0130: 0x00000000   0x00000000   0x00000000   0x03E10000
+
+--------------------------
+
+Loaded Modules:
+samp-server.exe	A: 0x00400000 - 0x00519000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\samp-server.exe)
+ntdll.dll	A: 0x77CA0000 - 0x77E5F000	(C:\WINDOWS\SYSTEM32\ntdll.dll)
+KERNEL32.DLL	A: 0x766D0000 - 0x767C0000	(C:\WINDOWS\System32\KERNEL32.DLL)
+KERNELBASE.dll	A: 0x76010000 - 0x762EA000	(C:\WINDOWS\System32\KERNELBASE.dll)
+SHELL32.dll	A: 0x77620000 - 0x77C85000	(C:\WINDOWS\System32\SHELL32.dll)
+msvcp_win.dll	A: 0x76F50000 - 0x76FD5000	(C:\WINDOWS\System32\msvcp_win.dll)
+ucrtbase.dll	A: 0x76FE0000 - 0x770F0000	(C:\WINDOWS\System32\ucrtbase.dll)
+USER32.dll	A: 0x75A20000 - 0x75C07000	(C:\WINDOWS\System32\USER32.dll)
+win32u.dll	A: 0x76F30000 - 0x76F4C000	(C:\WINDOWS\System32\win32u.dll)
+GDI32.dll	A: 0x76F00000 - 0x76F22000	(C:\WINDOWS\System32\GDI32.dll)
+gdi32full.dll	A: 0x768F0000 - 0x769DA000	(C:\WINDOWS\System32\gdi32full.dll)
+WINMM.dll	A: 0x71D70000 - 0x71DA3000	(C:\WINDOWS\SYSTEM32\WINMM.dll)
+WSOCK32.dll	A: 0x6F270000 - 0x6F278000	(C:\WINDOWS\SYSTEM32\WSOCK32.dll)
+msvcrt.dll	A: 0x765E0000 - 0x766A7000	(C:\WINDOWS\System32\msvcrt.dll)
+ws2_32.DLL	A: 0x76570000 - 0x765DA000	(C:\WINDOWS\System32\ws2_32.DLL)
+RPCRT4.dll	A: 0x769E0000 - 0x76A9C000	(C:\WINDOWS\System32\RPCRT4.dll)
+IMM32.DLL	A: 0x77590000 - 0x775B5000	(C:\WINDOWS\System32\IMM32.DLL)
+sscanf.DLL	A: 0x5F3A0000 - 0x5F3CA000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\sscanf.DLL)
+VCRUNTIME140.dll	A: 0x70080000 - 0x70095000	(C:\WINDOWS\SYSTEM32\VCRUNTIME140.dll)
+MSVCP140.dll	A: 0x70010000 - 0x7007D000	(C:\WINDOWS\SYSTEM32\MSVCP140.dll)
+streamer.dll	A: 0x5F330000 - 0x5F396000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\streamer.dll)
+requests.dll	A: 0x5EF30000 - 0x5F32F000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\requests.dll)
+ADVAPI32.dll	A: 0x77260000 - 0x772E5000	(C:\WINDOWS\System32\ADVAPI32.dll)
+WINHTTP.dll	A: 0x72D00000 - 0x72DE6000	(C:\WINDOWS\SYSTEM32\WINHTTP.dll)
+sechost.dll	A: 0x77500000 - 0x77585000	(C:\WINDOWS\System32\sechost.dll)
+CRYPT32.dll	A: 0x75C10000 - 0x75D1E000	(C:\WINDOWS\System32\CRYPT32.dll)
+CONCRT140.dll	A: 0x5EEF0000 - 0x5EF2E000	(C:\WINDOWS\SYSTEM32\CONCRT140.dll)
+bcrypt.dll	A: 0x738D0000 - 0x738EC000	(C:\WINDOWS\SYSTEM32\bcrypt.dll)
+DPAPI.DLL	A: 0x711E0000 - 0x711E9000	(C:\WINDOWS\SYSTEM32\DPAPI.DLL)
+mswsock.dll	A: 0x71E60000 - 0x71EB4000	(C:\WINDOWS\system32\mswsock.dll)
+napinsp.dll	A: 0x6C550000 - 0x6C562000	(C:\WINDOWS\system32\napinsp.dll)
+DNSAPI.dll	A: 0x70BF0000 - 0x70CFD000	(C:\WINDOWS\SYSTEM32\DNSAPI.dll)
+DSPARSE.dll	A: 0x70BE0000 - 0x70BEA000	(C:\WINDOWS\SYSTEM32\DSPARSE.dll)
+IPHLPAPI.DLL	A: 0x72F30000 - 0x72F56000	(C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL)
+NSI.dll	A: 0x764F0000 - 0x764F7000	(C:\WINDOWS\System32\NSI.dll)
+winrnr.dll	A: 0x6C570000 - 0x6C57E000	(C:\WINDOWS\System32\winrnr.dll)
+wshbth.dll	A: 0x6C5C0000 - 0x6C5D2000	(C:\WINDOWS\system32\wshbth.dll)
+rasadhlp.dll	A: 0x70BD0000 - 0x70BD8000	(C:\Windows\System32\rasadhlp.dll)
+kernel.appcore.dll	A: 0x74480000 - 0x74495000	(C:\WINDOWS\SYSTEM32\kernel.appcore.dll)
+
+--------------------------
+SA-MP Server: 0.3.7-R2
+
+Exception At Address: 0x70025903 Module: (MSVCP140.dll)
+
+Registers:
+EAX: 0x00000000	EBX: 0x007B8A30	ECX: 0x03EFF984	EDX: 0x00000000
+ESI: 0x00000000	EDI: 0x00000000	EBP: 0x03EFF8E8	ESP: 0x03EFF8C4
+EFLAGS: 0x00010286
+
+Stack:
++0000: 0x00000000   0x007B8A30   0x03EFF984   0x00000000
++0010: 0x5F22A5B4   0x00000002   0x03EFF920   0x5F04A453
++0020: 0x24AAEAD0   0x03EFF8F8   0x70025BDD   0x007B8A30
++0030: 0x00000000   0x03EFF92C   0x5F04AC9D   0x007B8A30
++0040: 0x00ED151A   0x03EFFD0C   0x00000000   0x00000001
++0050: 0x00000000   0x007B8A30   0x03EFF984   0x03EFF970
++0060: 0x5F22ACB5   0xFFFFFFFF   0x03EFF97C   0x5F045376
++0070: 0x03EFFD0C   0x00ED154A   0x007DDDB8   0x007DDDAC
++0080: 0xFFFFFFFF   0x5F04FC92   0x00000000   0x00000000
++0090: 0x00000000   0x00000000   0x5EF8A02D   0x00000000
++00A0: 0x00000000   0x03EFFD0C   0x00000001   0x03EFF9B4
++00B0: 0x5F21960F   0x00000001   0x03EFF9C0   0x5F045FEF
++00C0: 0x007B8A24   0x007B8A18   0x00000004   0x00ED15F6
++00D0: 0x007DDDB8   0x007DDDAC   0x5F04FC92   0x00000000
++00E0: 0x00000000   0x00000000   0x5EF87C35   0x00ED15FA
++00F0: 0x03EFFA28   0x5F21A10D   0x00000001   0x03EFFA34
++0100: 0x5F04FC92   0x03EFFD0C   0x007B8A24   0x007B8A18
++0110: 0x00000000   0x00000000   0x00000000   0x00000000
++0120: 0x00000000   0x5F22B000   0x00000001   0x5F04FC92
++0130: 0x00000000   0x00000000   0x00000000   0x03EF0000
+
+--------------------------
+
+Loaded Modules:
+samp-server.exe	A: 0x00400000 - 0x00519000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\samp-server.exe)
+ntdll.dll	A: 0x77CA0000 - 0x77E5F000	(C:\WINDOWS\SYSTEM32\ntdll.dll)
+KERNEL32.DLL	A: 0x766D0000 - 0x767C0000	(C:\WINDOWS\System32\KERNEL32.DLL)
+KERNELBASE.dll	A: 0x76010000 - 0x762EA000	(C:\WINDOWS\System32\KERNELBASE.dll)
+SHELL32.dll	A: 0x77620000 - 0x77C85000	(C:\WINDOWS\System32\SHELL32.dll)
+msvcp_win.dll	A: 0x76F50000 - 0x76FD5000	(C:\WINDOWS\System32\msvcp_win.dll)
+ucrtbase.dll	A: 0x76FE0000 - 0x770F0000	(C:\WINDOWS\System32\ucrtbase.dll)
+USER32.dll	A: 0x75A20000 - 0x75C07000	(C:\WINDOWS\System32\USER32.dll)
+win32u.dll	A: 0x76F30000 - 0x76F4C000	(C:\WINDOWS\System32\win32u.dll)
+GDI32.dll	A: 0x76F00000 - 0x76F22000	(C:\WINDOWS\System32\GDI32.dll)
+gdi32full.dll	A: 0x768F0000 - 0x769DA000	(C:\WINDOWS\System32\gdi32full.dll)
+WSOCK32.dll	A: 0x6F270000 - 0x6F278000	(C:\WINDOWS\SYSTEM32\WSOCK32.dll)
+WINMM.dll	A: 0x71D70000 - 0x71DA3000	(C:\WINDOWS\SYSTEM32\WINMM.dll)
+msvcrt.dll	A: 0x765E0000 - 0x766A7000	(C:\WINDOWS\System32\msvcrt.dll)
+WS2_32.dll	A: 0x76570000 - 0x765DA000	(C:\WINDOWS\System32\WS2_32.dll)
+RPCRT4.dll	A: 0x769E0000 - 0x76A9C000	(C:\WINDOWS\System32\RPCRT4.dll)
+IMM32.DLL	A: 0x77590000 - 0x775B5000	(C:\WINDOWS\System32\IMM32.DLL)
+sscanf.DLL	A: 0x5F3A0000 - 0x5F3CA000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\sscanf.DLL)
+MSVCP140.dll	A: 0x70010000 - 0x7007D000	(C:\WINDOWS\SYSTEM32\MSVCP140.dll)
+VCRUNTIME140.dll	A: 0x70080000 - 0x70095000	(C:\WINDOWS\SYSTEM32\VCRUNTIME140.dll)
+streamer.dll	A: 0x5F330000 - 0x5F396000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\streamer.dll)
+requests.dll	A: 0x5EF30000 - 0x5F32F000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\requests.dll)
+ADVAPI32.dll	A: 0x77260000 - 0x772E5000	(C:\WINDOWS\System32\ADVAPI32.dll)
+sechost.dll	A: 0x77500000 - 0x77585000	(C:\WINDOWS\System32\sechost.dll)
+WINHTTP.dll	A: 0x72D00000 - 0x72DE6000	(C:\WINDOWS\SYSTEM32\WINHTTP.dll)
+CRYPT32.dll	A: 0x75C10000 - 0x75D1E000	(C:\WINDOWS\System32\CRYPT32.dll)
+CONCRT140.dll	A: 0x5EEF0000 - 0x5EF2E000	(C:\WINDOWS\SYSTEM32\CONCRT140.dll)
+bcrypt.dll	A: 0x738D0000 - 0x738EC000	(C:\WINDOWS\SYSTEM32\bcrypt.dll)
+DPAPI.DLL	A: 0x711E0000 - 0x711E9000	(C:\WINDOWS\SYSTEM32\DPAPI.DLL)
+mswsock.dll	A: 0x71E60000 - 0x71EB4000	(C:\WINDOWS\system32\mswsock.dll)
+napinsp.dll	A: 0x6C550000 - 0x6C562000	(C:\WINDOWS\system32\napinsp.dll)
+DNSAPI.dll	A: 0x70BF0000 - 0x70CFD000	(C:\WINDOWS\SYSTEM32\DNSAPI.dll)
+DSPARSE.dll	A: 0x70BE0000 - 0x70BEA000	(C:\WINDOWS\SYSTEM32\DSPARSE.dll)
+IPHLPAPI.DLL	A: 0x72F30000 - 0x72F56000	(C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL)
+NSI.dll	A: 0x764F0000 - 0x764F7000	(C:\WINDOWS\System32\NSI.dll)
+winrnr.dll	A: 0x6C570000 - 0x6C57E000	(C:\WINDOWS\System32\winrnr.dll)
+wshbth.dll	A: 0x6C5C0000 - 0x6C5D2000	(C:\WINDOWS\system32\wshbth.dll)
+rasadhlp.dll	A: 0x70BD0000 - 0x70BD8000	(C:\Windows\System32\rasadhlp.dll)
+kernel.appcore.dll	A: 0x74480000 - 0x74495000	(C:\WINDOWS\SYSTEM32\kernel.appcore.dll)
+
+--------------------------
+SA-MP Server: 0.3.7-R2
+
+Exception At Address: 0x70025903 Module: (MSVCP140.dll)
+
+Registers:
+EAX: 0x00000000	EBX: 0x0080CC18	ECX: 0x03E2F984	EDX: 0x00000000
+ESI: 0x00000000	EDI: 0x00000000	EBP: 0x03E2F8E8	ESP: 0x03E2F8C4
+EFLAGS: 0x00010282
+
+Stack:
++0000: 0x00000000   0x0080CC18   0x03E2F984   0x00000000
++0010: 0x5F22A5B4   0x00000002   0x03E2F920   0x5F04A453
++0020: 0xD55B5BB4   0x03E2F8F8   0x70025BDD   0x0080CC18
++0030: 0x00000000   0x03E2F92C   0x5F04AC9D   0x0080CC18
++0040: 0x0A61E626   0x03E2FD0C   0x00000000   0x00000001
++0050: 0x00000000   0x0080CC18   0x03E2F984   0x03E2F970
++0060: 0x5F22ACB5   0xFFFFFFFF   0x03E2F97C   0x5F045376
++0070: 0x03E2FD0C   0x0A61E676   0x0083DBC0   0x0083DBB4
++0080: 0xFFFFFFFF   0x5F04FC92   0x00000000   0x00000000
++0090: 0x00000000   0x00000000   0x5EF8A02D   0x00000000
++00A0: 0x00000000   0x03E2FD0C   0x00000001   0x03E2F9B4
++00B0: 0x5F21960F   0x00000001   0x03E2F9C0   0x5F045FEF
++00C0: 0x0080CC0C   0x0080CC00   0x00000004   0x0A61E6CA
++00D0: 0x0083DBC0   0x0083DBB4   0x5F04FC92   0x00000000
++00E0: 0x00000000   0x00000000   0x5EF87C35   0x0A61E6C6
++00F0: 0x03E2FA28   0x5F21A10D   0x00000001   0x03E2FA34
++0100: 0x5F04FC92   0x03E2FD0C   0x0080CC0C   0x0080CC00
++0110: 0x00000000   0x00000000   0x00000000   0x00000000
++0120: 0x00000000   0x5F22B000   0x00000001   0x5F04FC92
++0130: 0x00000000   0x00000000   0x00000000   0x03E20000
+
+--------------------------
+
+Loaded Modules:
+samp-server.exe	A: 0x00400000 - 0x00519000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\samp-server.exe)
+ntdll.dll	A: 0x77CA0000 - 0x77E5F000	(C:\WINDOWS\SYSTEM32\ntdll.dll)
+KERNEL32.DLL	A: 0x766D0000 - 0x767C0000	(C:\WINDOWS\System32\KERNEL32.DLL)
+KERNELBASE.dll	A: 0x76010000 - 0x762EA000	(C:\WINDOWS\System32\KERNELBASE.dll)
+SHELL32.dll	A: 0x77620000 - 0x77C85000	(C:\WINDOWS\System32\SHELL32.dll)
+msvcp_win.dll	A: 0x76F50000 - 0x76FD5000	(C:\WINDOWS\System32\msvcp_win.dll)
+ucrtbase.dll	A: 0x76FE0000 - 0x770F0000	(C:\WINDOWS\System32\ucrtbase.dll)
+USER32.dll	A: 0x75A20000 - 0x75C07000	(C:\WINDOWS\System32\USER32.dll)
+win32u.dll	A: 0x76F30000 - 0x76F4C000	(C:\WINDOWS\System32\win32u.dll)
+GDI32.dll	A: 0x76F00000 - 0x76F22000	(C:\WINDOWS\System32\GDI32.dll)
+gdi32full.dll	A: 0x768F0000 - 0x769DA000	(C:\WINDOWS\System32\gdi32full.dll)
+WSOCK32.dll	A: 0x6F270000 - 0x6F278000	(C:\WINDOWS\SYSTEM32\WSOCK32.dll)
+WINMM.dll	A: 0x71D70000 - 0x71DA3000	(C:\WINDOWS\SYSTEM32\WINMM.dll)
+msvcrt.dll	A: 0x765E0000 - 0x766A7000	(C:\WINDOWS\System32\msvcrt.dll)
+ws2_32.DLL	A: 0x76570000 - 0x765DA000	(C:\WINDOWS\System32\ws2_32.DLL)
+RPCRT4.dll	A: 0x769E0000 - 0x76A9C000	(C:\WINDOWS\System32\RPCRT4.dll)
+IMM32.DLL	A: 0x77590000 - 0x775B5000	(C:\WINDOWS\System32\IMM32.DLL)
+sscanf.DLL	A: 0x5F3A0000 - 0x5F3CA000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\sscanf.DLL)
+VCRUNTIME140.dll	A: 0x70080000 - 0x70095000	(C:\WINDOWS\SYSTEM32\VCRUNTIME140.dll)
+MSVCP140.dll	A: 0x70010000 - 0x7007D000	(C:\WINDOWS\SYSTEM32\MSVCP140.dll)
+streamer.dll	A: 0x5F330000 - 0x5F396000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\streamer.dll)
+requests.dll	A: 0x5EF30000 - 0x5F32F000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\requests.dll)
+ADVAPI32.dll	A: 0x77260000 - 0x772E5000	(C:\WINDOWS\System32\ADVAPI32.dll)
+sechost.dll	A: 0x77500000 - 0x77585000	(C:\WINDOWS\System32\sechost.dll)
+CRYPT32.dll	A: 0x75C10000 - 0x75D1E000	(C:\WINDOWS\System32\CRYPT32.dll)
+WINHTTP.dll	A: 0x72D00000 - 0x72DE6000	(C:\WINDOWS\SYSTEM32\WINHTTP.dll)
+bcrypt.dll	A: 0x738D0000 - 0x738EC000	(C:\WINDOWS\SYSTEM32\bcrypt.dll)
+CONCRT140.dll	A: 0x5EEF0000 - 0x5EF2E000	(C:\WINDOWS\SYSTEM32\CONCRT140.dll)
+DPAPI.DLL	A: 0x711E0000 - 0x711E9000	(C:\WINDOWS\SYSTEM32\DPAPI.DLL)
+mswsock.dll	A: 0x71E60000 - 0x71EB4000	(C:\WINDOWS\system32\mswsock.dll)
+napinsp.dll	A: 0x6C550000 - 0x6C562000	(C:\WINDOWS\system32\napinsp.dll)
+DNSAPI.dll	A: 0x70BF0000 - 0x70CFD000	(C:\WINDOWS\SYSTEM32\DNSAPI.dll)
+DSPARSE.dll	A: 0x70BE0000 - 0x70BEA000	(C:\WINDOWS\SYSTEM32\DSPARSE.dll)
+IPHLPAPI.DLL	A: 0x72F30000 - 0x72F56000	(C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL)
+NSI.dll	A: 0x764F0000 - 0x764F7000	(C:\WINDOWS\System32\NSI.dll)
+winrnr.dll	A: 0x6C570000 - 0x6C57E000	(C:\WINDOWS\System32\winrnr.dll)
+wshbth.dll	A: 0x6C5C0000 - 0x6C5D2000	(C:\WINDOWS\system32\wshbth.dll)
+rasadhlp.dll	A: 0x70BD0000 - 0x70BD8000	(C:\Windows\System32\rasadhlp.dll)
+kernel.appcore.dll	A: 0x74480000 - 0x74495000	(C:\WINDOWS\SYSTEM32\kernel.appcore.dll)
+
+--------------------------
+SA-MP Server: 0.3.7-R2
+
+Exception At Address: 0x70025903 Module: (MSVCP140.dll)
+
+Registers:
+EAX: 0x00000000	EBX: 0x00898F80	ECX: 0x03DFF984	EDX: 0x00000000
+ESI: 0x00000000	EDI: 0x00000000	EBP: 0x03DFF8E8	ESP: 0x03DFF8C4
+EFLAGS: 0x00010286
+
+Stack:
++0000: 0x00000000   0x00898F80   0x03DFF984   0x00000000
++0010: 0x5F22A5B4   0x00000002   0x03DFF920   0x5F04A453
++0020: 0x253CB964   0x03DFF8F8   0x70025BDD   0x00898F80
++0030: 0x00000000   0x03DFF92C   0x5F04AC9D   0x00898F80
++0040: 0x2FCE83A3   0x03DFFD0C   0x00000000   0x00000001
++0050: 0x00000000   0x00898F80   0x03DFF984   0x03DFF970
++0060: 0x5F22ACB5   0xFFFFFFFF   0x03DFF97C   0x5F045376
++0070: 0x03DFFD0C   0x2FCE83F3   0x008B5AB0   0x008B5AA4
++0080: 0xFFFFFFFF   0x5F04FC92   0x00000000   0x00000000
++0090: 0x00000000   0x00000000   0x5EF8A02D   0x00000000
++00A0: 0x00000000   0x03DFFD0C   0x00000001   0x03DFF9B4
++00B0: 0x5F21960F   0x00000001   0x03DFF9C0   0x5F045FEF
++00C0: 0x00898F74   0x00898F68   0x00000004   0x2FCE834F
++00D0: 0x008B5AB0   0x008B5AA4   0x5F04FC92   0x00000000
++00E0: 0x00000000   0x00000000   0x5EF87C35   0x2FCE8343
++00F0: 0x03DFFA28   0x5F21A10D   0x00000001   0x03DFFA34
++0100: 0x5F04FC92   0x03DFFD0C   0x00898F74   0x00898F68
++0110: 0x00000000   0x00000000   0x00000000   0x00000000
++0120: 0x00000000   0x5F22B000   0x00000001   0x5F04FC92
++0130: 0x00000000   0x00000000   0x00000000   0x03DF0000
+
+--------------------------
+
+Loaded Modules:
+samp-server.exe	A: 0x00400000 - 0x00519000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\samp-server.exe)
+ntdll.dll	A: 0x77CA0000 - 0x77E5F000	(C:\WINDOWS\SYSTEM32\ntdll.dll)
+KERNEL32.DLL	A: 0x766D0000 - 0x767C0000	(C:\WINDOWS\System32\KERNEL32.DLL)
+KERNELBASE.dll	A: 0x76010000 - 0x762EA000	(C:\WINDOWS\System32\KERNELBASE.dll)
+apphelp.dll	A: 0x756C0000 - 0x7576F000	(C:\WINDOWS\SYSTEM32\apphelp.dll)
+SHELL32.dll	A: 0x77620000 - 0x77C85000	(C:\WINDOWS\System32\SHELL32.dll)
+msvcp_win.dll	A: 0x76F50000 - 0x76FD5000	(C:\WINDOWS\System32\msvcp_win.dll)
+ucrtbase.dll	A: 0x76FE0000 - 0x770F0000	(C:\WINDOWS\System32\ucrtbase.dll)
+USER32.dll	A: 0x75A20000 - 0x75C07000	(C:\WINDOWS\System32\USER32.dll)
+win32u.dll	A: 0x76F30000 - 0x76F4C000	(C:\WINDOWS\System32\win32u.dll)
+GDI32.dll	A: 0x76F00000 - 0x76F22000	(C:\WINDOWS\System32\GDI32.dll)
+gdi32full.dll	A: 0x768F0000 - 0x769DA000	(C:\WINDOWS\System32\gdi32full.dll)
+WINMM.dll	A: 0x71D70000 - 0x71DA3000	(C:\WINDOWS\SYSTEM32\WINMM.dll)
+WSOCK32.dll	A: 0x6F270000 - 0x6F278000	(C:\WINDOWS\SYSTEM32\WSOCK32.dll)
+ws2_32.DLL	A: 0x76570000 - 0x765DA000	(C:\WINDOWS\System32\ws2_32.DLL)
+msvcrt.dll	A: 0x765E0000 - 0x766A7000	(C:\WINDOWS\System32\msvcrt.dll)
+RPCRT4.dll	A: 0x769E0000 - 0x76A9C000	(C:\WINDOWS\System32\RPCRT4.dll)
+IMM32.DLL	A: 0x77590000 - 0x775B5000	(C:\WINDOWS\System32\IMM32.DLL)
+sscanf.DLL	A: 0x5F3A0000 - 0x5F3CA000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\sscanf.DLL)
+VCRUNTIME140.dll	A: 0x70080000 - 0x70095000	(C:\WINDOWS\SYSTEM32\VCRUNTIME140.dll)
+MSVCP140.dll	A: 0x70010000 - 0x7007D000	(C:\WINDOWS\SYSTEM32\MSVCP140.dll)
+streamer.dll	A: 0x5F330000 - 0x5F396000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\streamer.dll)
+requests.dll	A: 0x5EF30000 - 0x5F32F000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\requests.dll)
+ADVAPI32.dll	A: 0x77260000 - 0x772E5000	(C:\WINDOWS\System32\ADVAPI32.dll)
+WINHTTP.dll	A: 0x72D00000 - 0x72DE6000	(C:\WINDOWS\SYSTEM32\WINHTTP.dll)
+sechost.dll	A: 0x77500000 - 0x77585000	(C:\WINDOWS\System32\sechost.dll)
+CRYPT32.dll	A: 0x75C10000 - 0x75D1E000	(C:\WINDOWS\System32\CRYPT32.dll)
+CONCRT140.dll	A: 0x5EEF0000 - 0x5EF2E000	(C:\WINDOWS\SYSTEM32\CONCRT140.dll)
+bcrypt.dll	A: 0x738D0000 - 0x738EC000	(C:\WINDOWS\SYSTEM32\bcrypt.dll)
+DPAPI.DLL	A: 0x711E0000 - 0x711E9000	(C:\WINDOWS\SYSTEM32\DPAPI.DLL)
+mswsock.dll	A: 0x71E60000 - 0x71EB4000	(C:\WINDOWS\system32\mswsock.dll)
+napinsp.dll	A: 0x6C550000 - 0x6C562000	(C:\WINDOWS\system32\napinsp.dll)
+DNSAPI.dll	A: 0x70BF0000 - 0x70CFD000	(C:\WINDOWS\SYSTEM32\DNSAPI.dll)
+DSPARSE.dll	A: 0x70BE0000 - 0x70BEA000	(C:\WINDOWS\SYSTEM32\DSPARSE.dll)
+IPHLPAPI.DLL	A: 0x72F30000 - 0x72F56000	(C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL)
+NSI.dll	A: 0x764F0000 - 0x764F7000	(C:\WINDOWS\System32\NSI.dll)
+winrnr.dll	A: 0x6C570000 - 0x6C57E000	(C:\WINDOWS\System32\winrnr.dll)
+wshbth.dll	A: 0x6C5C0000 - 0x6C5D2000	(C:\WINDOWS\system32\wshbth.dll)
+rasadhlp.dll	A: 0x70BD0000 - 0x70BD8000	(C:\Windows\System32\rasadhlp.dll)
+kernel.appcore.dll	A: 0x74480000 - 0x74495000	(C:\WINDOWS\SYSTEM32\kernel.appcore.dll)
+
+--------------------------
+SA-MP Server: 0.3.7-R2
+
+Exception At Address: 0x70025903 Module: (MSVCP140.dll)
+
+Registers:
+EAX: 0x00000000	EBX: 0x007D1E60	ECX: 0x03EBF984	EDX: 0x00000000
+ESI: 0x00000000	EDI: 0x00000000	EBP: 0x03EBF8E8	ESP: 0x03EBF8C4
+EFLAGS: 0x00010286
+
+Stack:
++0000: 0x00000000   0x007D1E60   0x03EBF984   0x00000000
++0010: 0x5F22A5B4   0x00000002   0x03EBF920   0x5F04A453
++0020: 0x0C079C82   0x03EBF8F8   0x70025BDD   0x007D1E60
++0030: 0x00000000   0x03EBF92C   0x5F04AC9D   0x007D1E60
++0040: 0x9BB607EF   0x03EBFD0C   0x00000000   0x00000001
++0050: 0x00000000   0x007D1E60   0x03EBF984   0x03EBF970
++0060: 0x5F22ACB5   0xFFFFFFFF   0x03EBF97C   0x5F045376
++0070: 0x03EBFD0C   0x9BB607BF   0x0079B5C0   0x0079B5B4
++0080: 0xFFFFFFFF   0x5F04FC92   0x00000000   0x00000000
++0090: 0x00000000   0x00000000   0x5EF8A02D   0x00000000
++00A0: 0x00000000   0x03EBFD0C   0x00000001   0x03EBF9B4
++00B0: 0x5F21960F   0x00000001   0x03EBF9C0   0x5F045FEF
++00C0: 0x007D1E54   0x007D1E48   0x00000004   0x9BB60703
++00D0: 0x0079B5C0   0x0079B5B4   0x5F04FC92   0x00000000
++00E0: 0x00000000   0x00000000   0x5EF87C35   0x9BB6070F
++00F0: 0x03EBFA28   0x5F21A10D   0x00000001   0x03EBFA34
++0100: 0x5F04FC92   0x03EBFD0C   0x007D1E54   0x007D1E48
++0110: 0x00000000   0x00000000   0x00000000   0x00000000
++0120: 0x00000000   0x5F22B000   0x00000001   0x5F04FC92
++0130: 0x00000000   0x00000000   0x00000000   0x03EB0000
+
+--------------------------
+
+Loaded Modules:
+samp-server.exe	A: 0x00400000 - 0x00519000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\samp-server.exe)
+ntdll.dll	A: 0x77CA0000 - 0x77E5F000	(C:\WINDOWS\SYSTEM32\ntdll.dll)
+KERNEL32.DLL	A: 0x766D0000 - 0x767C0000	(C:\WINDOWS\System32\KERNEL32.DLL)
+KERNELBASE.dll	A: 0x76010000 - 0x762EA000	(C:\WINDOWS\System32\KERNELBASE.dll)
+SHELL32.dll	A: 0x77620000 - 0x77C85000	(C:\WINDOWS\System32\SHELL32.dll)
+msvcp_win.dll	A: 0x76F50000 - 0x76FD5000	(C:\WINDOWS\System32\msvcp_win.dll)
+ucrtbase.dll	A: 0x76FE0000 - 0x770F0000	(C:\WINDOWS\System32\ucrtbase.dll)
+USER32.dll	A: 0x75A20000 - 0x75C07000	(C:\WINDOWS\System32\USER32.dll)
+win32u.dll	A: 0x76F30000 - 0x76F4C000	(C:\WINDOWS\System32\win32u.dll)
+GDI32.dll	A: 0x76F00000 - 0x76F22000	(C:\WINDOWS\System32\GDI32.dll)
+gdi32full.dll	A: 0x768F0000 - 0x769DA000	(C:\WINDOWS\System32\gdi32full.dll)
+WSOCK32.dll	A: 0x6F270000 - 0x6F278000	(C:\WINDOWS\SYSTEM32\WSOCK32.dll)
+msvcrt.dll	A: 0x765E0000 - 0x766A7000	(C:\WINDOWS\System32\msvcrt.dll)
+WS2_32.dll	A: 0x76570000 - 0x765DA000	(C:\WINDOWS\System32\WS2_32.dll)
+WINMM.dll	A: 0x71D70000 - 0x71DA3000	(C:\WINDOWS\SYSTEM32\WINMM.dll)
+RPCRT4.dll	A: 0x769E0000 - 0x76A9C000	(C:\WINDOWS\System32\RPCRT4.dll)
+IMM32.DLL	A: 0x77590000 - 0x775B5000	(C:\WINDOWS\System32\IMM32.DLL)
+sscanf.DLL	A: 0x5F3A0000 - 0x5F3CA000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\sscanf.DLL)
+MSVCP140.dll	A: 0x70010000 - 0x7007D000	(C:\WINDOWS\SYSTEM32\MSVCP140.dll)
+VCRUNTIME140.dll	A: 0x70080000 - 0x70095000	(C:\WINDOWS\SYSTEM32\VCRUNTIME140.dll)
+streamer.dll	A: 0x5F330000 - 0x5F396000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\streamer.dll)
+requests.dll	A: 0x5EF30000 - 0x5F32F000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\requests.dll)
+ADVAPI32.dll	A: 0x77260000 - 0x772E5000	(C:\WINDOWS\System32\ADVAPI32.dll)
+sechost.dll	A: 0x77500000 - 0x77585000	(C:\WINDOWS\System32\sechost.dll)
+CRYPT32.dll	A: 0x75C10000 - 0x75D1E000	(C:\WINDOWS\System32\CRYPT32.dll)
+bcrypt.dll	A: 0x738D0000 - 0x738EC000	(C:\WINDOWS\SYSTEM32\bcrypt.dll)
+CONCRT140.dll	A: 0x5EEF0000 - 0x5EF2E000	(C:\WINDOWS\SYSTEM32\CONCRT140.dll)
+WINHTTP.dll	A: 0x72D00000 - 0x72DE6000	(C:\WINDOWS\SYSTEM32\WINHTTP.dll)
+DPAPI.DLL	A: 0x711E0000 - 0x711E9000	(C:\WINDOWS\SYSTEM32\DPAPI.DLL)
+mswsock.dll	A: 0x71E60000 - 0x71EB4000	(C:\WINDOWS\system32\mswsock.dll)
+napinsp.dll	A: 0x6C550000 - 0x6C562000	(C:\WINDOWS\system32\napinsp.dll)
+DNSAPI.dll	A: 0x70BF0000 - 0x70CFD000	(C:\WINDOWS\SYSTEM32\DNSAPI.dll)
+DSPARSE.dll	A: 0x70BE0000 - 0x70BEA000	(C:\WINDOWS\SYSTEM32\DSPARSE.dll)
+IPHLPAPI.DLL	A: 0x72F30000 - 0x72F56000	(C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL)
+NSI.dll	A: 0x764F0000 - 0x764F7000	(C:\WINDOWS\System32\NSI.dll)
+winrnr.dll	A: 0x6C570000 - 0x6C57E000	(C:\WINDOWS\System32\winrnr.dll)
+wshbth.dll	A: 0x6C5C0000 - 0x6C5D2000	(C:\WINDOWS\system32\wshbth.dll)
+rasadhlp.dll	A: 0x70BD0000 - 0x70BD8000	(C:\Windows\System32\rasadhlp.dll)
+kernel.appcore.dll	A: 0x74480000 - 0x74495000	(C:\WINDOWS\SYSTEM32\kernel.appcore.dll)
+
+--------------------------
+SA-MP Server: 0.3.7-R2
+
+Exception At Address: 0x700259C5 Module: (MSVCP140.dll)
+
+Registers:
+EAX: 0x00000000	EBX: 0x5F2E7130	ECX: 0x001AFC6C	EDX: 0x0413E0D8
+ESI: 0x5F2E7158	EDI: 0x00000000	EBP: 0x001AFC5C	ESP: 0x001AFC38
+EFLAGS: 0x00210286
+
+Stack:
++0000: 0x0413E0D8   0x001AFD6C   0x00000000   0x001AFC6C
++0010: 0x007CE408   0x0413DB04   0x0413DB10   0x001AFC94
++0020: 0x274F1156   0x001AFC80   0x70025C58   0x5F2E7130
++0030: 0x001AFC6C   0x00000000   0x00000000   0x00000000
++0040: 0x00000020   0x274F118A   0x001AFD18   0x5EF97566
++0050: 0x5F2E7130   0x33847B16   0x0413E0D8   0x001AFDFC
++0060: 0x001AFD6C   0x00000014   0x00000000   0x00000001
++0070: 0x00670000   0x00000000   0x006707D0   0x00000020
++0080: 0x001AFD6C   0x00000020   0x00000000   0x0413DB04
++0090: 0x00000000   0x00670950   0x001AFD20   0x00670000
++00A0: 0x006701C8   0x00670950   0x006D0000   0x001AFD20
++00B0: 0x77D31FE6   0x00000014   0x77D32177   0x001AFDFC
++00C0: 0x006D0000   0x006FC7E8   0x00000004   0x00000020
++00D0: 0x33847B16   0x001AFDE8   0x5F21BEE1   0x00000000
++00E0: 0x001AFDF4   0x5EFA1474   0x001AFD6C   0x33847BFA
++00F0: 0x0413E0D8   0x001AFDFC   0x00000000   0x00000014
++0100: 0x006FC7E8   0x001AFD2C   0x00000020   0x001AFDA4
++0110: 0x33847B7A   0x001AFDFC   0x0413E1B8   0x006FC7E8
++0120: 0x7700DF5F   0x006D0000   0x00000000   0x0413E0D8
++0130: 0x001AFDA4   0x00000000   0x00000000   0x00000000
+
+--------------------------
+
+Loaded Modules:
+samp-server.exe	A: 0x00400000 - 0x00519000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\samp-server.exe)
+ntdll.dll	A: 0x77CA0000 - 0x77E5F000	(C:\WINDOWS\SYSTEM32\ntdll.dll)
+KERNEL32.DLL	A: 0x766D0000 - 0x767C0000	(C:\WINDOWS\System32\KERNEL32.DLL)
+KERNELBASE.dll	A: 0x76010000 - 0x762EA000	(C:\WINDOWS\System32\KERNELBASE.dll)
+SHELL32.dll	A: 0x77620000 - 0x77C85000	(C:\WINDOWS\System32\SHELL32.dll)
+msvcp_win.dll	A: 0x76F50000 - 0x76FD5000	(C:\WINDOWS\System32\msvcp_win.dll)
+ucrtbase.dll	A: 0x76FE0000 - 0x770F0000	(C:\WINDOWS\System32\ucrtbase.dll)
+USER32.dll	A: 0x75A20000 - 0x75C07000	(C:\WINDOWS\System32\USER32.dll)
+win32u.dll	A: 0x76F30000 - 0x76F4C000	(C:\WINDOWS\System32\win32u.dll)
+GDI32.dll	A: 0x76F00000 - 0x76F22000	(C:\WINDOWS\System32\GDI32.dll)
+gdi32full.dll	A: 0x768F0000 - 0x769DA000	(C:\WINDOWS\System32\gdi32full.dll)
+WSOCK32.dll	A: 0x6F270000 - 0x6F278000	(C:\WINDOWS\SYSTEM32\WSOCK32.dll)
+msvcrt.dll	A: 0x765E0000 - 0x766A7000	(C:\WINDOWS\System32\msvcrt.dll)
+WS2_32.dll	A: 0x76570000 - 0x765DA000	(C:\WINDOWS\System32\WS2_32.dll)
+WINMM.dll	A: 0x71D70000 - 0x71DA3000	(C:\WINDOWS\SYSTEM32\WINMM.dll)
+RPCRT4.dll	A: 0x769E0000 - 0x76A9C000	(C:\WINDOWS\System32\RPCRT4.dll)
+IMM32.DLL	A: 0x77590000 - 0x775B5000	(C:\WINDOWS\System32\IMM32.DLL)
+sscanf.DLL	A: 0x5F3A0000 - 0x5F3CA000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\sscanf.DLL)
+MSVCP140.dll	A: 0x70010000 - 0x7007D000	(C:\WINDOWS\SYSTEM32\MSVCP140.dll)
+VCRUNTIME140.dll	A: 0x70080000 - 0x70095000	(C:\WINDOWS\SYSTEM32\VCRUNTIME140.dll)
+streamer.dll	A: 0x5F330000 - 0x5F396000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\streamer.dll)
+requests.dll	A: 0x5EF30000 - 0x5F32F000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\requests.dll)
+ADVAPI32.dll	A: 0x77260000 - 0x772E5000	(C:\WINDOWS\System32\ADVAPI32.dll)
+sechost.dll	A: 0x77500000 - 0x77585000	(C:\WINDOWS\System32\sechost.dll)
+CRYPT32.dll	A: 0x75C10000 - 0x75D1E000	(C:\WINDOWS\System32\CRYPT32.dll)
+WINHTTP.dll	A: 0x72D00000 - 0x72DE6000	(C:\WINDOWS\SYSTEM32\WINHTTP.dll)
+bcrypt.dll	A: 0x738D0000 - 0x738EC000	(C:\WINDOWS\SYSTEM32\bcrypt.dll)
+CONCRT140.dll	A: 0x5EEF0000 - 0x5EF2E000	(C:\WINDOWS\SYSTEM32\CONCRT140.dll)
+DPAPI.DLL	A: 0x711E0000 - 0x711E9000	(C:\WINDOWS\SYSTEM32\DPAPI.DLL)
+mswsock.dll	A: 0x71E60000 - 0x71EB4000	(C:\WINDOWS\system32\mswsock.dll)
+napinsp.dll	A: 0x6C550000 - 0x6C562000	(C:\WINDOWS\system32\napinsp.dll)
+DNSAPI.dll	A: 0x70BF0000 - 0x70CFD000	(C:\WINDOWS\SYSTEM32\DNSAPI.dll)
+DSPARSE.dll	A: 0x70BE0000 - 0x70BEA000	(C:\WINDOWS\SYSTEM32\DSPARSE.dll)
+IPHLPAPI.DLL	A: 0x72F30000 - 0x72F56000	(C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL)
+NSI.dll	A: 0x764F0000 - 0x764F7000	(C:\WINDOWS\System32\NSI.dll)
+winrnr.dll	A: 0x6C570000 - 0x6C57E000	(C:\WINDOWS\System32\winrnr.dll)
+wshbth.dll	A: 0x6C5C0000 - 0x6C5D2000	(C:\WINDOWS\system32\wshbth.dll)
+rasadhlp.dll	A: 0x70BD0000 - 0x70BD8000	(C:\Windows\System32\rasadhlp.dll)
+
+--------------------------
+SA-MP Server: 0.3.7-R2
+
+Exception At Address: 0x70025903 Module: (MSVCP140.dll)
+
+Registers:
+EAX: 0x00000000	EBX: 0x00775C90	ECX: 0x03E0F984	EDX: 0x00000000
+ESI: 0x00000000	EDI: 0x00000000	EBP: 0x03E0F8E8	ESP: 0x03E0F8C4
+EFLAGS: 0x00010282
+
+Stack:
++0000: 0x00000000   0x00775C90   0x03E0F984   0x00000000
++0010: 0x5F22A5B4   0x00000002   0x03E0F920   0x5F04A453
++0020: 0x7A957934   0x03E0F8F8   0x70025BDD   0x00775C90
++0030: 0x00000000   0x03E0F92C   0x5F04AC9D   0x00775C90
++0040: 0x0858FF9A   0x03E0FD0C   0x00000000   0x00000001
++0050: 0x00000000   0x00775C90   0x03E0F984   0x03E0F970
++0060: 0x5F22ACB5   0xFFFFFFFF   0x03E0F97C   0x5F045376
++0070: 0x03E0FD0C   0x0858FFCA   0x0073AEE8   0x0073AEDC
++0080: 0xFFFFFFFF   0x5F04FC92   0x00000000   0x00000000
++0090: 0x00000000   0x00000000   0x5EF8A02D   0x00000000
++00A0: 0x00000000   0x03E0FD0C   0x00000001   0x03E0F9B4
++00B0: 0x5F21960F   0x00000001   0x03E0F9C0   0x5F045FEF
++00C0: 0x00775C84   0x00775C78   0x00000004   0x0858FF76
++00D0: 0x0073AEE8   0x0073AEDC   0x5F04FC92   0x00000000
++00E0: 0x00000000   0x00000000   0x5EF87C35   0x0858FF7A
++00F0: 0x03E0FA28   0x5F21A10D   0x00000001   0x03E0FA34
++0100: 0x5F04FC92   0x03E0FD0C   0x00775C84   0x00775C78
++0110: 0x00000000   0x00000000   0x00000000   0x00000000
++0120: 0x00000000   0x5F22B000   0x00000001   0x5F04FC92
++0130: 0x00000000   0x00000000   0x00000000   0x03E00000
+
+--------------------------
+
+Loaded Modules:
+samp-server.exe	A: 0x00400000 - 0x00519000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\samp-server.exe)
+ntdll.dll	A: 0x77CA0000 - 0x77E5F000	(C:\WINDOWS\SYSTEM32\ntdll.dll)
+KERNEL32.DLL	A: 0x766D0000 - 0x767C0000	(C:\WINDOWS\System32\KERNEL32.DLL)
+KERNELBASE.dll	A: 0x76010000 - 0x762EA000	(C:\WINDOWS\System32\KERNELBASE.dll)
+SHELL32.dll	A: 0x77620000 - 0x77C85000	(C:\WINDOWS\System32\SHELL32.dll)
+msvcp_win.dll	A: 0x76F50000 - 0x76FD5000	(C:\WINDOWS\System32\msvcp_win.dll)
+ucrtbase.dll	A: 0x76FE0000 - 0x770F0000	(C:\WINDOWS\System32\ucrtbase.dll)
+USER32.dll	A: 0x75A20000 - 0x75C07000	(C:\WINDOWS\System32\USER32.dll)
+win32u.dll	A: 0x76F30000 - 0x76F4C000	(C:\WINDOWS\System32\win32u.dll)
+GDI32.dll	A: 0x76F00000 - 0x76F22000	(C:\WINDOWS\System32\GDI32.dll)
+gdi32full.dll	A: 0x768F0000 - 0x769DA000	(C:\WINDOWS\System32\gdi32full.dll)
+WINMM.dll	A: 0x71D70000 - 0x71DA3000	(C:\WINDOWS\SYSTEM32\WINMM.dll)
+WSOCK32.dll	A: 0x6F270000 - 0x6F278000	(C:\WINDOWS\SYSTEM32\WSOCK32.dll)
+msvcrt.dll	A: 0x765E0000 - 0x766A7000	(C:\WINDOWS\System32\msvcrt.dll)
+ws2_32.DLL	A: 0x76570000 - 0x765DA000	(C:\WINDOWS\System32\ws2_32.DLL)
+RPCRT4.dll	A: 0x769E0000 - 0x76A9C000	(C:\WINDOWS\System32\RPCRT4.dll)
+IMM32.DLL	A: 0x77590000 - 0x775B5000	(C:\WINDOWS\System32\IMM32.DLL)
+sscanf.DLL	A: 0x5F3A0000 - 0x5F3CA000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\sscanf.DLL)
+MSVCP140.dll	A: 0x70010000 - 0x7007D000	(C:\WINDOWS\SYSTEM32\MSVCP140.dll)
+VCRUNTIME140.dll	A: 0x70080000 - 0x70095000	(C:\WINDOWS\SYSTEM32\VCRUNTIME140.dll)
+streamer.dll	A: 0x5F330000 - 0x5F396000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\streamer.dll)
+requests.dll	A: 0x5EF30000 - 0x5F32F000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\requests.dll)
+ADVAPI32.dll	A: 0x77260000 - 0x772E5000	(C:\WINDOWS\System32\ADVAPI32.dll)
+sechost.dll	A: 0x77500000 - 0x77585000	(C:\WINDOWS\System32\sechost.dll)
+WINHTTP.dll	A: 0x72D00000 - 0x72DE6000	(C:\WINDOWS\SYSTEM32\WINHTTP.dll)
+CRYPT32.dll	A: 0x75C10000 - 0x75D1E000	(C:\WINDOWS\System32\CRYPT32.dll)
+bcrypt.dll	A: 0x738D0000 - 0x738EC000	(C:\WINDOWS\SYSTEM32\bcrypt.dll)
+CONCRT140.dll	A: 0x5EEF0000 - 0x5EF2E000	(C:\WINDOWS\SYSTEM32\CONCRT140.dll)
+DPAPI.DLL	A: 0x711E0000 - 0x711E9000	(C:\WINDOWS\SYSTEM32\DPAPI.DLL)
+mswsock.dll	A: 0x71E60000 - 0x71EB4000	(C:\WINDOWS\system32\mswsock.dll)
+napinsp.dll	A: 0x6C550000 - 0x6C562000	(C:\WINDOWS\system32\napinsp.dll)
+DNSAPI.dll	A: 0x70BF0000 - 0x70CFD000	(C:\WINDOWS\SYSTEM32\DNSAPI.dll)
+DSPARSE.dll	A: 0x70BE0000 - 0x70BEA000	(C:\WINDOWS\SYSTEM32\DSPARSE.dll)
+IPHLPAPI.DLL	A: 0x72F30000 - 0x72F56000	(C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL)
+NSI.dll	A: 0x764F0000 - 0x764F7000	(C:\WINDOWS\System32\NSI.dll)
+winrnr.dll	A: 0x6C570000 - 0x6C57E000	(C:\WINDOWS\System32\winrnr.dll)
+wshbth.dll	A: 0x6C5C0000 - 0x6C5D2000	(C:\WINDOWS\system32\wshbth.dll)
+rasadhlp.dll	A: 0x70BD0000 - 0x70BD8000	(C:\Windows\System32\rasadhlp.dll)
+kernel.appcore.dll	A: 0x74480000 - 0x74495000	(C:\WINDOWS\SYSTEM32\kernel.appcore.dll)
+
+--------------------------
+SA-MP Server: 0.3.7-R2
+
+Exception At Address: 0x70025903 Module: (MSVCP140.dll)
+
+Registers:
+EAX: 0x00000000	EBX: 0x00772DE0	ECX: 0x03EDF984	EDX: 0x00000000
+ESI: 0x00000000	EDI: 0x00000000	EBP: 0x03EDF8E8	ESP: 0x03EDF8C4
+EFLAGS: 0x00010286
+
+Stack:
++0000: 0x00000000   0x00772DE0   0x03EDF984   0x00000000
++0010: 0x5EB8A5B4   0x00000002   0x03EDF920   0x5E9AA453
++0020: 0xDB86FD51   0x03EDF8F8   0x70025BDD   0x00772DE0
++0030: 0x00000000   0x03EDF92C   0x5E9AAC9D   0x00772DE0
++0040: 0xCCF835DE   0x03EDFD0C   0x00000000   0x00000001
++0050: 0x00000000   0x00772DE0   0x03EDF984   0x03EDF970
++0060: 0x5EB8ACB5   0xFFFFFFFF   0x03EDF97C   0x5E9A5376
++0070: 0x03EDFD0C   0xCCF8358E   0x00742CC8   0x00742CBC
++0080: 0xFFFFFFFF   0x5E9AFC92   0x00000000   0x00000000
++0090: 0x00000000   0x00000000   0x5E8EA02D   0x00000000
++00A0: 0x00000000   0x03EDFD0C   0x00000001   0x03EDF9B4
++00B0: 0x5EB7960F   0x00000001   0x03EDF9C0   0x5E9A5FEF
++00C0: 0x00772DD4   0x00772DC8   0x00000004   0xCCF83532
++00D0: 0x00742CC8   0x00742CBC   0x5E9AFC92   0x00000000
++00E0: 0x00000000   0x00000000   0x5E8E7C35   0xCCF8353E
++00F0: 0x03EDFA28   0x5EB7A10D   0x00000001   0x03EDFA34
++0100: 0x5E9AFC92   0x03EDFD0C   0x00772DD4   0x00772DC8
++0110: 0x00000000   0x00000000   0x00000000   0x00000000
++0120: 0x00000000   0x5EB8B000   0x00000001   0x5E9AFC92
++0130: 0x00000000   0x00000000   0x00000000   0x03ED0000
+
+--------------------------
+
+Loaded Modules:
+samp-server.exe	A: 0x00400000 - 0x00519000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\samp-server.exe)
+ntdll.dll	A: 0x77CA0000 - 0x77E5F000	(C:\WINDOWS\SYSTEM32\ntdll.dll)
+KERNEL32.DLL	A: 0x766D0000 - 0x767C0000	(C:\WINDOWS\System32\KERNEL32.DLL)
+KERNELBASE.dll	A: 0x76010000 - 0x762EA000	(C:\WINDOWS\System32\KERNELBASE.dll)
+SHELL32.dll	A: 0x77620000 - 0x77C85000	(C:\WINDOWS\System32\SHELL32.dll)
+msvcp_win.dll	A: 0x76F50000 - 0x76FD5000	(C:\WINDOWS\System32\msvcp_win.dll)
+ucrtbase.dll	A: 0x76FE0000 - 0x770F0000	(C:\WINDOWS\System32\ucrtbase.dll)
+USER32.dll	A: 0x75A20000 - 0x75C07000	(C:\WINDOWS\System32\USER32.dll)
+win32u.dll	A: 0x76F30000 - 0x76F4C000	(C:\WINDOWS\System32\win32u.dll)
+GDI32.dll	A: 0x76F00000 - 0x76F22000	(C:\WINDOWS\System32\GDI32.dll)
+gdi32full.dll	A: 0x768F0000 - 0x769DA000	(C:\WINDOWS\System32\gdi32full.dll)
+WSOCK32.dll	A: 0x6F270000 - 0x6F278000	(C:\WINDOWS\SYSTEM32\WSOCK32.dll)
+msvcrt.dll	A: 0x765E0000 - 0x766A7000	(C:\WINDOWS\System32\msvcrt.dll)
+WINMM.dll	A: 0x71D70000 - 0x71DA3000	(C:\WINDOWS\SYSTEM32\WINMM.dll)
+WS2_32.dll	A: 0x76570000 - 0x765DA000	(C:\WINDOWS\System32\WS2_32.dll)
+RPCRT4.dll	A: 0x769E0000 - 0x76A9C000	(C:\WINDOWS\System32\RPCRT4.dll)
+IMM32.DLL	A: 0x77590000 - 0x775B5000	(C:\WINDOWS\System32\IMM32.DLL)
+sscanf.DLL	A: 0x5F0C0000 - 0x5F0EA000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\sscanf.DLL)
+VCRUNTIME140.dll	A: 0x70080000 - 0x70095000	(C:\WINDOWS\SYSTEM32\VCRUNTIME140.dll)
+MSVCP140.dll	A: 0x70010000 - 0x7007D000	(C:\WINDOWS\SYSTEM32\MSVCP140.dll)
+streamer.dll	A: 0x5F050000 - 0x5F0B6000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\streamer.dll)
+requests.dll	A: 0x5E890000 - 0x5EC8F000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\requests.dll)
+ADVAPI32.dll	A: 0x77260000 - 0x772E5000	(C:\WINDOWS\System32\ADVAPI32.dll)
+sechost.dll	A: 0x77500000 - 0x77585000	(C:\WINDOWS\System32\sechost.dll)
+WINHTTP.dll	A: 0x72D00000 - 0x72DE6000	(C:\WINDOWS\SYSTEM32\WINHTTP.dll)
+CRYPT32.dll	A: 0x75C10000 - 0x75D1E000	(C:\WINDOWS\System32\CRYPT32.dll)
+CONCRT140.dll	A: 0x5F010000 - 0x5F04E000	(C:\WINDOWS\SYSTEM32\CONCRT140.dll)
+bcrypt.dll	A: 0x738D0000 - 0x738EC000	(C:\WINDOWS\SYSTEM32\bcrypt.dll)
+DPAPI.DLL	A: 0x711E0000 - 0x711E9000	(C:\WINDOWS\SYSTEM32\DPAPI.DLL)
+mswsock.dll	A: 0x71E60000 - 0x71EB4000	(C:\WINDOWS\system32\mswsock.dll)
+napinsp.dll	A: 0x6C550000 - 0x6C562000	(C:\WINDOWS\system32\napinsp.dll)
+DNSAPI.dll	A: 0x70BF0000 - 0x70CFD000	(C:\WINDOWS\SYSTEM32\DNSAPI.dll)
+DSPARSE.dll	A: 0x70BE0000 - 0x70BEA000	(C:\WINDOWS\SYSTEM32\DSPARSE.dll)
+IPHLPAPI.DLL	A: 0x72F30000 - 0x72F56000	(C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL)
+NSI.dll	A: 0x764F0000 - 0x764F7000	(C:\WINDOWS\System32\NSI.dll)
+winrnr.dll	A: 0x6C570000 - 0x6C57E000	(C:\WINDOWS\System32\winrnr.dll)
+wshbth.dll	A: 0x6C5C0000 - 0x6C5D2000	(C:\WINDOWS\system32\wshbth.dll)
+rasadhlp.dll	A: 0x70BD0000 - 0x70BD8000	(C:\Windows\System32\rasadhlp.dll)
+kernel.appcore.dll	A: 0x74480000 - 0x74495000	(C:\WINDOWS\SYSTEM32\kernel.appcore.dll)
+
+--------------------------
+SA-MP Server: 0.3.7-R2
+
+Exception At Address: 0x70025903 Module: (MSVCP140.dll)
+
+Registers:
+EAX: 0x00000000	EBX: 0x006B3D68	ECX: 0x03DEF984	EDX: 0x00000000
+ESI: 0x00000000	EDI: 0x00000000	EBP: 0x03DEF8E8	ESP: 0x03DEF8C4
+EFLAGS: 0x00010282
+
+Stack:
++0000: 0x00000000   0x006B3D68   0x03DEF984   0x00000000
++0010: 0x5EB8A5B4   0x00000002   0x03DEF920   0x5E9AA453
++0020: 0xDE02E44F   0x03DEF8F8   0x70025BDD   0x006B3D68
++0030: 0x00000000   0x03DEF92C   0x5E9AAC9D   0x006B3D68
++0040: 0x0299E5D1   0x03DEFD0C   0x00000000   0x00000001
++0050: 0x00000000   0x006B3D68   0x03DEF984   0x03DEF970
++0060: 0x5EB8ACB5   0xFFFFFFFF   0x03DEF97C   0x5E9A5376
++0070: 0x03DEFD0C   0x0299E581   0x006F2700   0x006F26F4
++0080: 0xFFFFFFFF   0x5E9AFC92   0x00000000   0x00000000
++0090: 0x00000000   0x00000000   0x5E8EA02D   0x00000000
++00A0: 0x00000000   0x03DEFD0C   0x00000001   0x03DEF9B4
++00B0: 0x5EB7960F   0x00000001   0x03DEF9C0   0x5E9A5FEF
++00C0: 0x006B3D5C   0x006B3D50   0x00000004   0x0299E53D
++00D0: 0x006F2700   0x006F26F4   0x5E9AFC92   0x00000000
++00E0: 0x00000000   0x00000000   0x5E8E7C35   0x0299E531
++00F0: 0x03DEFA28   0x5EB7A10D   0x00000001   0x03DEFA34
++0100: 0x5E9AFC92   0x03DEFD0C   0x006B3D5C   0x006B3D50
++0110: 0x00000000   0x00000000   0x00000000   0x00000000
++0120: 0x00000000   0x5EB8B000   0x00000001   0x5E9AFC92
++0130: 0x00000000   0x00000000   0x00000000   0x03DE0000
+
+--------------------------
+
+Loaded Modules:
+samp-server.exe	A: 0x00400000 - 0x00519000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\samp-server.exe)
+ntdll.dll	A: 0x77CA0000 - 0x77E5F000	(C:\WINDOWS\SYSTEM32\ntdll.dll)
+KERNEL32.DLL	A: 0x766D0000 - 0x767C0000	(C:\WINDOWS\System32\KERNEL32.DLL)
+KERNELBASE.dll	A: 0x76010000 - 0x762EA000	(C:\WINDOWS\System32\KERNELBASE.dll)
+SHELL32.dll	A: 0x77620000 - 0x77C85000	(C:\WINDOWS\System32\SHELL32.dll)
+msvcp_win.dll	A: 0x76F50000 - 0x76FD5000	(C:\WINDOWS\System32\msvcp_win.dll)
+ucrtbase.dll	A: 0x76FE0000 - 0x770F0000	(C:\WINDOWS\System32\ucrtbase.dll)
+USER32.dll	A: 0x75A20000 - 0x75C07000	(C:\WINDOWS\System32\USER32.dll)
+win32u.dll	A: 0x76F30000 - 0x76F4C000	(C:\WINDOWS\System32\win32u.dll)
+GDI32.dll	A: 0x76F00000 - 0x76F22000	(C:\WINDOWS\System32\GDI32.dll)
+gdi32full.dll	A: 0x768F0000 - 0x769DA000	(C:\WINDOWS\System32\gdi32full.dll)
+WSOCK32.dll	A: 0x6F270000 - 0x6F278000	(C:\WINDOWS\SYSTEM32\WSOCK32.dll)
+msvcrt.dll	A: 0x765E0000 - 0x766A7000	(C:\WINDOWS\System32\msvcrt.dll)
+WINMM.dll	A: 0x71D70000 - 0x71DA3000	(C:\WINDOWS\SYSTEM32\WINMM.dll)
+WS2_32.dll	A: 0x76570000 - 0x765DA000	(C:\WINDOWS\System32\WS2_32.dll)
+RPCRT4.dll	A: 0x769E0000 - 0x76A9C000	(C:\WINDOWS\System32\RPCRT4.dll)
+IMM32.DLL	A: 0x77590000 - 0x775B5000	(C:\WINDOWS\System32\IMM32.DLL)
+sscanf.DLL	A: 0x5F0C0000 - 0x5F0EA000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\sscanf.DLL)
+MSVCP140.dll	A: 0x70010000 - 0x7007D000	(C:\WINDOWS\SYSTEM32\MSVCP140.dll)
+VCRUNTIME140.dll	A: 0x70080000 - 0x70095000	(C:\WINDOWS\SYSTEM32\VCRUNTIME140.dll)
+streamer.dll	A: 0x5F050000 - 0x5F0B6000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\streamer.dll)
+requests.dll	A: 0x5E890000 - 0x5EC8F000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\requests.dll)
+ADVAPI32.dll	A: 0x77260000 - 0x772E5000	(C:\WINDOWS\System32\ADVAPI32.dll)
+sechost.dll	A: 0x77500000 - 0x77585000	(C:\WINDOWS\System32\sechost.dll)
+WINHTTP.dll	A: 0x72D00000 - 0x72DE6000	(C:\WINDOWS\SYSTEM32\WINHTTP.dll)
+CRYPT32.dll	A: 0x75C10000 - 0x75D1E000	(C:\WINDOWS\System32\CRYPT32.dll)
+bcrypt.dll	A: 0x738D0000 - 0x738EC000	(C:\WINDOWS\SYSTEM32\bcrypt.dll)
+CONCRT140.dll	A: 0x5F010000 - 0x5F04E000	(C:\WINDOWS\SYSTEM32\CONCRT140.dll)
+DPAPI.DLL	A: 0x711E0000 - 0x711E9000	(C:\WINDOWS\SYSTEM32\DPAPI.DLL)
+mswsock.dll	A: 0x71E60000 - 0x71EB4000	(C:\WINDOWS\system32\mswsock.dll)
+napinsp.dll	A: 0x6C550000 - 0x6C562000	(C:\WINDOWS\system32\napinsp.dll)
+DNSAPI.dll	A: 0x70BF0000 - 0x70CFD000	(C:\WINDOWS\SYSTEM32\DNSAPI.dll)
+DSPARSE.dll	A: 0x70BE0000 - 0x70BEA000	(C:\WINDOWS\SYSTEM32\DSPARSE.dll)
+IPHLPAPI.DLL	A: 0x72F30000 - 0x72F56000	(C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL)
+NSI.dll	A: 0x764F0000 - 0x764F7000	(C:\WINDOWS\System32\NSI.dll)
+winrnr.dll	A: 0x6C570000 - 0x6C57E000	(C:\WINDOWS\System32\winrnr.dll)
+wshbth.dll	A: 0x6C5C0000 - 0x6C5D2000	(C:\WINDOWS\system32\wshbth.dll)
+rasadhlp.dll	A: 0x70BD0000 - 0x70BD8000	(C:\Windows\System32\rasadhlp.dll)
+kernel.appcore.dll	A: 0x74480000 - 0x74495000	(C:\WINDOWS\SYSTEM32\kernel.appcore.dll)
+
+--------------------------
+SA-MP Server: 0.3.7-R2
+
+Exception At Address: 0x700259C5 Module: (MSVCP140.dll)
+
+Registers:
+EAX: 0x00000000	EBX: 0x5EC47130	ECX: 0x001AFC6C	EDX: 0x04190A50
+ESI: 0x5EC47158	EDI: 0x00000000	EBP: 0x001AFC5C	ESP: 0x001AFC38
+EFLAGS: 0x00210286
+
+Stack:
++0000: 0x04190A50   0x001AFD6C   0x00000000   0x001AFC6C
++0010: 0x0417FFD0   0x0418F6FC   0x0418F714   0x001AFC94
++0020: 0x5A0F5730   0x001AFC80   0x70025C58   0x5EC47130
++0030: 0x001AFC6C   0x00000000   0x00000000   0x00000000
++0040: 0x00000020   0x5A0F57EC   0x001AFD18   0x5E8F7566
++0050: 0x5EC47130   0xCC2483B1   0x04190A50   0x001AFDFC
++0060: 0x001AFD6C   0x00000014   0x00000000   0x00000001
++0070: 0x007B0000   0x00000000   0x007B07D0   0x00000020
++0080: 0x001AFD6C   0x00000020   0x00000000   0x0418F6FC
++0090: 0x00000000   0x007B0950   0x001AFD20   0x007B0000
++00A0: 0x007B01C8   0x007B0950   0x006B0000   0x001AFD20
++00B0: 0x77D31FE6   0x00000014   0x77D32177   0x001AFDFC
++00C0: 0x006B0000   0x006DBA70   0x00000004   0x00000020
++00D0: 0xCC2483B1   0x001AFDE8   0x5EB7BEE1   0x00000000
++00E0: 0x001AFDF4   0x5E901474   0x001AFD6C   0xCC24835D
++00F0: 0x04190A50   0x001AFDFC   0x00000000   0x00000014
++0100: 0x006DBA70   0x001AFD2C   0x00000020   0x001AFDA4
++0110: 0xCC2483DD   0x001AFDFC   0x04190AB0   0x006DBA70
++0120: 0x7700DF5F   0x006B0000   0x00000000   0x04190A50
++0130: 0x001AFDA4   0x00000000   0x00000000   0x00000000
+
+--------------------------
+
+Loaded Modules:
+samp-server.exe	A: 0x00400000 - 0x00519000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\samp-server.exe)
+ntdll.dll	A: 0x77CA0000 - 0x77E5F000	(C:\WINDOWS\SYSTEM32\ntdll.dll)
+KERNEL32.DLL	A: 0x766D0000 - 0x767C0000	(C:\WINDOWS\System32\KERNEL32.DLL)
+KERNELBASE.dll	A: 0x76010000 - 0x762EA000	(C:\WINDOWS\System32\KERNELBASE.dll)
+SHELL32.dll	A: 0x77620000 - 0x77C85000	(C:\WINDOWS\System32\SHELL32.dll)
+msvcp_win.dll	A: 0x76F50000 - 0x76FD5000	(C:\WINDOWS\System32\msvcp_win.dll)
+ucrtbase.dll	A: 0x76FE0000 - 0x770F0000	(C:\WINDOWS\System32\ucrtbase.dll)
+USER32.dll	A: 0x75A20000 - 0x75C07000	(C:\WINDOWS\System32\USER32.dll)
+win32u.dll	A: 0x76F30000 - 0x76F4C000	(C:\WINDOWS\System32\win32u.dll)
+GDI32.dll	A: 0x76F00000 - 0x76F22000	(C:\WINDOWS\System32\GDI32.dll)
+gdi32full.dll	A: 0x768F0000 - 0x769DA000	(C:\WINDOWS\System32\gdi32full.dll)
+WINMM.dll	A: 0x71D70000 - 0x71DA3000	(C:\WINDOWS\SYSTEM32\WINMM.dll)
+WSOCK32.dll	A: 0x6F270000 - 0x6F278000	(C:\WINDOWS\SYSTEM32\WSOCK32.dll)
+msvcrt.dll	A: 0x765E0000 - 0x766A7000	(C:\WINDOWS\System32\msvcrt.dll)
+ws2_32.DLL	A: 0x76570000 - 0x765DA000	(C:\WINDOWS\System32\ws2_32.DLL)
+RPCRT4.dll	A: 0x769E0000 - 0x76A9C000	(C:\WINDOWS\System32\RPCRT4.dll)
+IMM32.DLL	A: 0x77590000 - 0x775B5000	(C:\WINDOWS\System32\IMM32.DLL)
+sscanf.DLL	A: 0x5F0C0000 - 0x5F0EA000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\sscanf.DLL)
+MSVCP140.dll	A: 0x70010000 - 0x7007D000	(C:\WINDOWS\SYSTEM32\MSVCP140.dll)
+VCRUNTIME140.dll	A: 0x70080000 - 0x70095000	(C:\WINDOWS\SYSTEM32\VCRUNTIME140.dll)
+streamer.dll	A: 0x5F050000 - 0x5F0B6000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\streamer.dll)
+requests.dll	A: 0x5E890000 - 0x5EC8F000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\requests.dll)
+ADVAPI32.dll	A: 0x77260000 - 0x772E5000	(C:\WINDOWS\System32\ADVAPI32.dll)
+WINHTTP.dll	A: 0x72D00000 - 0x72DE6000	(C:\WINDOWS\SYSTEM32\WINHTTP.dll)
+sechost.dll	A: 0x77500000 - 0x77585000	(C:\WINDOWS\System32\sechost.dll)
+CRYPT32.dll	A: 0x75C10000 - 0x75D1E000	(C:\WINDOWS\System32\CRYPT32.dll)
+bcrypt.dll	A: 0x738D0000 - 0x738EC000	(C:\WINDOWS\SYSTEM32\bcrypt.dll)
+CONCRT140.dll	A: 0x5F010000 - 0x5F04E000	(C:\WINDOWS\SYSTEM32\CONCRT140.dll)
+DPAPI.DLL	A: 0x711E0000 - 0x711E9000	(C:\WINDOWS\SYSTEM32\DPAPI.DLL)
+mswsock.dll	A: 0x71E60000 - 0x71EB4000	(C:\WINDOWS\system32\mswsock.dll)
+napinsp.dll	A: 0x6C550000 - 0x6C562000	(C:\WINDOWS\system32\napinsp.dll)
+DNSAPI.dll	A: 0x70BF0000 - 0x70CFD000	(C:\WINDOWS\SYSTEM32\DNSAPI.dll)
+DSPARSE.dll	A: 0x70BE0000 - 0x70BEA000	(C:\WINDOWS\SYSTEM32\DSPARSE.dll)
+IPHLPAPI.DLL	A: 0x72F30000 - 0x72F56000	(C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL)
+NSI.dll	A: 0x764F0000 - 0x764F7000	(C:\WINDOWS\System32\NSI.dll)
+winrnr.dll	A: 0x6C570000 - 0x6C57E000	(C:\WINDOWS\System32\winrnr.dll)
+wshbth.dll	A: 0x6C5C0000 - 0x6C5D2000	(C:\WINDOWS\system32\wshbth.dll)
+rasadhlp.dll	A: 0x70BD0000 - 0x70BD8000	(C:\Windows\System32\rasadhlp.dll)
+
+--------------------------
+SA-MP Server: 0.3.7-R2
+
+Exception At Address: 0x700259C5 Module: (MSVCP140.dll)
+
+Registers:
+EAX: 0x00000000	EBX: 0x5EC47130	ECX: 0x001AFC6C	EDX: 0x0412BBF8
+ESI: 0x5EC47158	EDI: 0x00000000	EBP: 0x001AFC5C	ESP: 0x001AFC38
+EFLAGS: 0x00210286
+
+Stack:
++0000: 0x0412BBF8   0x001AFD6C   0x00000000   0x001AFC6C
++0010: 0x040E9A38   0x0412B064   0x0412B074   0x001AFC94
++0020: 0x91464E2B   0x001AFC80   0x70025C58   0x5EC47130
++0030: 0x001AFC6C   0x00000000   0x00000000   0x00000000
++0040: 0x00000020   0x91464EF7   0x001AFD18   0x5E8F7566
++0050: 0x5EC47130   0x0189729B   0x0412BBF8   0x001AFDFC
++0060: 0x001AFD6C   0x00000014   0x00000000   0x00000001
++0070: 0x00660000   0x00000000   0x006607D0   0x00000020
++0080: 0x001AFD6C   0x00000020   0x00000000   0x0412B064
++0090: 0x00000000   0x00660950   0x001AFD20   0x00660000
++00A0: 0x006601C8   0x00660950   0x00760000   0x001AFD20
++00B0: 0x77D31FE6   0x00000014   0x77D32177   0x001AFDFC
++00C0: 0x00760000   0x0078DAF0   0x00000004   0x00000020
++00D0: 0x0189729B   0x001AFDE8   0x5EB7BEE1   0x00000000
++00E0: 0x001AFDF4   0x5E901474   0x001AFD6C   0x01897277
++00F0: 0x0412BBF8   0x001AFDFC   0x00000000   0x00000014
++0100: 0x0078DAF0   0x001AFD2C   0x00000020   0x001AFDA4
++0110: 0x018972F7   0x001AFDFC   0x0412BA78   0x0078DAF0
++0120: 0x7700DF5F   0x00760000   0x00000000   0x0412BBF8
++0130: 0x001AFDA4   0x00000000   0x00000000   0x00000000
+
+--------------------------
+
+Loaded Modules:
+samp-server.exe	A: 0x00400000 - 0x00519000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\samp-server.exe)
+ntdll.dll	A: 0x77CA0000 - 0x77E5F000	(C:\WINDOWS\SYSTEM32\ntdll.dll)
+KERNEL32.DLL	A: 0x766D0000 - 0x767C0000	(C:\WINDOWS\System32\KERNEL32.DLL)
+KERNELBASE.dll	A: 0x76010000 - 0x762EA000	(C:\WINDOWS\System32\KERNELBASE.dll)
+SHELL32.dll	A: 0x77620000 - 0x77C85000	(C:\WINDOWS\System32\SHELL32.dll)
+msvcp_win.dll	A: 0x76F50000 - 0x76FD5000	(C:\WINDOWS\System32\msvcp_win.dll)
+ucrtbase.dll	A: 0x76FE0000 - 0x770F0000	(C:\WINDOWS\System32\ucrtbase.dll)
+USER32.dll	A: 0x75A20000 - 0x75C07000	(C:\WINDOWS\System32\USER32.dll)
+win32u.dll	A: 0x76F30000 - 0x76F4C000	(C:\WINDOWS\System32\win32u.dll)
+GDI32.dll	A: 0x76F00000 - 0x76F22000	(C:\WINDOWS\System32\GDI32.dll)
+gdi32full.dll	A: 0x768F0000 - 0x769DA000	(C:\WINDOWS\System32\gdi32full.dll)
+WSOCK32.dll	A: 0x6F270000 - 0x6F278000	(C:\WINDOWS\SYSTEM32\WSOCK32.dll)
+WINMM.dll	A: 0x71D70000 - 0x71DA3000	(C:\WINDOWS\SYSTEM32\WINMM.dll)
+msvcrt.dll	A: 0x765E0000 - 0x766A7000	(C:\WINDOWS\System32\msvcrt.dll)
+ws2_32.DLL	A: 0x76570000 - 0x765DA000	(C:\WINDOWS\System32\ws2_32.DLL)
+RPCRT4.dll	A: 0x769E0000 - 0x76A9C000	(C:\WINDOWS\System32\RPCRT4.dll)
+IMM32.DLL	A: 0x77590000 - 0x775B5000	(C:\WINDOWS\System32\IMM32.DLL)
+sscanf.DLL	A: 0x5F0C0000 - 0x5F0EA000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\sscanf.DLL)
+VCRUNTIME140.dll	A: 0x70080000 - 0x70095000	(C:\WINDOWS\SYSTEM32\VCRUNTIME140.dll)
+MSVCP140.dll	A: 0x70010000 - 0x7007D000	(C:\WINDOWS\SYSTEM32\MSVCP140.dll)
+streamer.dll	A: 0x5F050000 - 0x5F0B6000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\streamer.dll)
+requests.dll	A: 0x5E890000 - 0x5EC8F000	(C:\Users\eldin\OneDrive\Desktop\SAMP BE BeckUp\BRevolution-main\plugins\requests.dll)
+ADVAPI32.dll	A: 0x77260000 - 0x772E5000	(C:\WINDOWS\System32\ADVAPI32.dll)
+sechost.dll	A: 0x77500000 - 0x77585000	(C:\WINDOWS\System32\sechost.dll)
+WINHTTP.dll	A: 0x72D00000 - 0x72DE6000	(C:\WINDOWS\SYSTEM32\WINHTTP.dll)
+CRYPT32.dll	A: 0x75C10000 - 0x75D1E000	(C:\WINDOWS\System32\CRYPT32.dll)
+bcrypt.dll	A: 0x738D0000 - 0x738EC000	(C:\WINDOWS\SYSTEM32\bcrypt.dll)
+CONCRT140.dll	A: 0x5F010000 - 0x5F04E000	(C:\WINDOWS\SYSTEM32\CONCRT140.dll)
+DPAPI.DLL	A: 0x711E0000 - 0x711E9000	(C:\WINDOWS\SYSTEM32\DPAPI.DLL)
+mswsock.dll	A: 0x71E60000 - 0x71EB4000	(C:\WINDOWS\system32\mswsock.dll)
+napinsp.dll	A: 0x6C550000 - 0x6C562000	(C:\WINDOWS\system32\napinsp.dll)
+DNSAPI.dll	A: 0x70BF0000 - 0x70CFD000	(C:\WINDOWS\SYSTEM32\DNSAPI.dll)
+DSPARSE.dll	A: 0x70BE0000 - 0x70BEA000	(C:\WINDOWS\SYSTEM32\DSPARSE.dll)
+IPHLPAPI.DLL	A: 0x72F30000 - 0x72F56000	(C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL)
+NSI.dll	A: 0x764F0000 - 0x764F7000	(C:\WINDOWS\System32\NSI.dll)
+winrnr.dll	A: 0x6C570000 - 0x6C57E000	(C:\WINDOWS\System32\winrnr.dll)
+wshbth.dll	A: 0x6C5C0000 - 0x6C5D2000	(C:\WINDOWS\system32\wshbth.dll)
+rasadhlp.dll	A: 0x70BD0000 - 0x70BD8000	(C:\Windows\System32\rasadhlp.dll)
