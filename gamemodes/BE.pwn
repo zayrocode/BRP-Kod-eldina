@@ -109,6 +109,9 @@ new PodesiStatsTarget[MAX_PLAYERS], PodesiStatsId[MAX_PLAYERS];
 #define DIALOG_SELL_EURO 15046
 #define DIALOG_EURO_RATES 15047
 #define DIALOG_PIJACA_VOZILO 15048
+#define DIALOG_VEHICLE_SELL_OFFER 15049
+#define DIALOG_VEHICLE_COLOR_1 15050
+#define DIALOG_VEHICLE_COLOR_2 15051
 #define DIALOG_BIZZ_BANK_MENU_BASE 15100
 #define DIALOG_BIZZ_BANK_DEPOSIT_BASE 15200
 #define DIALOG_BIZZ_BANK_WITHDRAW_BASE 15300
@@ -364,6 +367,12 @@ new bool:AdminParkedVehicle[MAX_VEHICLES];
 new Float:AdminParkX[MAX_VEHICLES],Float:AdminParkY[MAX_VEHICLES],Float:AdminParkZ[MAX_VEHICLES],Float:AdminParkA[MAX_VEHICLES];
 new AdminParkInterior[MAX_VEHICLES], AdminParkWorld[MAX_VEHICLES];
 new PersonalVehicleOwner[MAX_VEHICLES], PersonalVehicleSlot[MAX_VEHICLES];
+new PersonalVehicleColor1[MAX_VEHICLES], PersonalVehicleColor2[MAX_VEHICLES];
+new PendingVehicleSeller[MAX_PLAYERS], PendingVehicleSaleVehicle[MAX_PLAYERS], PendingVehicleSaleSlot[MAX_PLAYERS];
+new PendingVehicleSalePrice[MAX_PLAYERS], PendingVehicleSaleExpires[MAX_PLAYERS];
+new VehicleOfferTarget[MAX_PLAYERS], VehicleOfferExpires[MAX_PLAYERS], VehicleOfferCooldown[MAX_PLAYERS];
+new PendingVehicleColorSlot[MAX_PLAYERS], PendingVehicleColorSide[MAX_PLAYERS];
+new bool:VehicleFindCheckpoint[MAX_PLAYERS];
 new PersonalMarketVehicleId[MAX_PERSONAL_MARKET_VEHICLES];
 new PersonalMarketLabel[MAX_PERSONAL_MARKET_VEHICLES];
 new bool:PersonalMarketExists[MAX_PERSONAL_MARKET_VEHICLES], bool:PersonalMarketReserved[MAX_PERSONAL_MARKET_VEHICLES];
@@ -1251,6 +1260,13 @@ stock ShowPlayerHelp(playerid)
 stock ShowVehicleHelp(playerid)
 {
     new text[1280];
+    strcat(text, "{FFFF00}Licna vozila (/v)\n", sizeof(text));
+    strcat(text, "{00FF00}/v parkN {FFFFFF}- Sacuvaj parking vozila slota 1-3\n", sizeof(text));
+    strcat(text, "{00FF00}/v lockN {FFFFFF}- Zakljucaj ili otkljucaj vozilo slota 1-3\n", sizeof(text));
+    strcat(text, "{00FF00}/v findN {FFFFFF}- Oznaci vozilo na mapi checkpointom\n", sizeof(text));
+    strcat(text, "{00FF00}/v color1 [slot] /v color2 [slot] {FFFFFF}- Promijeni i trajno sacuvaj boje\n", sizeof(text));
+    strcat(text, "{00FF00}/v sellto [ID] [EUR] {FFFFFF}- Ponudi svoje vozilo igracu\n", sizeof(text));
+    strcat(text, "{00FF00}/v list {FFFFFF}- Prikazi ovu pomoc\n\n", sizeof(text));
     strcat(text, "{00FF00}/engine {FFFFFF}- Paljenje ili gasenje motora vozila\n", sizeof(text));
     strcat(text, "{00FF00}/fill {FFFFFF}- Tocenje goriva dok vozilo miruje i motor je ugasen\n", sizeof(text));
     strcat(text, "{00FF00}/platiputarinu {FFFFFF}- Placanje putarine i otvaranje rampe iz vozila\n", sizeof(text));
@@ -2094,6 +2110,7 @@ stock ResetDynamicVehicleRuntime(vehicleid)
     if(vehicleid <= 0 || vehicleid >= MAX_VEHICLES) return 0;
     AdminSpawnedVehicle[vehicleid] = false; AdminParkedVehicle[vehicleid] = false;
     PersonalVehicleOwner[vehicleid] = 0; PersonalVehicleSlot[vehicleid] = 0; RentVehicleOwner[vehicleid] = 0;
+    PersonalVehicleColor1[vehicleid] = 0; PersonalVehicleColor2[vehicleid] = 0;
     VehicleHudInitialized[vehicleid] = false; VehicleHudOutOfFuel[vehicleid] = false;
     VehicleHudLastPosValid[vehicleid] = false; VehicleHudBrokenNotice[vehicleid] = false;
     VehicleHudStalled[vehicleid] = false; VehicleHudNextStartTry[vehicleid] = 0;
@@ -2112,6 +2129,179 @@ stock GetPersonalVehicleKeys(slot, modelKey[], keySize, xKey[], yKey[], zKey[], 
     format(aKey, 24, "Vozilo%dA", slot == 2 ? 3 : slot + 1);
     format(intKey, 24, "Vozilo%dInterior", slot == 2 ? 3 : slot + 1);
     format(worldKey, 24, "Vozilo%dWorld", slot == 2 ? 3 : slot + 1);
+    return 1;
+}
+
+stock GetPersonalVehiclePropertyKeys(slot, color1Key[], color2Key[], lockedKey[], size)
+{
+    new savedSlot = slot == 2 ? 3 : slot + 1;
+    format(color1Key, size, "Vozilo%dColor1", savedSlot);
+    format(color2Key, size, "Vozilo%dColor2", savedSlot);
+    format(lockedKey, size, "Vozilo%dLocked", savedSlot);
+    return 1;
+}
+
+stock ApplyPersonalVehicleProps(vehicleid, playerid, slot)
+{
+    if(vehicleid <= 0 || vehicleid >= MAX_VEHICLES || playerid < 0 || playerid >= MAX_PLAYERS) return 0;
+    new account[128], color1Key[32], color2Key[32], lockedKey[32];
+    if(!GetPlayerAccountPath(playerid, account, sizeof(account))) return 0;
+    GetPersonalVehiclePropertyKeys(slot, color1Key, color2Key, lockedKey, sizeof(color1Key));
+    PersonalVehicleColor1[vehicleid] = DOF2_IsSet(account, color1Key) ? DOF2_GetInt(account, color1Key) : 0;
+    PersonalVehicleColor2[vehicleid] = DOF2_IsSet(account, color2Key) ? DOF2_GetInt(account, color2Key) : 0;
+    ChangeVehicleColor(vehicleid, PersonalVehicleColor1[vehicleid], PersonalVehicleColor2[vehicleid]);
+    for(new componentSlot = 0; componentSlot < 14; componentSlot++)
+    {
+        new component = GetVehicleComponentInSlot(vehicleid, componentSlot);
+        if(component > 0) RemoveVehicleComponent(vehicleid, component);
+        new componentKey[32];
+        format(componentKey, sizeof(componentKey), "Vozilo%dTuning%d", slot == 2 ? 3 : slot + 1, componentSlot);
+        component = DOF2_GetInt(account, componentKey);
+        if(component > 0) AddVehicleComponent(vehicleid, component);
+    }
+    new engine, lights, alarm, doors, bonnet, boot, objective;
+    GetVehicleParamsEx(vehicleid, engine, lights, alarm, doors, bonnet, boot, objective);
+    doors = DOF2_GetInt(account, lockedKey) ? 1 : 0;
+    SetVehicleParamsEx(vehicleid, engine, lights, alarm, doors, bonnet, boot, objective);
+    return 1;
+}
+
+stock IsPersonalVehicleLocked(vehicleid)
+{
+    if(vehicleid <= 0 || vehicleid >= MAX_VEHICLES || GetVehicleModel(vehicleid) == 0 || PersonalVehicleOwner[vehicleid] <= 0) return 0;
+    new ownerid = PersonalVehicleOwner[vehicleid] - 1;
+    if(ownerid < 0 || ownerid >= MAX_PLAYERS || !IsPlayerConnected(ownerid)) return 0;
+    new account[128], color1Key[32], color2Key[32], lockedKey[32];
+    if(!GetPlayerAccountPath(ownerid, account, sizeof(account))) return 0;
+    GetPersonalVehiclePropertyKeys(PersonalVehicleSlot[vehicleid] - 1, color1Key, color2Key, lockedKey, sizeof(color1Key));
+    return DOF2_GetInt(account, lockedKey) != 0;
+}
+
+stock GetOwnedPersonalVehicle(playerid, slotNum)
+{
+    for(new vehicleid = 1; vehicleid < MAX_VEHICLES; vehicleid++)
+        if(GetVehicleModel(vehicleid) && PersonalVehicleOwner[vehicleid] == playerid + 1 && PersonalVehicleSlot[vehicleid] == slotNum)
+            return vehicleid;
+    return INVALID_VEHICLE_ID;
+}
+
+stock FormatEuroAmount(amount, output[], size)
+{
+    new digits[16], grouped[24], suffix[32];
+    format(digits, sizeof(digits), "%d", amount);
+    new length = strlen(digits), pos = 0;
+    for(new i = 0; i < length && pos < sizeof(grouped) - 1; i++)
+    {
+        if(i > 0 && (length - i) % 3 == 0) grouped[pos++] = '.';
+        grouped[pos++] = digits[i];
+    }
+    grouped[pos] = EOS;
+    format(suffix, sizeof(suffix), "%s EUR", grouped);
+    format(output, size, "%s", suffix);
+    return 1;
+}
+
+stock HandleVehSaleResponse(buyerid, response, const inputtext[])
+{
+    new sellerEncoded = PendingVehicleSeller[buyerid];
+    if(sellerEncoded <= 0) return 1;
+    new sellerid = sellerEncoded - 1;
+    new vehicleid = PendingVehicleSaleVehicle[buyerid];
+    new slotNum = PendingVehicleSaleSlot[buyerid];
+    new price = PendingVehicleSalePrice[buyerid];
+    new expires = PendingVehicleSaleExpires[buyerid];
+    PendingVehicleSeller[buyerid] = 0;
+    PendingVehicleSaleVehicle[buyerid] = INVALID_VEHICLE_ID;
+    PendingVehicleSaleSlot[buyerid] = 0;
+    PendingVehicleSalePrice[buyerid] = 0;
+    PendingVehicleSaleExpires[buyerid] = 0;
+
+    if(sellerid < 0 || sellerid >= MAX_PLAYERS) return 1;
+    if(VehicleOfferTarget[sellerid] == buyerid + 1)
+    {
+        VehicleOfferTarget[sellerid] = 0;
+        VehicleOfferExpires[sellerid] = 0;
+    }
+    if(expires >= gettime()) VehicleOfferCooldown[sellerid] = gettime() + 30;
+    if(!IsPlayerConnected(sellerid)) return 1;
+    if(expires < gettime())
+        return SendClientMessage(sellerid, 0xFF7777FF, "[VOZILO]: Ponuda za vozilo je istekla.");
+    if(!response || !strcmp(inputtext, "Odustani", true))
+        return SendClientMessage(sellerid, 0x33CCFFFF, "[VOZILO]: Igrac je odustao od kupovine tog vozila.");
+    if(strcmp(inputtext, "Prihvati", true) != 0) return 1;
+
+    if(!IsPlayerConnected(buyerid) || !GetPVarInt(buyerid, "BR_LoggedIn") || !GetPVarInt(sellerid, "BR_LoggedIn"))
+        return SendClientMessage(sellerid, 0xFF7777FF, "[VOZILO]: Kupac ili prodavac vise nije dostupan.");
+    if(slotNum < 1 || slotNum > 3 || vehicleid <= 0 || vehicleid >= MAX_VEHICLES || GetVehicleModel(vehicleid) == 0 ||
+       PersonalVehicleOwner[vehicleid] != sellerid + 1 || PersonalVehicleSlot[vehicleid] != slotNum ||
+       GetPlayerState(sellerid) != PLAYER_STATE_DRIVER || GetPlayerVehicleID(sellerid) != vehicleid)
+        return SendClientMessage(sellerid, 0xFF7777FF, "[VOZILO]: Ponudjeno vozilo vise nije dostupno za prodaju.");
+
+    new Float:x, Float:y, Float:z, Float:angle;
+    GetVehiclePos(vehicleid, x, y, z);
+    GetVehicleZAngle(vehicleid, angle);
+    if(GetPlayerInterior(buyerid) != GetPlayerInterior(sellerid) || GetPlayerVirtualWorld(buyerid) != GetPlayerVirtualWorld(sellerid) ||
+       !IsPlayerInRangeOfPoint(buyerid, 10.0, x, y, z))
+        return SendClientMessage(sellerid, 0xFF7777FF, "[VOZILO]: Kupac mora biti blizu vozila da bi preuzeo kljuceve.");
+
+    new sellerFile[128], buyerFile[128];
+    if(!GetPlayerAccountPath(sellerid, sellerFile, sizeof(sellerFile)) || !GetPlayerAccountPath(buyerid, buyerFile, sizeof(buyerFile)))
+        return SendClientMessage(sellerid, 0xFF7777FF, "[VOZILO]: Korisnicki racun nije dostupan.");
+    if(PlayerInfo[buyerid][pEuro] < price)
+        return SendClientMessage(sellerid, 0xFF7777FF, "[VOZILO]: Kupac nema dovoljno EUR za kupovinu.");
+    if(PlayerInfo[sellerid][pEuro] > MAX_EURO_BALANCE - price)
+        return SendClientMessage(sellerid, 0xFF7777FF, "[VOZILO]: Nemate dovoljno mjesta za EUR uplatu.");
+    new targetSlot = GetAvailablePersonalVehicleSlot(buyerFile);
+    if(targetSlot == -1)
+        return SendClientMessage(sellerid, 0xFF7777FF, "[VOZILO]: Kupac nema slobodan slot za vozilo.");
+
+    new sellerModelKey[24], sxKey[24], syKey[24], szKey[24], saKey[24], siKey[24], swKey[24];
+    new buyerModelKey[24], bxKey[24], byKey[24], bzKey[24], baKey[24], biKey[24], bwKey[24];
+    GetPersonalVehicleKeys(slotNum - 1, sellerModelKey, sizeof(sellerModelKey), sxKey, syKey, szKey, saKey, siKey, swKey);
+    GetPersonalVehicleKeys(targetSlot, buyerModelKey, sizeof(buyerModelKey), bxKey, byKey, bzKey, baKey, biKey, bwKey);
+    new sellerColor1[32], sellerColor2[32], sellerLocked[32], buyerColor1[32], buyerColor2[32], buyerLocked[32];
+    GetPersonalVehiclePropertyKeys(slotNum - 1, sellerColor1, sellerColor2, sellerLocked, sizeof(sellerColor1));
+    GetPersonalVehiclePropertyKeys(targetSlot, buyerColor1, buyerColor2, buyerLocked, sizeof(buyerColor1));
+    new sellerSlotIndex = slotNum == 3 ? 3 : slotNum;
+    new targetSlotIndex = targetSlot == 2 ? 3 : targetSlot + 1;
+    new sellerPriceKey[32], sellerMarketKey[32], buyerPriceKey[32], buyerMarketKey[32];
+    format(sellerPriceKey, sizeof(sellerPriceKey), "Vozilo%dCijenaEUR", sellerSlotIndex);
+    format(sellerMarketKey, sizeof(sellerMarketKey), "Vozilo%dPijacaSlot", sellerSlotIndex);
+    format(buyerPriceKey, sizeof(buyerPriceKey), "Vozilo%dCijenaEUR", targetSlotIndex);
+    format(buyerMarketKey, sizeof(buyerMarketKey), "Vozilo%dPijacaSlot", targetSlotIndex);
+    new model = GetVehicleModel(vehicleid), sellerShare = PlayerInfo[sellerid][pEuro] + price;
+    DOF2_SetInt(buyerFile, buyerModelKey, model);
+    DOF2_SetFloat(buyerFile, bxKey, x); DOF2_SetFloat(buyerFile, byKey, y); DOF2_SetFloat(buyerFile, bzKey, z); DOF2_SetFloat(buyerFile, baKey, angle);
+    DOF2_SetInt(buyerFile, biKey, GetPlayerInterior(sellerid)); DOF2_SetInt(buyerFile, bwKey, GetPlayerVirtualWorld(sellerid));
+    DOF2_SetInt(buyerFile, buyerPriceKey, DOF2_GetInt(sellerFile, sellerPriceKey));
+    DOF2_SetInt(buyerFile, buyerMarketKey, DOF2_GetInt(sellerFile, sellerMarketKey));
+    if(DOF2_IsSet(sellerFile, sellerColor1) && DOF2_IsSet(sellerFile, sellerColor2))
+    {
+        DOF2_SetInt(buyerFile, buyerColor1, DOF2_GetInt(sellerFile, sellerColor1));
+        DOF2_SetInt(buyerFile, buyerColor2, DOF2_GetInt(sellerFile, sellerColor2));
+    }
+    else { DOF2_Unset(buyerFile, buyerColor1); DOF2_Unset(buyerFile, buyerColor2); }
+    DOF2_SetInt(buyerFile, buyerLocked, DOF2_GetInt(sellerFile, sellerLocked));
+    DOF2_SetInt(sellerFile, sellerModelKey, -1);
+    DOF2_SetInt(sellerFile, sellerPriceKey, 0); DOF2_SetInt(sellerFile, sellerMarketKey, 0);
+    DOF2_Unset(sellerFile, sellerColor1); DOF2_Unset(sellerFile, sellerColor2); DOF2_Unset(sellerFile, sellerLocked);
+    PlayerInfo[buyerid][pEuro] -= price;
+    PlayerInfo[sellerid][pEuro] = sellerShare;
+    DOF2_SetInt(buyerFile, "Euro", PlayerInfo[buyerid][pEuro]);
+    DOF2_SetInt(sellerFile, "Euro", PlayerInfo[sellerid][pEuro]);
+    DOF2_SaveFile();
+    PersonalVehicleOwner[vehicleid] = buyerid + 1;
+    PersonalVehicleSlot[vehicleid] = targetSlot + 1;
+    ApplyPersonalVehicleProps(vehicleid, buyerid, targetSlot);
+    UpdateRevolutionHudData(buyerid); UpdateRevolutionHudData(sellerid);
+    RemovePlayerFromVehicle(sellerid);
+    new buyerName[MAX_PLAYER_NAME], sellerName[MAX_PLAYER_NAME], message[160], priceString[32];
+    GetPlayerName(buyerid, buyerName, sizeof(buyerName)); GetPlayerName(sellerid, sellerName, sizeof(sellerName));
+    FormatEuroAmount(price, priceString, sizeof(priceString));
+    format(message, sizeof(message), "[VOZILO]: Prodali ste vozilo igracu %s za %s.", buyerName, priceString);
+    SendClientMessage(sellerid, 0x33CC33FF, message);
+    format(message, sizeof(message), "[VOZILO]: Kupili ste vozilo %s od %s za %s. Kljuci su vam predati.", VehicleHudModelNames[model - 400], sellerName, priceString);
+    SendClientMessage(buyerid, 0x33CC33FF, message);
     return 1;
 }
 
@@ -2294,6 +2484,7 @@ public LoadPlayerOwnedVehicles(playerid)
         PersonalVehicleSlot[vehicleid] = slot + 1;
         LinkVehicleToInterior(vehicleid, DOF2_GetInt(file, intKey));
         SetVehicleVirtualWorld(vehicleid, DOF2_GetInt(file, worldKey));
+        ApplyPersonalVehicleProps(vehicleid, playerid, slot);
         VehicleHudInitData(vehicleid);
     }
     DOF2_SaveFile();
@@ -2314,6 +2505,7 @@ public RespawnOwnedPersonalVehicle(vehicleid)
     SetVehicleZAngle(vehicleid, DOF2_GetFloat(account, aKey));
     LinkVehicleToInterior(vehicleid, DOF2_GetInt(account, intKey));
     SetVehicleVirtualWorld(vehicleid, DOF2_GetInt(account, worldKey));
+    ApplyPersonalVehicleProps(vehicleid, playerid, PersonalVehicleSlot[vehicleid] - 1);
     return 1;
 }
 
@@ -2833,6 +3025,17 @@ public OnGameModeInit()
 }
 public OnPlayerConnect(playerid)
 {
+    PendingVehicleSeller[playerid] = 0;
+    PendingVehicleSaleVehicle[playerid] = INVALID_VEHICLE_ID;
+    PendingVehicleSaleSlot[playerid] = 0;
+    PendingVehicleSalePrice[playerid] = 0;
+    PendingVehicleSaleExpires[playerid] = 0;
+    VehicleOfferTarget[playerid] = 0;
+    VehicleOfferExpires[playerid] = 0;
+    VehicleOfferCooldown[playerid] = 0;
+    PendingVehicleColorSlot[playerid] = 0;
+    PendingVehicleColorSide[playerid] = 0;
+    VehicleFindCheckpoint[playerid] = false;
     AuthTDShown[playerid] = false;
     LastAntiSpamTick[playerid] = 0;
     PendingBizzStateSale[playerid] = -1;
@@ -2985,6 +3188,33 @@ public KickPlayerDelayed(playerid)
 public OnPlayerDisconnect(playerid, reason)
 {
     SaveRibolovacCatch(playerid);
+    if(PendingVehicleSeller[playerid] > 0)
+    {
+        new sellerid = PendingVehicleSeller[playerid] - 1;
+        if(sellerid >= 0 && sellerid < MAX_PLAYERS && IsPlayerConnected(sellerid))
+        {
+            VehicleOfferTarget[sellerid] = 0;
+            VehicleOfferExpires[sellerid] = 0;
+            VehicleOfferCooldown[sellerid] = gettime() + 30;
+            SendClientMessage(sellerid, 0xFF7777FF, "[VOZILO]: Kupac je napustio server. Sacekajte 30 sekundi za novu ponudu.");
+        }
+    }
+    if(VehicleOfferTarget[playerid] > 0)
+    {
+        new buyerid = VehicleOfferTarget[playerid] - 1;
+        if(buyerid >= 0 && buyerid < MAX_PLAYERS && IsPlayerConnected(buyerid) && PendingVehicleSeller[buyerid] == playerid + 1)
+        {
+            PendingVehicleSeller[buyerid] = 0;
+            PendingVehicleSaleExpires[buyerid] = 0;
+            SendClientMessage(buyerid, 0xFF7777FF, "[VOZILO]: Prodavac je napustio server. Ponuda je otkazana.");
+        }
+    }
+    PendingVehicleSeller[playerid] = 0;
+    VehicleOfferTarget[playerid] = 0;
+    VehicleOfferExpires[playerid] = 0;
+    PendingVehicleColorSlot[playerid] = 0;
+    PendingVehicleColorSide[playerid] = 0;
+    VehicleFindCheckpoint[playerid] = false;
     for(new ownedVehicle = 1; ownedVehicle < MAX_VEHICLES; ownedVehicle++)
     {
         if(PersonalVehicleOwner[ownedVehicle] != playerid + 1) continue;
@@ -3465,6 +3695,42 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             if(!response) return 1;
             return CompletePersonalMarketPurchase(playerid, marketIndex, marketVehicle);
         }
+        case DIALOG_VEHICLE_COLOR_1, DIALOG_VEHICLE_COLOR_2:
+        {
+            new slotNum = PendingVehicleColorSlot[playerid];
+            new side = PendingVehicleColorSide[playerid];
+            PendingVehicleColorSlot[playerid] = 0;
+            PendingVehicleColorSide[playerid] = 0;
+            if(!response) return 1;
+            if(slotNum < 1 || slotNum > 3 || (side != 1 && side != 2))
+                return SendClientMessage(playerid, 0xFF7777FF, "[VOZILO]: Izbor boje je istekao.");
+            new inputLength = strlen(inputtext);
+            if(inputLength < 1 || inputLength > 3)
+                return SendClientMessage(playerid, 0xFF7777FF, "[VOZILO]: Unesite broj boje od 0 do 255.");
+            for(new c = 0; inputtext[c] != EOS; c++)
+                if(inputtext[c] < '0' || inputtext[c] > '9')
+                    return SendClientMessage(playerid, 0xFF7777FF, "[VOZILO]: Unesite samo broj boje od 0 do 255.");
+            new color = strval(inputtext);
+            if(color < 0 || color > 255)
+                return SendClientMessage(playerid, 0xFF7777FF, "[VOZILO]: Unesite broj boje od 0 do 255.");
+            new vehicleid = GetOwnedPersonalVehicle(playerid, slotNum), account[128];
+            if(vehicleid == INVALID_VEHICLE_ID || !GetPlayerAccountPath(playerid, account, sizeof(account)))
+                return SendClientMessage(playerid, 0xFF7777FF, "[VOZILO]: Vozilo vise nije dostupno.");
+            new color1Key[32], color2Key[32], lockedKey[32];
+            GetPersonalVehiclePropertyKeys(slotNum - 1, color1Key, color2Key, lockedKey, sizeof(color1Key));
+            new color1 = DOF2_IsSet(account, color1Key) ? DOF2_GetInt(account, color1Key) : 0;
+            new color2 = DOF2_IsSet(account, color2Key) ? DOF2_GetInt(account, color2Key) : 0;
+            if(side == 1) color1 = color;
+            else color2 = color;
+            PersonalVehicleColor1[vehicleid] = color1;
+            PersonalVehicleColor2[vehicleid] = color2;
+            ChangeVehicleColor(vehicleid, color1, color2);
+            new message[96];
+            format(message, sizeof(message), "[VOZILO]: Boje sacuvane: Color 1 = %d, Color 2 = %d.", color1, color2);
+            return SendClientMessage(playerid, 0x33CC33FF, message);
+        }
+        case DIALOG_VEHICLE_SELL_OFFER:
+            return HandleVehSaleResponse(playerid, response, inputtext);
         case DIALOG_BUY_EURO:
         {
             if(!response) return 1;
@@ -12880,6 +13146,8 @@ public OnVehicleSpawn(vehicleid)
             LinkVehicleToInterior(vehicleid, AdminParkInterior[vehicleid]);
             SetVehicleVirtualWorld(vehicleid, AdminParkWorld[vehicleid]);
         }
+        if(PersonalVehicleOwner[vehicleid] > 0)
+            ApplyPersonalVehicleProps(vehicleid, PersonalVehicleOwner[vehicleid] - 1, PersonalVehicleSlot[vehicleid] - 1);
     }
     return 1;
 }
@@ -15046,6 +15314,8 @@ public RelockAdminEnteredVehicle(vehicleid)
 public OnPlayerEnterVehicle(playerid,vehicleid,ispassenger)
 {
     #pragma unused ispassenger
+    // Admini mogu privremeno otkljucati obicna vozila, ali ne i zakljucana licna vozila.
+    if(IsPersonalVehicleLocked(vehicleid)) return 1;
     if(!HasAdminCommandAccess(playerid)||IsTaxiVozilo(vehicleid)||IsHitnaVozilo(vehicleid)||IsParkingServisVozilo(vehicleid)||IsPostarVozilo(vehicleid))return 1;
     new engine,lights,alarm,doors,bonnet,boot,objective;GetVehicleParamsEx(vehicleid,engine,lights,alarm,doors,bonnet,boot,objective);if(doors==1){SetVehicleParamsEx(vehicleid,engine,lights,alarm,0,bonnet,boot,objective);SetTimerEx("RelockAdminEnteredVehicle",3500,false,"i",vehicleid);}return 1;
 }
@@ -15053,6 +15323,18 @@ public OnPlayerStateChange(playerid, newstate, oldstate)
 {
     if(newstate == PLAYER_STATE_DRIVER || newstate == PLAYER_STATE_PASSENGER)
         ScriptJetpack[playerid] = false;
+    // Zakljucavanje vrata samo po sebi ne blokira pouzdano ulazak na svakom klijentu,
+    // posebno na suvozacko sjediste (G). Provjera stanja izbacuje igraca iz oba sjedista.
+    if(newstate == PLAYER_STATE_DRIVER || newstate == PLAYER_STATE_PASSENGER)
+    {
+        new lockedVehicle = GetPlayerVehicleID(playerid);
+        if(IsPersonalVehicleLocked(lockedVehicle))
+        {
+            RemovePlayerFromVehicle(playerid);
+            SendClientMessage(playerid, 0xFF7777FF, "Auto je zakljucan!");
+            return 1;
+        }
+    }
     // Proveravamo kada igrac postane vozac nekog vozila
     if(newstate == PLAYER_STATE_DRIVER)
     {
@@ -16110,6 +16392,13 @@ CMD:duty(playerid, params[])
 }
 public OnPlayerEnterCheckpoint(playerid)
 {
+    if(VehicleFindCheckpoint[playerid])
+    {
+        VehicleFindCheckpoint[playerid] = false;
+        DisablePlayerCheckpoint(playerid);
+        SendClientMessage(playerid, 0x33CCFFFF, "[VOZILO]: Stigli ste do lokacije svog vozila.");
+        return 1;
+    }
     if(OffshoreCheckpoint[playerid])
     {
         DisablePlayerCheckpoint(playerid);
@@ -19088,30 +19377,162 @@ CMD:apark(playerid, params[])
 }
 CMD:v(playerid, params[])
 {
-    if(strfind(params, "park", true) != 0)
-        return SendClientMessage(playerid, -1, "Koristenje: /v park1 | /v park2 | /v park3");
-    new slotNum = strval(params[4]);
-    if(slotNum < 1 || slotNum > 3 || params[5] != EOS)
-        return SendClientMessage(playerid, -1, "Koristenje: /v park1 | /v park2 | /v park3");
-    if(GetPlayerState(playerid) != PLAYER_STATE_DRIVER)
-        return SendClientMessage(playerid, 0xFF7777FF, "Morate biti vozac svog vozila.");
-    new vehicleid = GetPlayerVehicleID(playerid);
-    if(PersonalVehicleOwner[vehicleid] != playerid + 1 || PersonalVehicleSlot[vehicleid] != slotNum)
-        return SendClientMessage(playerid, 0xFF7777FF, "Sjedite u svom vozilu odgovarajuceg slota.");
-    new account[128], modelKey[24], xKey[24], yKey[24], zKey[24], aKey[24], intKey[24], worldKey[24];
-    if(!GetPlayerAccountPath(playerid, account, sizeof(account))) return 0;
-    GetPersonalVehicleKeys(slotNum - 1, modelKey, sizeof(modelKey), xKey, yKey, zKey, aKey, intKey, worldKey);
-    new Float:x, Float:y, Float:z, Float:a;
-    GetPlayerPos(playerid, x, y, z);
-    GetPlayerFacingAngle(playerid, a);
-    new interior = GetPlayerInterior(playerid), world = GetPlayerVirtualWorld(playerid);
-    DOF2_SetInt(account, modelKey, GetVehicleModel(vehicleid));
-    DOF2_SetFloat(account, xKey, x); DOF2_SetFloat(account, yKey, y); DOF2_SetFloat(account, zKey, z); DOF2_SetFloat(account, aKey, a);
-    DOF2_SetInt(account, intKey, interior); DOF2_SetInt(account, worldKey, world); DOF2_SaveFile();
-    for(new i = 0; i < MAX_PLAYERS; i++) if(IsPlayerConnected(i) && IsPlayerInVehicle(i, vehicleid)) RemovePlayerFromVehicle(i);
-    SetVehicleToRespawn(vehicleid); SetVehiclePos(vehicleid, x, y, z); SetVehicleZAngle(vehicleid, a);
-    LinkVehicleToInterior(vehicleid, interior); SetVehicleVirtualWorld(vehicleid, world);
-    return SendClientMessage(playerid, 0x33CC33FF, "[VOZILO]: Parking vozila je sacuvan.");
+    if(isnull(params)) return SendClientMessage(playerid, -1, "Koristenje: /v parkN | lockN | findN | color1 [slot] | color2 [slot] | sellto | list");
+    new action[24];
+    if(sscanf(params, "s[24]", action)) return SendClientMessage(playerid, -1, "Koristenje: /v parkN | lockN | findN | color1 [slot] | color2 [slot] | sellto | list");
+    if(!strcmp(action, "list", true)) return ShowVehicleHelp(playerid);
+
+    if(!strcmp(action, "sellto", true))
+    {
+        new targetid, price;
+        // CMD:v dobija cio tekst nakon /v. Akciju smo vec procitali iz params,
+        // pa argumente ponude parsiramo od znaka odmah iza "sellto ".
+        if(strlen(params) <= 7 || sscanf(params[7], "ui", targetid, price))
+            return SendClientMessage(playerid, -1, "Koristenje: /v sellto [ID/Ime] [Cijena EUR]");
+        if(targetid == playerid || !IsPlayerConnected(targetid) || !GetPVarInt(targetid, "BR_LoggedIn"))
+            return SendClientMessage(playerid, 0xFF7777FF, "[VOZILO]: Izaberite drugog prijavljenog igraca.");
+        if(price < 1 || price > MAX_EURO_BALANCE)
+            return SendClientMessage(playerid, 0xFF7777FF, "[VOZILO]: Cijena mora biti od 1 do 2.000.000.000 EUR.");
+        if(GetPlayerState(playerid) != PLAYER_STATE_DRIVER)
+            return SendClientMessage(playerid, 0xFF7777FF, "[VOZILO]: Morate biti vozac svog vozila da biste ga ponudili.");
+        new vehicleid = GetPlayerVehicleID(playerid), slotNum = PersonalVehicleSlot[GetPlayerVehicleID(playerid)];
+        if(vehicleid <= 0 || PersonalVehicleOwner[vehicleid] != playerid + 1 || slotNum < 1 || slotNum > 3)
+            return SendClientMessage(playerid, 0xFF7777FF, "[VOZILO]: Mozete ponuditi samo svoje licno vozilo.");
+        if(GetPlayerInterior(targetid) != GetPlayerInterior(playerid) || GetPlayerVirtualWorld(targetid) != GetPlayerVirtualWorld(playerid))
+            return SendClientMessage(playerid, 0xFF7777FF, "[VOZILO]: Kupac mora biti u istom enterijeru i svijetu.");
+        new Float:vehicleX, Float:vehicleY, Float:vehicleZ;
+        GetVehiclePos(vehicleid, vehicleX, vehicleY, vehicleZ);
+        if(!IsPlayerInRangeOfPoint(targetid, 10.0, vehicleX, vehicleY, vehicleZ))
+            return SendClientMessage(playerid, 0xFF7777FF, "[VOZILO]: Kupac mora biti blizu vozila.");
+        new now = gettime();
+        if(VehicleOfferTarget[playerid] > 0)
+        {
+            if(VehicleOfferExpires[playerid] > now)
+                return SendClientMessage(playerid, 0xFF7777FF, "[VOZILO]: Sacekajte da se trenutna ponuda zatvori ili istekne.");
+            new oldTarget = VehicleOfferTarget[playerid] - 1;
+            if(oldTarget >= 0 && oldTarget < MAX_PLAYERS && PendingVehicleSeller[oldTarget] == playerid + 1)
+                PendingVehicleSeller[oldTarget] = 0;
+            VehicleOfferTarget[playerid] = 0;
+            VehicleOfferExpires[playerid] = 0;
+        }
+        if(VehicleOfferCooldown[playerid] > now)
+        {
+            new waitMessage[96];
+            format(waitMessage, sizeof(waitMessage), "[VOZILO]: Novu ponudu mozete poslati za %d sekundi.", VehicleOfferCooldown[playerid] - now);
+            return SendClientMessage(playerid, 0xFF7777FF, waitMessage);
+        }
+        if(PendingVehicleSeller[targetid] > 0 && PendingVehicleSaleExpires[targetid] > now)
+            return SendClientMessage(playerid, 0xFF7777FF, "[VOZILO]: Taj igrac vec ima aktivnu ponudu.");
+        if(PendingVehicleSeller[targetid] > 0) PendingVehicleSeller[targetid] = 0;
+        new sellerName[MAX_PLAYER_NAME], model = GetVehicleModel(vehicleid), dialogText[320], priceText[32];
+        GetPlayerName(playerid, sellerName, sizeof(sellerName));
+        FormatEuroAmount(price, priceText, sizeof(priceText));
+        format(dialogText, sizeof(dialogText), "Da li zelite kupiti %s od %s za %s?\n\nAko ste sigurni, upisite Prihvati.\nAko odustajete, upisite Odustani.", VehicleHudModelNames[model - 400], sellerName, priceText);
+        PendingVehicleSeller[targetid] = playerid + 1;
+        PendingVehicleSaleVehicle[targetid] = vehicleid;
+        PendingVehicleSaleSlot[targetid] = slotNum;
+        PendingVehicleSalePrice[targetid] = price;
+        PendingVehicleSaleExpires[targetid] = now + 30;
+        VehicleOfferTarget[playerid] = targetid + 1;
+        VehicleOfferExpires[playerid] = now + 30;
+        if(!ShowPlayerDialog(targetid, DIALOG_VEHICLE_SELL_OFFER, DIALOG_STYLE_INPUT, "Ponuda za vozilo", dialogText, "Posalji", "Odustani"))
+        {
+            PendingVehicleSeller[targetid] = 0; VehicleOfferTarget[playerid] = 0; VehicleOfferExpires[playerid] = 0;
+            return SendClientMessage(playerid, 0xFF7777FF, "[VOZILO]: Ponudu nije moguce prikazati kupcu.");
+        }
+        return SendClientMessage(playerid, 0x33CC33FF, "[VOZILO]: Ponuda za vozilo je poslana.");
+    }
+
+    if(!strcmp(action, "color1", true) || !strcmp(action, "color2", true))
+    {
+        new slotNum;
+        if(sscanf(params, "s[24]i", action, slotNum))
+        {
+            if(GetPlayerState(playerid) == PLAYER_STATE_DRIVER && GetPlayerVehicleID(playerid) > 0 &&
+               PersonalVehicleOwner[GetPlayerVehicleID(playerid)] == playerid + 1)
+                slotNum = PersonalVehicleSlot[GetPlayerVehicleID(playerid)];
+            else return SendClientMessage(playerid, -1, "Koristenje: sjednite u svoje vozilo ili koristite /v color1 [slot] /v color2 [slot].");
+        }
+        if(slotNum < 1 || slotNum > 3)
+            return SendClientMessage(playerid, -1, "Slot mora biti 1, 2 ili 3.");
+        new vehicleid = GetOwnedPersonalVehicle(playerid, slotNum);
+        if(vehicleid == INVALID_VEHICLE_ID) return SendClientMessage(playerid, 0xFF7777FF, "[VOZILO]: Nemate vozilo u tom slotu.");
+        PendingVehicleColorSlot[playerid] = slotNum;
+        PendingVehicleColorSide[playerid] = !strcmp(action, "color1", true) ? 1 : 2;
+        new dialogText[128];
+        format(dialogText, sizeof(dialogText), "Unesite boju %d vozila (ID boje 0-255; 0 je crna).", PendingVehicleColorSide[playerid]);
+        return ShowPlayerDialog(playerid, PendingVehicleColorSide[playerid] == 1 ? DIALOG_VEHICLE_COLOR_1 : DIALOG_VEHICLE_COLOR_2,
+            DIALOG_STYLE_INPUT, "Boja licnog vozila", dialogText, "Sacuvaj", "Odustani");
+    }
+
+    if(strfind(action, "park", true) == 0 || strfind(action, "lock", true) == 0 || strfind(action, "find", true) == 0)
+    {
+        new prefix[8], prefixLength = 4;
+        if(strfind(action, "park", true) == 0) prefix = "park";
+        else if(strfind(action, "lock", true) == 0) prefix = "lock";
+        else prefix = "find";
+        new slotNum = strval(action[prefixLength]);
+        if(strlen(action) != prefixLength + 1 || slotNum < 1 || slotNum > 3)
+            return SendClientMessage(playerid, -1, "Koristenje: /v parkN | /v lockN | /v findN (N je 1-3)");
+        new vehicleid = GetOwnedPersonalVehicle(playerid, slotNum);
+        if(vehicleid == INVALID_VEHICLE_ID)
+            return SendClientMessage(playerid, 0xFF7777FF, "[VOZILO]: Nemate vozilo u tom slotu.");
+        if(!strcmp(prefix, "find", true))
+        {
+            new Float:x, Float:y, Float:z;
+            GetVehiclePos(vehicleid, x, y, z);
+            SetPlayerCheckpoint(playerid, x, y, z, 5.0);
+            VehicleFindCheckpoint[playerid] = true;
+            return SendClientMessage(playerid, 0x33CCFFFF, "[VOZILO]: Lokacija vozila je oznacena checkpointom na mapi.");
+        }
+        if(!strcmp(prefix, "lock", true))
+        {
+            new account[128], color1Key[32], color2Key[32], lockedKey[32], engine, lights, alarm, doors, bonnet, boot, objective;
+            if(!GetPlayerAccountPath(playerid, account, sizeof(account))) return 0;
+            GetPersonalVehiclePropertyKeys(slotNum - 1, color1Key, color2Key, lockedKey, sizeof(color1Key));
+            GetVehicleParamsEx(vehicleid, engine, lights, alarm, doors, bonnet, boot, objective);
+            new bool:locked = doors != 1;
+            doors = locked ? 1 : 0;
+            SetVehicleParamsEx(vehicleid, engine, lights, alarm, doors, bonnet, boot, objective);
+            DOF2_SetInt(account, lockedKey, locked); DOF2_SaveFile();
+            if(locked) GameTextForPlayer(playerid, "~r~Zakljucali ste vozilo", 2500, 3);
+            else GameTextForPlayer(playerid, "~b~Otkljucali ste vozilo", 2500, 3);
+            return 1;
+        }
+        if(GetPlayerState(playerid) != PLAYER_STATE_DRIVER || GetPlayerVehicleID(playerid) != vehicleid)
+        {
+            if(GetPlayerVehicleID(playerid) == vehicleid && PersonalVehicleOwner[vehicleid] == playerid + 1)
+                ApplyPersonalVehicleProps(vehicleid, playerid, slotNum - 1);
+            return SendClientMessage(playerid, 0xFF7777FF, "[VOZILO]: Morate biti vozac svog vozila da biste ga parkirali.");
+        }
+        new account[128], modelKey[24], xKey[24], yKey[24], zKey[24], aKey[24], intKey[24], worldKey[24];
+        if(!GetPlayerAccountPath(playerid, account, sizeof(account))) return 0;
+        GetPersonalVehicleKeys(slotNum - 1, modelKey, sizeof(modelKey), xKey, yKey, zKey, aKey, intKey, worldKey);
+        new Float:x, Float:y, Float:z, Float:a;
+        GetPlayerPos(playerid, x, y, z); GetPlayerFacingAngle(playerid, a);
+        new interior = GetPlayerInterior(playerid), world = GetPlayerVirtualWorld(playerid);
+        // Boja i tuning postaju trajni tek kada je parkiranje validno.
+        new color1Key[32], color2Key[32], lockedKey[32];
+        GetPersonalVehiclePropertyKeys(slotNum - 1, color1Key, color2Key, lockedKey, sizeof(color1Key));
+        DOF2_SetInt(account, color1Key, PersonalVehicleColor1[vehicleid]);
+        DOF2_SetInt(account, color2Key, PersonalVehicleColor2[vehicleid]);
+        for(new componentSlot = 0; componentSlot < 14; componentSlot++)
+        {
+            new componentKey[32];
+            format(componentKey, sizeof(componentKey), "Vozilo%dTuning%d", slotNum, componentSlot);
+            DOF2_SetInt(account, componentKey, GetVehicleComponentInSlot(vehicleid, componentSlot));
+        }
+        DOF2_SetInt(account, modelKey, GetVehicleModel(vehicleid));
+        DOF2_SetFloat(account, xKey, x); DOF2_SetFloat(account, yKey, y); DOF2_SetFloat(account, zKey, z); DOF2_SetFloat(account, aKey, a);
+        DOF2_SetInt(account, intKey, interior); DOF2_SetInt(account, worldKey, world); DOF2_SaveFile();
+        for(new i = 0; i < MAX_PLAYERS; i++) if(IsPlayerConnected(i) && IsPlayerInVehicle(i, vehicleid)) RemovePlayerFromVehicle(i);
+        SetVehicleToRespawn(vehicleid); SetVehiclePos(vehicleid, x, y, z); SetVehicleZAngle(vehicleid, a);
+        LinkVehicleToInterior(vehicleid, interior); SetVehicleVirtualWorld(vehicleid, world);
+        ApplyPersonalVehicleProps(vehicleid, playerid, slotNum - 1);
+        return SendClientMessage(playerid, 0x33CC33FF, "[VOZILO]: Parking vozila je sacuvan.");
+    }
+
+    return SendClientMessage(playerid, -1, "Komande: /v parkN, /v lockN, /v findN, /v color1 [slot], /v color2 [slot], /v sellto [ID] [EUR], /v list.");
 }
 CMD:prodajvozilo(playerid, params[])
 {

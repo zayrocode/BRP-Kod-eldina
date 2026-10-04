@@ -40351,3 +40351,633 @@ v0.3.7-R2, (C)2005-2015 SA-MP Team
 [07:45:37] [connection] incoming connection: 192.168.2.153:50450 id: 1
 [07:45:37] [join] zan has joined the server (1:192.168.2.153)
 [07:46:35] [part] zan has left the server (1:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[14:16:16] 
+[14:16:16] Server Plugins
+[14:16:16] --------------
+[14:16:16]  Loading plugin: sscanf
+[14:16:16] 
+[14:16:16]  ===============================
+[14:16:16] 
+[14:16:16]       sscanf plugin loaded.     
+[14:16:16] 
+[14:16:16]          Version: 2.13.8
+[14:16:16] 
+[14:16:16]    (c) 2022 Alex "Y_Less" Cole  
+[14:16:16] 
+[14:16:16]  ===============================
+[14:16:16] 
+[14:16:16]   Loaded.
+[14:16:16]  Loading plugin: streamer.dll
+[14:16:16] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[14:16:16]   Loaded.
+[14:16:16]  Loading plugin: https_samp.dll
+[14:16:16] 
+[14:16:16]   | https_samp 1.0.0 | 2026
+[14:16:16]   |-------------------------------
+[14:16:16]   | Author and maintainer: NullSablex <https://github.com/NullSablex>
+[14:16:16] 
+[14:16:16]   | Compiled: May 20 2026 at 20:27:13
+[14:16:16]   |-------------------------------
+[14:16:16]   | Repository: https://github.com/NullSablex/https_samp
+[14:16:16] 
+[14:16:16] [https_samp] running on SA-MP (or Open Multiplayer legacy mode)
+[14:16:16]   Loaded.
+[14:16:16]  Loaded 3 plugins.
+
+[14:16:16] 
+[14:16:16] Filterscripts
+[14:16:16] ---------------
+[14:16:16]   Loading filterscript 'gl_realtime.amx'...
+[14:16:16]   Loaded 1 filterscripts.
+
+[14:16:16] Ucitan biznis Mali Oglasi ID: 0
+[14:16:16] Ucitan biznis Mali Oglasi ID: 1
+[14:16:16] Ucitan biznis Mali Oglasi ID: 2
+[14:16:16] Ucitan biznis Mali Oglasi ID: 3
+[14:16:16] Ucitan biznis Mali Oglasi ID: 4
+[14:16:16] Ucitan biznis Mali Oglasi ID: 5
+[14:16:16] Ucitan biznis Mali Oglasi ID: 6
+[14:16:16] Ucitan biznis Mali Oglasi ID: 7
+[14:16:16] Ucitan biznis Mali Oglasi ID: 8
+[14:16:16] Ucitan biznis Mali Oglasi ID: 9
+[14:16:16] Ucitan biznis Mali Oglasi ID: 10
+[14:16:16] Ucitan biznis Mali Oglasi ID: 11
+[14:16:16] Ucitan biznis Mali Oglasi ID: 12
+[14:16:16] Ucitan biznis Mali Oglasi ID: 13
+[14:16:16] Ucitan biznis Mali Oglasi ID: 14
+[14:16:16] Ucitan biznis Mali Oglasi ID: 15
+[14:16:16] Ucitan biznis Mali Oglasi ID: 16
+[14:16:16] Ucitan biznis Mali Oglasi ID: 17
+[14:16:16] Ucitan biznis Mali Oglasi ID: 18
+[14:16:16] Ucitan biznis Mali Oglasi ID: 19
+[14:16:16] Ucitana Zlatara ID: 0
+[14:16:16] Ucitana Zlatara ID: 1
+[14:16:16] Ucitana Zlatara ID: 2
+[14:16:16] Ucitana Zlatara ID: 3
+[14:16:16] Ucitana Zlatara ID: 4
+[14:16:16] Ucitana Zlatara ID: 5
+[14:16:16] Ucitana Zlatara ID: 6
+[14:16:16] Ucitana Zlatara ID: 7
+[14:16:16] Ucitana Zlatara ID: 8
+[14:16:16] Ucitana Zlatara ID: 9
+[14:16:16] Ucitana Zlatara ID: 10
+[14:16:16] Ucitana Zlatara ID: 11
+[14:16:16] Ucitana Zlatara ID: 12
+[14:16:16] Ucitana Zlatara ID: 13
+[14:16:16] Ucitana Zlatara ID: 14
+[14:16:16] Ucitana Trafika ID: 0
+[14:16:16] Ucitana Trafika ID: 1
+[14:16:16] Ucitana Trafika ID: 2
+[14:16:16] Ucitana Trafika ID: 3
+[14:16:16] Ucitana Trafika ID: 4
+[14:16:16] Ucitana Trafika ID: 5
+[14:16:16] Ucitana Trafika ID: 6
+[14:16:16] Ucitana Trafika ID: 7
+[14:16:16] Ucitana Trafika ID: 8
+[14:16:16] Ucitana Trafika ID: 9
+[14:16:16] Ucitana Trafika ID: 10
+[14:16:16] Ucitana Trafika ID: 11
+[14:16:16] Ucitana Trafika ID: 12
+[14:16:16] Ucitana Trafika ID: 13
+[14:16:16] Ucitana Trafika ID: 14
+[14:16:16] Ucitana Trafika ID: 15
+[14:16:16] Ucitana Trafika ID: 16
+[14:16:16] Ucitana Trafika ID: 17
+[14:16:16] Ucitana Trafika ID: 18
+[14:16:16] Ucitana Trafika ID: 19
+[14:16:16] Ucitana Trafika ID: 20
+[14:16:16] Ucitana Trafika ID: 21
+[14:16:16] Ucitana Trafika ID: 22
+[14:16:16] Ucitana Trafika ID: 23
+[14:16:16] Ucitana Trafika ID: 24
+[14:16:16] Ucitana Trafika ID: 25
+[14:16:16] Ucitana Trafika ID: 26
+[14:16:16] Ucitana Trafika ID: 27
+[14:16:16] Ucitana Trafika ID: 28
+[14:16:16] Ucitana Trafika ID: 29
+[14:16:16] Ucitana Trafika ID: 30
+[14:16:16] Ucitana Trafika ID: 31
+[14:16:16] Ucitana Trafika ID: 32
+[14:16:16] Ucitana Trafika ID: 33
+[14:16:16] Ucitana Trafika ID: 34
+[14:16:16] Ucitana Trafika ID: 35
+[14:16:16] Ucitana Trafika ID: 36
+[14:16:16] Ucitana Trafika ID: 37
+[14:16:16] Ucitana Trafika ID: 38
+[14:16:16] Ucitana Trafika ID: 39
+[14:16:16] Ucitana Trafika ID: 40
+[14:16:16] Ucitana Trafika ID: 41
+[14:16:16] Ucitana Trafika ID: 42
+[14:16:16] Ucitana Trafika ID: 43
+[14:16:16] Ucitana Trafika ID: 44
+[14:16:16] Ucitana Trafika ID: 45
+[14:16:16] Ucitana Trafika ID: 46
+[14:16:16] Ucitana Trafika ID: 47
+[14:16:16] Ucitana Trafika ID: 48
+[14:16:16] Ucitana Trafika ID: 49
+[14:16:16] Ucitano slobodnih objekata iz Objekti.ini
+[14:16:16] [LABEL SYSTEM]: Uspje?no ucitano 26 labela iz baze.
+[14:16:16] 
+----------------------------------
+[14:16:16]   Balkan Revolution RP se pokrece...
+[14:16:16] ----------------------------------
+
+[14:16:16] Number of vehicle models: 15
+[14:16:17] [connection] 192.168.2.32:60302 requests connection cookie.
+[14:16:18] [connection] incoming connection: 192.168.2.32:60302 id: 0
+[14:16:18] [join] Rile has joined the server (0:192.168.2.32)
+[14:16:20] (ThreadId(7)) park without timeout
+[14:16:20] (ThreadId(9)) start runtime::block_on
+[14:16:20] wait at most 12s
+[14:16:20] (ThreadId(7)) park timeout 11.9999885s
+[14:16:20] starting new connection: https://open.er-api.com/
+[14:16:20] shouldn't retry!
+[14:16:20] wait at most 12s
+[14:16:20] wait at most 12s
+[14:16:20] [KURSNA LISTA]: HTTPS kurs osvjezen: 1 EUR = 117.4786 RSD.
+[14:16:37] [connection] 192.168.2.153:60042 requests connection cookie.
+[14:16:38] [connection] incoming connection: 192.168.2.153:60042 id: 1
+[14:16:38] [join] zan has joined the server (1:192.168.2.153)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[15:00:42] 
+[15:00:42] Server Plugins
+[15:00:42] --------------
+[15:00:42]  Loading plugin: sscanf
+[15:00:42] 
+[15:00:42]  ===============================
+[15:00:42] 
+[15:00:42]       sscanf plugin loaded.     
+[15:00:42] 
+[15:00:42]          Version: 2.13.8
+[15:00:42] 
+[15:00:42]    (c) 2022 Alex "Y_Less" Cole  
+[15:00:42] 
+[15:00:42]  ===============================
+[15:00:42] 
+[15:00:42]   Loaded.
+[15:00:42]  Loading plugin: streamer.dll
+[15:00:42] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[15:00:42]   Loaded.
+[15:00:42]  Loading plugin: https_samp.dll
+[15:00:42] 
+[15:00:42]   | https_samp 1.0.0 | 2026
+[15:00:42]   |-------------------------------
+[15:00:42]   | Author and maintainer: NullSablex <https://github.com/NullSablex>
+[15:00:42] 
+[15:00:42]   | Compiled: May 20 2026 at 20:27:13
+[15:00:42]   |-------------------------------
+[15:00:42]   | Repository: https://github.com/NullSablex/https_samp
+[15:00:42] 
+[15:00:42] [https_samp] running on SA-MP (or Open Multiplayer legacy mode)
+[15:00:42]   Loaded.
+[15:00:42]  Loaded 3 plugins.
+
+[15:00:42] 
+[15:00:42] Filterscripts
+[15:00:42] ---------------
+[15:00:42]   Loading filterscript 'gl_realtime.amx'...
+[15:00:42]   Loaded 1 filterscripts.
+
+[15:00:42] Ucitan biznis Mali Oglasi ID: 0
+[15:00:42] Ucitan biznis Mali Oglasi ID: 1
+[15:00:42] Ucitan biznis Mali Oglasi ID: 2
+[15:00:42] Ucitan biznis Mali Oglasi ID: 3
+[15:00:42] Ucitan biznis Mali Oglasi ID: 4
+[15:00:42] Ucitan biznis Mali Oglasi ID: 5
+[15:00:42] Ucitan biznis Mali Oglasi ID: 6
+[15:00:42] Ucitan biznis Mali Oglasi ID: 7
+[15:00:42] Ucitan biznis Mali Oglasi ID: 8
+[15:00:42] Ucitan biznis Mali Oglasi ID: 9
+[15:00:42] Ucitan biznis Mali Oglasi ID: 10
+[15:00:42] Ucitan biznis Mali Oglasi ID: 11
+[15:00:42] Ucitan biznis Mali Oglasi ID: 12
+[15:00:42] Ucitan biznis Mali Oglasi ID: 13
+[15:00:42] Ucitan biznis Mali Oglasi ID: 14
+[15:00:42] Ucitan biznis Mali Oglasi ID: 15
+[15:00:42] Ucitan biznis Mali Oglasi ID: 16
+[15:00:42] Ucitan biznis Mali Oglasi ID: 17
+[15:00:42] Ucitan biznis Mali Oglasi ID: 18
+[15:00:42] Ucitan biznis Mali Oglasi ID: 19
+[15:00:42] Ucitana Zlatara ID: 0
+[15:00:42] Ucitana Zlatara ID: 1
+[15:00:42] Ucitana Zlatara ID: 2
+[15:00:42] Ucitana Zlatara ID: 3
+[15:00:42] Ucitana Zlatara ID: 4
+[15:00:42] Ucitana Zlatara ID: 5
+[15:00:42] Ucitana Zlatara ID: 6
+[15:00:42] Ucitana Zlatara ID: 7
+[15:00:42] Ucitana Zlatara ID: 8
+[15:00:42] Ucitana Zlatara ID: 9
+[15:00:42] Ucitana Zlatara ID: 10
+[15:00:42] Ucitana Zlatara ID: 11
+[15:00:42] Ucitana Zlatara ID: 12
+[15:00:42] Ucitana Zlatara ID: 13
+[15:00:42] Ucitana Zlatara ID: 14
+[15:00:42] Ucitana Trafika ID: 0
+[15:00:42] Ucitana Trafika ID: 1
+[15:00:42] Ucitana Trafika ID: 2
+[15:00:42] Ucitana Trafika ID: 3
+[15:00:42] Ucitana Trafika ID: 4
+[15:00:42] Ucitana Trafika ID: 5
+[15:00:42] Ucitana Trafika ID: 6
+[15:00:42] Ucitana Trafika ID: 7
+[15:00:42] Ucitana Trafika ID: 8
+[15:00:42] Ucitana Trafika ID: 9
+[15:00:42] Ucitana Trafika ID: 10
+[15:00:42] Ucitana Trafika ID: 11
+[15:00:42] Ucitana Trafika ID: 12
+[15:00:42] Ucitana Trafika ID: 13
+[15:00:42] Ucitana Trafika ID: 14
+[15:00:42] Ucitana Trafika ID: 15
+[15:00:42] Ucitana Trafika ID: 16
+[15:00:42] Ucitana Trafika ID: 17
+[15:00:42] Ucitana Trafika ID: 18
+[15:00:42] Ucitana Trafika ID: 19
+[15:00:42] Ucitana Trafika ID: 20
+[15:00:42] Ucitana Trafika ID: 21
+[15:00:42] Ucitana Trafika ID: 22
+[15:00:42] Ucitana Trafika ID: 23
+[15:00:42] Ucitana Trafika ID: 24
+[15:00:42] Ucitana Trafika ID: 25
+[15:00:42] Ucitana Trafika ID: 26
+[15:00:42] Ucitana Trafika ID: 27
+[15:00:42] Ucitana Trafika ID: 28
+[15:00:42] Ucitana Trafika ID: 29
+[15:00:42] Ucitana Trafika ID: 30
+[15:00:42] Ucitana Trafika ID: 31
+[15:00:42] Ucitana Trafika ID: 32
+[15:00:42] Ucitana Trafika ID: 33
+[15:00:42] Ucitana Trafika ID: 34
+[15:00:42] Ucitana Trafika ID: 35
+[15:00:42] Ucitana Trafika ID: 36
+[15:00:42] Ucitana Trafika ID: 37
+[15:00:42] Ucitana Trafika ID: 38
+[15:00:42] Ucitana Trafika ID: 39
+[15:00:42] Ucitana Trafika ID: 40
+[15:00:42] Ucitana Trafika ID: 41
+[15:00:42] Ucitana Trafika ID: 42
+[15:00:42] Ucitana Trafika ID: 43
+[15:00:42] Ucitana Trafika ID: 44
+[15:00:42] Ucitana Trafika ID: 45
+[15:00:42] Ucitana Trafika ID: 46
+[15:00:42] Ucitana Trafika ID: 47
+[15:00:42] Ucitana Trafika ID: 48
+[15:00:42] Ucitana Trafika ID: 49
+[15:00:42] Ucitano slobodnih objekata iz Objekti.ini
+[15:00:42] [LABEL SYSTEM]: Uspje?no ucitano 26 labela iz baze.
+[15:00:42] 
+----------------------------------
+[15:00:42]   Balkan Revolution RP se pokrece...
+[15:00:42] ----------------------------------
+
+[15:00:42] Number of vehicle models: 15
+[15:00:45] (ThreadId(2)) park without timeout
+[15:00:45] (ThreadId(9)) start runtime::block_on
+[15:00:45] wait at most 12s
+[15:00:45] (ThreadId(2)) park timeout 11.9999961s
+[15:00:45] starting new connection: https://open.er-api.com/
+[15:00:45] shouldn't retry!
+[15:00:45] wait at most 12s
+[15:00:45] wait at most 12s
+[15:00:45] [KURSNA LISTA]: HTTPS kurs osvjezen: 1 EUR = 117.4786 RSD.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[15:01:25] 
+[15:01:25] Server Plugins
+[15:01:25] --------------
+[15:01:25]  Loading plugin: sscanf
+[15:01:25] 
+[15:01:25]  ===============================
+[15:01:25] 
+[15:01:25]       sscanf plugin loaded.     
+[15:01:25] 
+[15:01:25]          Version: 2.13.8
+[15:01:25] 
+[15:01:25]    (c) 2022 Alex "Y_Less" Cole  
+[15:01:25] 
+[15:01:25]  ===============================
+[15:01:25] 
+[15:01:25]   Loaded.
+[15:01:25]  Loading plugin: streamer.dll
+[15:01:25] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[15:01:25]   Loaded.
+[15:01:25]  Loading plugin: https_samp.dll
+[15:01:25] 
+[15:01:25]   | https_samp 1.0.0 | 2026
+[15:01:25]   |-------------------------------
+[15:01:25]   | Author and maintainer: NullSablex <https://github.com/NullSablex>
+[15:01:25] 
+[15:01:25]   | Compiled: May 20 2026 at 20:27:13
+[15:01:25]   |-------------------------------
+[15:01:25]   | Repository: https://github.com/NullSablex/https_samp
+[15:01:25] 
+[15:01:25] [https_samp] running on SA-MP (or Open Multiplayer legacy mode)
+[15:01:25]   Loaded.
+[15:01:25]  Loaded 3 plugins.
+
+[15:01:25] 
+[15:01:25] Filterscripts
+[15:01:25] ---------------
+[15:01:25]   Loading filterscript 'gl_realtime.amx'...
+[15:01:25]   Loaded 1 filterscripts.
+
+[15:01:25] Ucitan biznis Mali Oglasi ID: 0
+[15:01:25] Ucitan biznis Mali Oglasi ID: 1
+[15:01:25] Ucitan biznis Mali Oglasi ID: 2
+[15:01:25] Ucitan biznis Mali Oglasi ID: 3
+[15:01:25] Ucitan biznis Mali Oglasi ID: 4
+[15:01:25] Ucitan biznis Mali Oglasi ID: 5
+[15:01:25] Ucitan biznis Mali Oglasi ID: 6
+[15:01:25] Ucitan biznis Mali Oglasi ID: 7
+[15:01:25] Ucitan biznis Mali Oglasi ID: 8
+[15:01:25] Ucitan biznis Mali Oglasi ID: 9
+[15:01:25] Ucitan biznis Mali Oglasi ID: 10
+[15:01:25] Ucitan biznis Mali Oglasi ID: 11
+[15:01:25] Ucitan biznis Mali Oglasi ID: 12
+[15:01:25] Ucitan biznis Mali Oglasi ID: 13
+[15:01:25] Ucitan biznis Mali Oglasi ID: 14
+[15:01:25] Ucitan biznis Mali Oglasi ID: 15
+[15:01:25] Ucitan biznis Mali Oglasi ID: 16
+[15:01:25] Ucitan biznis Mali Oglasi ID: 17
+[15:01:25] Ucitan biznis Mali Oglasi ID: 18
+[15:01:25] Ucitan biznis Mali Oglasi ID: 19
+[15:01:25] Ucitana Zlatara ID: 0
+[15:01:25] Ucitana Zlatara ID: 1
+[15:01:25] Ucitana Zlatara ID: 2
+[15:01:25] Ucitana Zlatara ID: 3
+[15:01:25] Ucitana Zlatara ID: 4
+[15:01:25] Ucitana Zlatara ID: 5
+[15:01:25] Ucitana Zlatara ID: 6
+[15:01:25] Ucitana Zlatara ID: 7
+[15:01:25] Ucitana Zlatara ID: 8
+[15:01:25] Ucitana Zlatara ID: 9
+[15:01:25] Ucitana Zlatara ID: 10
+[15:01:25] Ucitana Zlatara ID: 11
+[15:01:25] Ucitana Zlatara ID: 12
+[15:01:25] Ucitana Zlatara ID: 13
+[15:01:25] Ucitana Zlatara ID: 14
+[15:01:25] Ucitana Trafika ID: 0
+[15:01:25] Ucitana Trafika ID: 1
+[15:01:25] Ucitana Trafika ID: 2
+[15:01:25] Ucitana Trafika ID: 3
+[15:01:25] Ucitana Trafika ID: 4
+[15:01:25] Ucitana Trafika ID: 5
+[15:01:25] Ucitana Trafika ID: 6
+[15:01:25] Ucitana Trafika ID: 7
+[15:01:25] Ucitana Trafika ID: 8
+[15:01:25] Ucitana Trafika ID: 9
+[15:01:25] Ucitana Trafika ID: 10
+[15:01:25] Ucitana Trafika ID: 11
+[15:01:25] Ucitana Trafika ID: 12
+[15:01:25] Ucitana Trafika ID: 13
+[15:01:25] Ucitana Trafika ID: 14
+[15:01:25] Ucitana Trafika ID: 15
+[15:01:25] Ucitana Trafika ID: 16
+[15:01:25] Ucitana Trafika ID: 17
+[15:01:25] Ucitana Trafika ID: 18
+[15:01:25] Ucitana Trafika ID: 19
+[15:01:25] Ucitana Trafika ID: 20
+[15:01:25] Ucitana Trafika ID: 21
+[15:01:25] Ucitana Trafika ID: 22
+[15:01:25] Ucitana Trafika ID: 23
+[15:01:25] Ucitana Trafika ID: 24
+[15:01:25] Ucitana Trafika ID: 25
+[15:01:25] Ucitana Trafika ID: 26
+[15:01:25] Ucitana Trafika ID: 27
+[15:01:25] Ucitana Trafika ID: 28
+[15:01:25] Ucitana Trafika ID: 29
+[15:01:25] Ucitana Trafika ID: 30
+[15:01:25] Ucitana Trafika ID: 31
+[15:01:25] Ucitana Trafika ID: 32
+[15:01:25] Ucitana Trafika ID: 33
+[15:01:25] Ucitana Trafika ID: 34
+[15:01:25] Ucitana Trafika ID: 35
+[15:01:25] Ucitana Trafika ID: 36
+[15:01:25] Ucitana Trafika ID: 37
+[15:01:25] Ucitana Trafika ID: 38
+[15:01:25] Ucitana Trafika ID: 39
+[15:01:25] Ucitana Trafika ID: 40
+[15:01:25] Ucitana Trafika ID: 41
+[15:01:25] Ucitana Trafika ID: 42
+[15:01:25] Ucitana Trafika ID: 43
+[15:01:25] Ucitana Trafika ID: 44
+[15:01:25] Ucitana Trafika ID: 45
+[15:01:25] Ucitana Trafika ID: 46
+[15:01:25] Ucitana Trafika ID: 47
+[15:01:25] Ucitana Trafika ID: 48
+[15:01:25] Ucitana Trafika ID: 49
+[15:01:25] Ucitano slobodnih objekata iz Objekti.ini
+[15:01:25] [LABEL SYSTEM]: Uspje?no ucitano 26 labela iz baze.
+[15:01:25] 
+----------------------------------
+[15:01:25]   Balkan Revolution RP se pokrece...
+[15:01:25] ----------------------------------
+
+[15:01:25] Number of vehicle models: 15
+[15:01:29] (ThreadId(1)) park without timeout
+[15:01:29] (ThreadId(9)) start runtime::block_on
+[15:01:29] wait at most 12s
+[15:01:29] (ThreadId(1)) park timeout 11.9999935s
+[15:01:29] starting new connection: https://open.er-api.com/
+[15:01:29] shouldn't retry!
+[15:01:29] wait at most 12s
+[15:01:29] wait at most 12s
+[15:01:29] [KURSNA LISTA]: HTTPS kurs osvjezen: 1 EUR = 117.4786 RSD.
+[15:01:34] [connection] 192.168.2.32:59817 requests connection cookie.
+[15:01:34] [connection] 192.168.2.153:58130 requests connection cookie.
+[15:01:35] [connection] incoming connection: 192.168.2.32:59817 id: 0
+[15:01:35] [join] Rile has joined the server (0:192.168.2.32)
+[15:01:35] [connection] incoming connection: 192.168.2.153:58130 id: 1
+[15:01:36] [join] zan has joined the server (1:192.168.2.153)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[15:51:15] 
+[15:51:15] Server Plugins
+[15:51:15] --------------
+[15:51:15]  Loading plugin: sscanf
+[15:51:15] 
+[15:51:15]  ===============================
+[15:51:15] 
+[15:51:15]       sscanf plugin loaded.     
+[15:51:15] 
+[15:51:15]          Version: 2.13.8
+[15:51:15] 
+[15:51:15]    (c) 2022 Alex "Y_Less" Cole  
+[15:51:15] 
+[15:51:15]  ===============================
+[15:51:15] 
+[15:51:15]   Loaded.
+[15:51:15]  Loading plugin: streamer.dll
+[15:51:15] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[15:51:15]   Loaded.
+[15:51:15]  Loading plugin: https_samp.dll
+[15:51:15] 
+[15:51:15]   | https_samp 1.0.0 | 2026
+[15:51:15]   |-------------------------------
+[15:51:15]   | Author and maintainer: NullSablex <https://github.com/NullSablex>
+[15:51:15] 
+[15:51:15]   | Compiled: May 20 2026 at 20:27:13
+[15:51:15]   |-------------------------------
+[15:51:15]   | Repository: https://github.com/NullSablex/https_samp
+[15:51:15] 
+[15:51:15] [https_samp] running on SA-MP (or Open Multiplayer legacy mode)
+[15:51:15]   Loaded.
+[15:51:15]  Loaded 3 plugins.
+
+[15:51:15] 
+[15:51:15] Filterscripts
+[15:51:15] ---------------
+[15:51:15]   Loading filterscript 'gl_realtime.amx'...
+[15:51:15]   Loaded 1 filterscripts.
+
+[15:51:16] Ucitan biznis Mali Oglasi ID: 0
+[15:51:16] Ucitan biznis Mali Oglasi ID: 1
+[15:51:16] Ucitan biznis Mali Oglasi ID: 2
+[15:51:16] Ucitan biznis Mali Oglasi ID: 3
+[15:51:16] Ucitan biznis Mali Oglasi ID: 4
+[15:51:16] Ucitan biznis Mali Oglasi ID: 5
+[15:51:16] Ucitan biznis Mali Oglasi ID: 6
+[15:51:16] Ucitan biznis Mali Oglasi ID: 7
+[15:51:16] Ucitan biznis Mali Oglasi ID: 8
+[15:51:16] Ucitan biznis Mali Oglasi ID: 9
+[15:51:16] Ucitan biznis Mali Oglasi ID: 10
+[15:51:16] Ucitan biznis Mali Oglasi ID: 11
+[15:51:16] Ucitan biznis Mali Oglasi ID: 12
+[15:51:16] Ucitan biznis Mali Oglasi ID: 13
+[15:51:16] Ucitan biznis Mali Oglasi ID: 14
+[15:51:16] Ucitan biznis Mali Oglasi ID: 15
+[15:51:16] Ucitan biznis Mali Oglasi ID: 16
+[15:51:16] Ucitan biznis Mali Oglasi ID: 17
+[15:51:16] Ucitan biznis Mali Oglasi ID: 18
+[15:51:16] Ucitan biznis Mali Oglasi ID: 19
+[15:51:16] Ucitana Zlatara ID: 0
+[15:51:16] Ucitana Zlatara ID: 1
+[15:51:16] Ucitana Zlatara ID: 2
+[15:51:16] Ucitana Zlatara ID: 3
+[15:51:16] Ucitana Zlatara ID: 4
+[15:51:16] Ucitana Zlatara ID: 5
+[15:51:16] Ucitana Zlatara ID: 6
+[15:51:16] Ucitana Zlatara ID: 7
+[15:51:16] Ucitana Zlatara ID: 8
+[15:51:16] Ucitana Zlatara ID: 9
+[15:51:16] Ucitana Zlatara ID: 10
+[15:51:16] Ucitana Zlatara ID: 11
+[15:51:16] Ucitana Zlatara ID: 12
+[15:51:16] Ucitana Zlatara ID: 13
+[15:51:16] Ucitana Zlatara ID: 14
+[15:51:16] Ucitana Trafika ID: 0
+[15:51:16] Ucitana Trafika ID: 1
+[15:51:16] Ucitana Trafika ID: 2
+[15:51:16] Ucitana Trafika ID: 3
+[15:51:16] Ucitana Trafika ID: 4
+[15:51:16] Ucitana Trafika ID: 5
+[15:51:16] Ucitana Trafika ID: 6
+[15:51:16] Ucitana Trafika ID: 7
+[15:51:16] Ucitana Trafika ID: 8
+[15:51:16] Ucitana Trafika ID: 9
+[15:51:16] Ucitana Trafika ID: 10
+[15:51:16] Ucitana Trafika ID: 11
+[15:51:16] Ucitana Trafika ID: 12
+[15:51:16] Ucitana Trafika ID: 13
+[15:51:16] Ucitana Trafika ID: 14
+[15:51:16] Ucitana Trafika ID: 15
+[15:51:16] Ucitana Trafika ID: 16
+[15:51:16] Ucitana Trafika ID: 17
+[15:51:16] Ucitana Trafika ID: 18
+[15:51:16] Ucitana Trafika ID: 19
+[15:51:16] Ucitana Trafika ID: 20
+[15:51:16] Ucitana Trafika ID: 21
+[15:51:16] Ucitana Trafika ID: 22
+[15:51:16] Ucitana Trafika ID: 23
+[15:51:16] Ucitana Trafika ID: 24
+[15:51:16] Ucitana Trafika ID: 25
+[15:51:16] Ucitana Trafika ID: 26
+[15:51:16] Ucitana Trafika ID: 27
+[15:51:16] Ucitana Trafika ID: 28
+[15:51:16] Ucitana Trafika ID: 29
+[15:51:16] Ucitana Trafika ID: 30
+[15:51:16] Ucitana Trafika ID: 31
+[15:51:16] Ucitana Trafika ID: 32
+[15:51:16] Ucitana Trafika ID: 33
+[15:51:16] Ucitana Trafika ID: 34
+[15:51:16] Ucitana Trafika ID: 35
+[15:51:16] Ucitana Trafika ID: 36
+[15:51:16] Ucitana Trafika ID: 37
+[15:51:16] Ucitana Trafika ID: 38
+[15:51:16] Ucitana Trafika ID: 39
+[15:51:16] Ucitana Trafika ID: 40
+[15:51:16] Ucitana Trafika ID: 41
+[15:51:16] Ucitana Trafika ID: 42
+[15:51:16] Ucitana Trafika ID: 43
+[15:51:16] Ucitana Trafika ID: 44
+[15:51:16] Ucitana Trafika ID: 45
+[15:51:16] Ucitana Trafika ID: 46
+[15:51:16] Ucitana Trafika ID: 47
+[15:51:16] Ucitana Trafika ID: 48
+[15:51:16] Ucitana Trafika ID: 49
+[15:51:16] Ucitano slobodnih objekata iz Objekti.ini
+[15:51:16] [LABEL SYSTEM]: Uspje?no ucitano 26 labela iz baze.
+[15:51:16] 
+----------------------------------
+[15:51:16]   Balkan Revolution RP se pokrece...
+[15:51:16] ----------------------------------
+
+[15:51:16] Number of vehicle models: 15
+[15:51:20] (ThreadId(1)) park without timeout
+[15:51:20] (ThreadId(9)) start runtime::block_on
+[15:51:20] wait at most 12s
+[15:51:20] (ThreadId(1)) park timeout 11.9999907s
+[15:51:20] starting new connection: https://open.er-api.com/
+[15:51:20] shouldn't retry!
+[15:51:20] wait at most 12s
+[15:51:20] wait at most 12s
+[15:51:20] [KURSNA LISTA]: HTTPS kurs osvjezen: 1 EUR = 117.4786 RSD.
+[15:51:21] [connection] 192.168.2.32:52994 requests connection cookie.
+[15:51:22] [connection] incoming connection: 192.168.2.32:52994 id: 0
+[15:51:22] [join] Rile has joined the server (0:192.168.2.32)
+[15:51:31] [connection] 192.168.2.153:60824 requests connection cookie.
+[15:51:32] [connection] incoming connection: 192.168.2.153:60824 id: 1
+[15:51:32] [join] zan has joined the server (1:192.168.2.153)
